@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.api.referral_account_api import ReferralAccountApi  # noqa: E501
+from ClickSend.Client.Api.referral_account_api import ReferralAccountApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestReferralAccountApi(unittest.TestCase):
     """ReferralAccountApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.referral_account_api.ReferralAccountApi()  # noqa: E501
+        self.api = ClickSend.Client.Api.referral_account_api.ReferralAccountApi()  # noqa: E501
 
     def tearDown(self):
         pass

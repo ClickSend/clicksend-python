@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.api.sms_delivery_receipt_rules_api import SMSDeliveryReceiptRulesApi  # noqa: E501
+from ClickSend.Client.Api.sms_delivery_receipt_rules_api import SMSDeliveryReceiptRulesApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestSMSDeliveryReceiptRulesApi(unittest.TestCase):
     """SMSDeliveryReceiptRulesApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.sms_delivery_receipt_rules_api.SMSDeliveryReceiptRulesApi()  # noqa: E501
+        self.api = ClickSend.Client.Api.sms_delivery_receipt_rules_api.SMSDeliveryReceiptRulesApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.api.fax_api import FaxApi  # noqa: E501
+from ClickSend.Client.Api.fax_api import FaxApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestFaxApi(unittest.TestCase):
     """FaxApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.fax_api.FaxApi()  # noqa: E501
+        self.api = ClickSend.Client.Api.fax_api.FaxApi()  # noqa: E501
 
     def tearDown(self):
         pass

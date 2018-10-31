@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.models.contact_list_import import ContactListImport  # noqa: E501
+from swagger_client.ClickSend.Client.Model.contact_list_import import ContactListImport  # noqa: E501
 from swagger_client.rest import ApiException
 
 

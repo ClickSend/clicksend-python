@@ -16,9 +16,9 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.models.attachment import Attachment  # noqa: F401,E501
-from swagger_client.models.email_from import EmailFrom  # noqa: F401,E501
-from swagger_client.models.email_recipient import EmailRecipient  # noqa: F401,E501
+from swagger_client.ClickSend.Client.Model.attachment import Attachment  # noqa: F401,E501
+from swagger_client.ClickSend.Client.Model.email_from import EmailFrom  # noqa: F401,E501
+from swagger_client.ClickSend.Client.Model.email_recipient import EmailRecipient  # noqa: F401,E501
 
 
 class Email(object):

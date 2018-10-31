@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.models.fax_message_collection import FaxMessageCollection  # noqa: E501
+from swagger_client.ClickSend.Client.Model.fax_message_collection import FaxMessageCollection  # noqa: E501
 from swagger_client.rest import ApiException
 
 

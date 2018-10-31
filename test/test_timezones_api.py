@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.api.timezones_api import TimezonesApi  # noqa: E501
+from ClickSend.Client.Api.timezones_api import TimezonesApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestTimezonesApi(unittest.TestCase):
     """TimezonesApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.timezones_api.TimezonesApi()  # noqa: E501
+        self.api = ClickSend.Client.Api.timezones_api.TimezonesApi()  # noqa: E501
 
     def tearDown(self):
         pass

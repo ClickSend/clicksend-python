@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.api.subaccount_api import SubaccountApi  # noqa: E501
+from ClickSend.Client.Api.subaccount_api import SubaccountApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestSubaccountApi(unittest.TestCase):
     """SubaccountApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.subaccount_api.SubaccountApi()  # noqa: E501
+        self.api = ClickSend.Client.Api.subaccount_api.SubaccountApi()  # noqa: E501
 
     def tearDown(self):
         pass
