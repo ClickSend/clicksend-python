@@ -24,7 +24,7 @@ import six
 from six.moves.urllib.parse import quote
 
 from swagger_client.configuration import Configuration
-import swagger_client.ClickSend.Client.Model
+import swagger_client.clicksend.model
 from swagger_client import rest
 
 
@@ -258,7 +258,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(swagger_client.ClickSend.Client.Model, klass)
+                klass = getattr(swagger_client.clicksend.model, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

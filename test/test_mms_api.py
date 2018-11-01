@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from ClickSend.Client.Api.mms_api import MMSApi  # noqa: E501
+from clicksend.api.mms_api import MMSApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestMMSApi(unittest.TestCase):
     """MMSApi unit test stubs"""
 
     def setUp(self):
-        self.api = ClickSend.Client.Api.mms_api.MMSApi()  # noqa: E501
+        self.api = clicksend.api.mms_api.MMSApi()  # noqa: E501
 
     def tearDown(self):
         pass

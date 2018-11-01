@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.ClickSend.Client.Model.voice_message_collection import VoiceMessageCollection  # noqa: E501
+from swagger_client.clicksend.model.voice_message_collection import VoiceMessageCollection  # noqa: E501
 from swagger_client.rest import ApiException
 
 

@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from ClickSend.Client.Api.inbound_fax_rules_api import InboundFAXRulesApi  # noqa: E501
+from clicksend.api.inbound_fax_rules_api import InboundFAXRulesApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestInboundFAXRulesApi(unittest.TestCase):
     """InboundFAXRulesApi unit test stubs"""
 
     def setUp(self):
-        self.api = ClickSend.Client.Api.inbound_fax_rules_api.InboundFAXRulesApi()  # noqa: E501
+        self.api = clicksend.api.inbound_fax_rules_api.InboundFAXRulesApi()  # noqa: E501
 
     def tearDown(self):
         pass

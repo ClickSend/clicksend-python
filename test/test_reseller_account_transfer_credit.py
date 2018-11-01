@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.ClickSend.Client.Model.reseller_account_transfer_credit import ResellerAccountTransferCredit  # noqa: E501
+from swagger_client.clicksend.model.reseller_account_transfer_credit import ResellerAccountTransferCredit  # noqa: E501
 from swagger_client.rest import ApiException
 
 

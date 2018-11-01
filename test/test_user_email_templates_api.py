@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from ClickSend.Client.Api.user_email_templates_api import UserEmailTemplatesApi  # noqa: E501
+from clicksend.api.user_email_templates_api import UserEmailTemplatesApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestUserEmailTemplatesApi(unittest.TestCase):
     """UserEmailTemplatesApi unit test stubs"""
 
     def setUp(self):
-        self.api = ClickSend.Client.Api.user_email_templates_api.UserEmailTemplatesApi()  # noqa: E501
+        self.api = clicksend.api.user_email_templates_api.UserEmailTemplatesApi()  # noqa: E501
 
     def tearDown(self):
         pass

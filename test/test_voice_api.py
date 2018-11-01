@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from ClickSend.Client.Api.voice_api import VoiceApi  # noqa: E501
+from clicksend.api.voice_api import VoiceApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestVoiceApi(unittest.TestCase):
     """VoiceApi unit test stubs"""
 
     def setUp(self):
-        self.api = ClickSend.Client.Api.voice_api.VoiceApi()  # noqa: E501
+        self.api = clicksend.api.voice_api.VoiceApi()  # noqa: E501
 
     def tearDown(self):
         pass

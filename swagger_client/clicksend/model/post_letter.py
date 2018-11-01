@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.ClickSend.Client.Model.post_recipient import PostRecipient  # noqa: F401,E501
+from swagger_client.clicksend.model.post_recipient import PostRecipient  # noqa: F401,E501
 
 
 class PostLetter(object):

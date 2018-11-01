@@ -30,9 +30,9 @@ Run the following command to generate the DLL
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using swagger_client.swagger_client.ClickSend.Client.Api;
+using swagger_client.swagger_client.clicksend.api;
 using swagger_client.Client;
-using swagger_client.swagger_client.ClickSend.Client.Model;
+using swagger_client.swagger_client.clicksend.model;
 ```
 <a name="packaging"></a>
 ## Packaging
@@ -53,9 +53,9 @@ Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-p
 ```csharp
 using System;
 using System.Diagnostics;
-using swagger_client.swagger_client.ClickSend.Client.Api;
+using swagger_client.swagger_client.clicksend.api;
 using swagger_client.Client;
-using swagger_client.swagger_client.ClickSend.Client.Model;
+using swagger_client.swagger_client.clicksend.model;
 
 namespace Example
 {

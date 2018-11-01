@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from ClickSend.Client.Api.detect_address_api import DetectAddressApi  # noqa: E501
+from clicksend.api.detect_address_api import DetectAddressApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestDetectAddressApi(unittest.TestCase):
     """DetectAddressApi unit test stubs"""
 
     def setUp(self):
-        self.api = ClickSend.Client.Api.detect_address_api.DetectAddressApi()  # noqa: E501
+        self.api = clicksend.api.detect_address_api.DetectAddressApi()  # noqa: E501
 
     def tearDown(self):
         pass
