@@ -1,4 +1,4 @@
-# swagger_client.SubaccountApi
+# clicksend_client.SubaccountApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,17 +23,17 @@ Delete a subaccount
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SubaccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SubaccountApi(clicksend_client.ApiClient(configuration))
 subaccount_id = 56 # int | ID of subaccount to delete
 
 try:
@@ -76,17 +76,17 @@ Get specific subaccount
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SubaccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SubaccountApi(clicksend_client.ApiClient(configuration))
 subaccount_id = 56 # int | ID of subaccount to get
 
 try:
@@ -129,19 +129,19 @@ Update subaccount
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SubaccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SubaccountApi(clicksend_client.ApiClient(configuration))
 subaccount_id = 56 # int | ID of subaccount to update
-subaccount = swagger_client.Subaccount() # Subaccount | Subaccount model
+subaccount = clicksend_client.Subaccount() # Subaccount | Subaccount model
 
 try:
     # Update subaccount
@@ -184,17 +184,17 @@ Get all subaccounts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SubaccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SubaccountApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -239,18 +239,18 @@ Create new subaccount
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SubaccountApi(swagger_client.ApiClient(configuration))
-subaccount = swagger_client.Subaccount() # Subaccount | Subaccount model
+api_instance = clicksend_client.SubaccountApi(clicksend_client.ApiClient(configuration))
+subaccount = clicksend_client.Subaccount() # Subaccount | Subaccount model
 
 try:
     # Create new subaccount
@@ -292,17 +292,17 @@ Regenerate an API Key
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SubaccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SubaccountApi(clicksend_client.ApiClient(configuration))
 subaccount_id = 56 # int | ID of subaccount to regenerate API key for
 
 try:

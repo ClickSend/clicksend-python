@@ -1,4 +1,4 @@
-# swagger_client.DetectAddressApi
+# clicksend_client.DetectAddressApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -18,17 +18,17 @@ Detects address in uploaded file.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.DetectAddressApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.DetectAddressApi(clicksend_client.ApiClient(configuration))
 content = 'content_example' # str | Base64-encoded file contents
 
 try:

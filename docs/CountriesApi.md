@@ -1,4 +1,4 @@
-# swagger_client.CountriesApi
+# clicksend_client.CountriesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -18,12 +18,12 @@ Get all countries
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CountriesApi()
+api_instance = clicksend_client.CountriesApi()
 
 try:
     # Get all country codes

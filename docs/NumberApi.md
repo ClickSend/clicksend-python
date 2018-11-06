@@ -1,4 +1,4 @@
-# swagger_client.NumberApi
+# clicksend_client.NumberApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,17 +20,17 @@ Buy dedicated number
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.NumberApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.NumberApi(clicksend_client.ApiClient(configuration))
 dedicated_number = 'dedicated_number_example' # str | Phone number to purchase
 
 try:
@@ -73,17 +73,17 @@ Get all availible dedicated numbers
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.NumberApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.NumberApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -128,17 +128,17 @@ Get all dedicated numbers by country
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.NumberApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.NumberApi(clicksend_client.ApiClient(configuration))
 country = 'country_example' # str | Country code to search
 search = 'search_example' # str | Your search pattern or query. (optional)
 search_type = 56 # int | Your strategy for searching, 0 = starts with, 1 = anywhere, 2 = ends with. (optional)

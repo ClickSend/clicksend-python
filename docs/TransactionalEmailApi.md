@@ -1,4 +1,4 @@
-# swagger_client.TransactionalEmailApi
+# clicksend_client.TransactionalEmailApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,17 +21,17 @@ Export all Transactional Email history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionalEmailApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.TransactionalEmailApi(clicksend_client.ApiClient(configuration))
 filename = 'filename_example' # str | Filename to download history as
 date_from = 56 # int | Start date (optional)
 date_to = 56 # int | End date (optional)
@@ -78,17 +78,17 @@ Get all transactional email history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionalEmailApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.TransactionalEmailApi(clicksend_client.ApiClient(configuration))
 date_from = 56 # int | Start date (optional)
 date_to = 56 # int | End date (optional)
 page = 1 # int | Page number (optional) (default to 1)
@@ -137,18 +137,18 @@ Get transactional email price
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionalEmailApi(swagger_client.ApiClient(configuration))
-email = swagger_client.Email() # Email | Email model
+api_instance = clicksend_client.TransactionalEmailApi(clicksend_client.ApiClient(configuration))
+email = clicksend_client.Email() # Email | Email model
 
 try:
     # Get transactional email price
@@ -190,18 +190,18 @@ Send transactional email
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionalEmailApi(swagger_client.ApiClient(configuration))
-email = swagger_client.Email() # Email | Email model
+api_instance = clicksend_client.TransactionalEmailApi(clicksend_client.ApiClient(configuration))
+email = clicksend_client.Email() # Email | Email model
 
 try:
     # Send transactional email

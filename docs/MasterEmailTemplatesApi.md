@@ -1,4 +1,4 @@
-# swagger_client.MasterEmailTemplatesApi
+# clicksend_client.MasterEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,17 +22,17 @@ Get all master email template categories
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MasterEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.MasterEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -77,17 +77,17 @@ Get specific master email template category
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MasterEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.MasterEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 category_id = 56 # int | Email category id
 
 try:
@@ -130,17 +130,17 @@ Get specific master email template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MasterEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.MasterEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 template_id = 56 # int | Email template id
 
 try:
@@ -183,17 +183,17 @@ Get all master email templates
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MasterEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.MasterEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -238,17 +238,17 @@ Get all master email templates in a category
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MasterEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.MasterEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 category_id = 56 # int | Email category id
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)

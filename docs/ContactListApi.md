@@ -1,4 +1,4 @@
-# swagger_client.ContactListApi
+# clicksend_client.ContactListApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -24,17 +24,17 @@ Delete a specific contact list
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.ContactListApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_id = 56 # int | List ID
 
 try:
@@ -77,17 +77,17 @@ Get specific contact list
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.ContactListApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_id = 56 # int | List ID
 
 try:
@@ -130,17 +130,17 @@ Update specific contact list
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.ContactListApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_id = 56 # int | Your list id
 list_name = 'list_name_example' # str | Your new list name
 
@@ -185,17 +185,17 @@ Get all contact lists
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.ContactListApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -240,19 +240,19 @@ Import contacts to list
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.ContactListApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_id = 56 # int | Your contact list id you want to access.
-file = swagger_client.ContactListImport() # ContactListImport | ContactListImport model
+file = clicksend_client.ContactListImport() # ContactListImport | ContactListImport model
 
 try:
     # Import contacts to list
@@ -295,17 +295,17 @@ Create new contact list
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.ContactListApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_name = 'list_name_example' # str | Your contact list name
 
 try:
@@ -348,17 +348,17 @@ Remove duplicate contacts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.ContactListApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_id = 56 # int | Your list id
 
 try:

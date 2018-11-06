@@ -1,4 +1,4 @@
-# swagger_client.PostReturnAddressApi
+# clicksend_client.PostReturnAddressApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,17 +22,17 @@ Delete specific post return address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostReturnAddressApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostReturnAddressApi(clicksend_client.ApiClient(configuration))
 return_address_id = 56 # int | Return address ID
 
 try:
@@ -75,17 +75,17 @@ Get specific post return address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostReturnAddressApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostReturnAddressApi(clicksend_client.ApiClient(configuration))
 return_address_id = 56 # int | Return address ID
 
 try:
@@ -128,19 +128,19 @@ Update post return address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostReturnAddressApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostReturnAddressApi(clicksend_client.ApiClient(configuration))
 return_address_id = 56 # int | Return address ID
-return_address = swagger_client.Address() # Address | Address model
+return_address = clicksend_client.Address() # Address | Address model
 
 try:
     # Update post return address
@@ -183,17 +183,17 @@ Get list of post return addresses
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostReturnAddressApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostReturnAddressApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -238,18 +238,18 @@ Create post return address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostReturnAddressApi(swagger_client.ApiClient(configuration))
-return_address = swagger_client.Address() # Address | Address model
+api_instance = clicksend_client.PostReturnAddressApi(clicksend_client.ApiClient(configuration))
+return_address = clicksend_client.Address() # Address | Address model
 
 try:
     # Create post return address

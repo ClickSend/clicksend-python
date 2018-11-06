@@ -1,4 +1,4 @@
-# swagger_client.PostLetterApi
+# clicksend_client.PostLetterApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,17 +21,17 @@ export post letter history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostLetterApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostLetterApi(clicksend_client.ApiClient(configuration))
 filename = 'filename_example' # str | Filename to export to
 
 try:
@@ -74,17 +74,17 @@ Get all post letter history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostLetterApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostLetterApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -129,18 +129,18 @@ Calculate post letter price
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostLetterApi(swagger_client.ApiClient(configuration))
-post_letter = swagger_client.PostLetter() # PostLetter | PostLetter model
+api_instance = clicksend_client.PostLetterApi(clicksend_client.ApiClient(configuration))
+post_letter = clicksend_client.PostLetter() # PostLetter | PostLetter model
 
 try:
     # Calculate post letter price
@@ -182,18 +182,18 @@ Send post letter
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostLetterApi(swagger_client.ApiClient(configuration))
-post_letter = swagger_client.PostLetter() # PostLetter | PostLetter model
+api_instance = clicksend_client.PostLetterApi(clicksend_client.ApiClient(configuration))
+post_letter = clicksend_client.PostLetter() # PostLetter | PostLetter model
 
 try:
     # Send post letter

@@ -1,4 +1,4 @@
-# swagger_client.EmailToSmsApi
+# clicksend_client.EmailToSmsApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -24,17 +24,17 @@ Get list of email to sms allowed addresses
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailToSmsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -79,18 +79,18 @@ Create email to sms allowed address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailToSmsApi(swagger_client.ApiClient(configuration))
-email_sms_address = swagger_client.EmailSMSAddress() # EmailSMSAddress | EmailSMSAddress model
+api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
+email_sms_address = clicksend_client.EmailSMSAddress() # EmailSMSAddress | EmailSMSAddress model
 
 try:
     # Create email to sms allowed address
@@ -132,17 +132,17 @@ Delete email to sms stripped string rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailToSmsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
 rule_id = 56 # int | Your rule id
 
 try:
@@ -185,17 +185,17 @@ Get email to sms stripped string rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailToSmsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
 rule_id = 56 # int | Your rule id
 
 try:
@@ -238,17 +238,17 @@ Create email to sms stripped string rules
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailToSmsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
 stripped_string = 'stripped_string_example' # str | String to be stripped.
 
 try:
@@ -291,17 +291,17 @@ Update email to sms stripped string rule
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailToSmsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
 rule_id = 56 # int | Your rule id
 stripped_string = 'stripped_string_example' # str | String to be stripped.
 
@@ -346,17 +346,17 @@ Get list of email to sms stripped string rules
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailToSmsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 

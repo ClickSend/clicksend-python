@@ -1,4 +1,4 @@
-# swagger_client.VoiceApi
+# clicksend_client.VoiceApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -25,17 +25,17 @@ Update all voice messages as cancelled
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Update all voice messages as cancelled
@@ -74,17 +74,17 @@ Update voice message status as cancelled
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
 message_id = 'message_id_example' # str | Your voice message id
 
 try:
@@ -127,17 +127,17 @@ Export voice history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
 filename = 'filename_example' # str | Filename to export to
 
 try:
@@ -180,17 +180,17 @@ Get all voice history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
 date_from = 56 # int | Timestamp (from) used to show records by date. (optional)
 date_to = 56 # int | Timestamp (to) used to show records by date (optional)
 page = 1 # int | Page number (optional) (default to 1)
@@ -239,17 +239,17 @@ Get all voice languages
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Get all voice languages
@@ -288,18 +288,18 @@ Calculate voice price
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
-voice_messages = swagger_client.VoiceMessageCollection() # VoiceMessageCollection | VoiceMessageCollection model
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
+voice_messages = clicksend_client.VoiceMessageCollection() # VoiceMessageCollection | VoiceMessageCollection model
 
 try:
     # Calculate voice price
@@ -341,17 +341,17 @@ Get all voice receipts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -396,18 +396,18 @@ Send a voice call
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.VoiceApi(swagger_client.ApiClient(configuration))
-voice_messages = swagger_client.VoiceMessageCollection() # VoiceMessageCollection | VoiceMessageCollection model
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
+voice_messages = clicksend_client.VoiceMessageCollection() # VoiceMessageCollection | VoiceMessageCollection model
 
 try:
     # Send voice message(s)

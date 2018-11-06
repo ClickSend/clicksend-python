@@ -1,4 +1,4 @@
-# swagger_client.AccountApi
+# clicksend_client.AccountApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -24,17 +24,17 @@ Get account details
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Get account information
@@ -73,18 +73,18 @@ Create An Account
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi(swagger_client.ApiClient(configuration))
-account = swagger_client.Account() # Account | Account model
+api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
+account = clicksend_client.Account() # Account | Account model
 
 try:
     # Create a new account
@@ -126,18 +126,18 @@ Send account activation token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi(swagger_client.ApiClient(configuration))
-account_verify = swagger_client.AccountVerify() # AccountVerify | Account details
+api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
+account_verify = clicksend_client.AccountVerify() # AccountVerify | Account details
 
 try:
     # Send account activation token
@@ -179,17 +179,17 @@ Verify new account
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
 activation_token = 56 # int | 
 
 try:
@@ -232,17 +232,17 @@ Forgot password
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
 username = 'username_example' # str | Username belonging to account
 
 try:
@@ -285,18 +285,18 @@ Verify forgot password
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi(swagger_client.ApiClient(configuration))
-verify_password = swagger_client.AccountForgotPasswordVerify() # AccountForgotPasswordVerify | verifyPassword data
+api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
+verify_password = clicksend_client.AccountForgotPasswordVerify() # AccountForgotPasswordVerify | verifyPassword data
 
 try:
     # Verify forgot password
@@ -338,12 +338,12 @@ Forgot username
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AccountApi()
+api_instance = clicksend_client.AccountApi()
 email = 'email_example' # str | Email belonging to account
 
 try:

@@ -1,4 +1,4 @@
-# swagger_client.StatisticsApi
+# clicksend_client.StatisticsApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,17 +20,17 @@ Get mms statistics
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.StatisticsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.StatisticsApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Get mms statistics
@@ -69,17 +69,17 @@ Get sms statistics
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.StatisticsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.StatisticsApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Get sms statistics
@@ -118,17 +118,17 @@ Get voice statistics
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.StatisticsApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.StatisticsApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Get voice statistics

@@ -1,4 +1,4 @@
-# swagger_client.UserEmailTemplatesApi
+# clicksend_client.UserEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,17 +22,17 @@ Delete user email template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.UserEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.UserEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 template_id = 56 # int | Email template id
 
 try:
@@ -75,17 +75,17 @@ Get specific user email templates
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.UserEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.UserEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 template_id = 56 # int | Email template id
 
 try:
@@ -128,18 +128,18 @@ Create email template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.UserEmailTemplatesApi(swagger_client.ApiClient(configuration))
-email_template = swagger_client.EmailTemplateNew() # EmailTemplateNew | Email template model
+api_instance = clicksend_client.UserEmailTemplatesApi(clicksend_client.ApiClient(configuration))
+email_template = clicksend_client.EmailTemplateNew() # EmailTemplateNew | Email template model
 
 try:
     # Create email template
@@ -181,19 +181,19 @@ Update email template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.UserEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.UserEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 template_id = 56 # int | Email template id
-email_template = swagger_client.EmailTemplateUpdate() # EmailTemplateUpdate | Email template model
+email_template = clicksend_client.EmailTemplateUpdate() # EmailTemplateUpdate | Email template model
 
 try:
     # Update email template
@@ -236,17 +236,17 @@ Get all user email templates
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.UserEmailTemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.UserEmailTemplatesApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 

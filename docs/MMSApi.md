@@ -1,4 +1,4 @@
-# swagger_client.MMSApi
+# clicksend_client.MMSApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -19,18 +19,18 @@ Get Price for MMS sent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MMSApi(swagger_client.ApiClient(configuration))
-mms_messages = swagger_client.MmsMessageCollection() # MmsMessageCollection | MmsMessageCollection model
+api_instance = clicksend_client.MMSApi(clicksend_client.ApiClient(configuration))
+mms_messages = clicksend_client.MmsMessageCollection() # MmsMessageCollection | MmsMessageCollection model
 
 try:
     # Get Price for MMS sent
@@ -72,18 +72,18 @@ Send MMS
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MMSApi(swagger_client.ApiClient(configuration))
-mms_messages = swagger_client.MmsMessageCollection() # MmsMessageCollection | MmsMessageCollection model
+api_instance = clicksend_client.MMSApi(clicksend_client.ApiClient(configuration))
+mms_messages = clicksend_client.MmsMessageCollection() # MmsMessageCollection | MmsMessageCollection model
 
 try:
     # Send MMS

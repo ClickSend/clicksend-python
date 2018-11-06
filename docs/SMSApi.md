@@ -1,4 +1,4 @@
-# swagger_client.SMSApi
+# clicksend_client.SMSApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -34,17 +34,17 @@ Update all scheduled message as cancelled
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Update all scheduled message as cancelled
@@ -83,17 +83,17 @@ Update scheduled message as cancelled
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 message_id = 'message_id_example' # str | The message ID you want to cancel
 
 try:
@@ -136,17 +136,17 @@ Export all sms history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 filename = 'filename_example' # str | Filename to download history as
 
 try:
@@ -189,17 +189,17 @@ Get all sms history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 date_from = 56 # int | Start date (optional)
 date_to = 56 # int | End date (optional)
 page = 1 # int | Page number (optional) (default to 1)
@@ -248,17 +248,17 @@ Get all inbound sms
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -303,17 +303,17 @@ Create inbound sms
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 url = 'url_example' # str | Your url
 
 try:
@@ -356,17 +356,17 @@ Mark all inbound SMS as read optionally before a certain date
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 date_before = 'date_before_example' # str | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
 
 try:
@@ -409,18 +409,18 @@ Calculate sms price
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
-sms_messages = swagger_client.SmsMessageCollection() # SmsMessageCollection | SmsMessageCollection model
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
+sms_messages = clicksend_client.SmsMessageCollection() # SmsMessageCollection | SmsMessageCollection model
 
 try:
     # Calculate sms price
@@ -462,17 +462,17 @@ Get a Specific Delivery Receipt
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 message_id = 'message_id_example' # str | Message ID
 
 try:
@@ -515,17 +515,17 @@ Get all delivery receipts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -570,17 +570,17 @@ Add a delivery receipt
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 url = 'url_example' # str | Your url
 
 try:
@@ -623,17 +623,17 @@ Mark delivery receipts as read
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 date_before = 'date_before_example' # str | Mark all as read before this timestamp (optional)
 
 try:
@@ -676,18 +676,18 @@ Send sms message(s)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
-sms_messages = swagger_client.SmsMessageCollection() # SmsMessageCollection | SmsMessageCollection model
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
+sms_messages = clicksend_client.SmsMessageCollection() # SmsMessageCollection | SmsMessageCollection model
 
 try:
     # Send sms message(s)
@@ -729,17 +729,17 @@ Delete sms template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 template_id = 56 # int | Template id
 
 try:
@@ -782,19 +782,19 @@ Update sms template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 template_id = 56 # int | Template id
-sms_template = swagger_client.SmsTemplate() # SmsTemplate | Template item
+sms_template = clicksend_client.SmsTemplate() # SmsTemplate | Template item
 
 try:
     # Update sms template
@@ -837,17 +837,17 @@ Get lists of all sms templates
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -892,18 +892,18 @@ Create sms template
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SMSApi(swagger_client.ApiClient(configuration))
-sms_template = swagger_client.SmsTemplate() # SmsTemplate | SmsTemplate model
+api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
+sms_template = clicksend_client.SmsTemplate() # SmsTemplate | SmsTemplate model
 
 try:
     # Create sms template

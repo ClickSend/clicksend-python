@@ -1,4 +1,4 @@
-# swagger_client.FAXDeliveryReceiptRulesApi
+# clicksend_client.FAXDeliveryReceiptRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,17 +22,17 @@ Delete fax delivery receipt automation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FAXDeliveryReceiptRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.FAXDeliveryReceiptRulesApi(clicksend_client.ApiClient(configuration))
 receipt_rule_id = 56 # int | Receipt rule id
 
 try:
@@ -75,17 +75,17 @@ Get specific fax delivery receipt automation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FAXDeliveryReceiptRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.FAXDeliveryReceiptRulesApi(clicksend_client.ApiClient(configuration))
 receipt_rule_id = 56 # int | Receipt rule id
 
 try:
@@ -128,18 +128,18 @@ Create fax delivery receipt automations
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FAXDeliveryReceiptRulesApi(swagger_client.ApiClient(configuration))
-delivery_receipt_rule = swagger_client.DeliveryReceiptRule() # DeliveryReceiptRule | fax delivery receipt rule model
+api_instance = clicksend_client.FAXDeliveryReceiptRulesApi(clicksend_client.ApiClient(configuration))
+delivery_receipt_rule = clicksend_client.DeliveryReceiptRule() # DeliveryReceiptRule | fax delivery receipt rule model
 
 try:
     # Create fax delivery receipt automations
@@ -181,19 +181,19 @@ Update fax delivery receipt automation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FAXDeliveryReceiptRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.FAXDeliveryReceiptRulesApi(clicksend_client.ApiClient(configuration))
 receipt_rule_id = 56 # int | Receipt rule id
-delivery_receipt_rule = swagger_client.DeliveryReceiptRule() # DeliveryReceiptRule | Delivery receipt rule model
+delivery_receipt_rule = clicksend_client.DeliveryReceiptRule() # DeliveryReceiptRule | Delivery receipt rule model
 
 try:
     # Update fax delivery receipt automation
@@ -236,17 +236,17 @@ Get all fax delivery receipt automations
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FAXDeliveryReceiptRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.FAXDeliveryReceiptRulesApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 

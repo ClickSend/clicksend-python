@@ -1,4 +1,4 @@
-# swagger_client.PostDirectMailApi
+# clicksend_client.PostDirectMailApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,17 +21,17 @@ Get direct mail campaigns
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostDirectMailApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostDirectMailApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -76,18 +76,18 @@ Calculate direct mail campaign price
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostDirectMailApi(swagger_client.ApiClient(configuration))
-post_direct_mail = swagger_client.PostDirectMail() # PostDirectMail | PostDirectMail model
+api_instance = clicksend_client.PostDirectMailApi(clicksend_client.ApiClient(configuration))
+post_direct_mail = clicksend_client.PostDirectMail() # PostDirectMail | PostDirectMail model
 
 try:
     # Calculate direct mail campaign price
@@ -129,18 +129,18 @@ Send direct mail campaign
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostDirectMailApi(swagger_client.ApiClient(configuration))
-post_direct_mail = swagger_client.PostDirectMail() # PostDirectMail | PostDirectMail model
+api_instance = clicksend_client.PostDirectMailApi(clicksend_client.ApiClient(configuration))
+post_direct_mail = clicksend_client.PostDirectMail() # PostDirectMail | PostDirectMail model
 
 try:
     # Send direct mail campaign
@@ -182,17 +182,17 @@ Search for a location
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostDirectMailApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostDirectMailApi(clicksend_client.ApiClient(configuration))
 country = 'country_example' # str | Country Code to search
 q = 'q_example' # str | Search term (e.g. post code, city name)
 page = 1 # int | Page number (optional) (default to 1)

@@ -1,4 +1,4 @@
-# swagger_client.PostPostcardApi
+# clicksend_client.PostPostcardApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,17 +21,17 @@ Export postcard history to a CSV file
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostPostcardApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostPostcardApi(clicksend_client.ApiClient(configuration))
 filename = 'filename_example' # str | Filename to export to
 
 try:
@@ -74,17 +74,17 @@ Retrieve the history of postcards sent or scheduled
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostPostcardApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.PostPostcardApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -129,18 +129,18 @@ Calculate price for sending one or more postcards
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostPostcardApi(swagger_client.ApiClient(configuration))
-post_postcards = swagger_client.PostPostcard() # PostPostcard | PostPostcard model
+api_instance = clicksend_client.PostPostcardApi(clicksend_client.ApiClient(configuration))
+post_postcards = clicksend_client.PostPostcard() # PostPostcard | PostPostcard model
 
 try:
     # Calculate price for sending one or more postcards
@@ -182,18 +182,18 @@ Send one or more postcards
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.PostPostcardApi(swagger_client.ApiClient(configuration))
-post_postcards = swagger_client.PostPostcard() # PostPostcard | PostPostcard model
+api_instance = clicksend_client.PostPostcardApi(clicksend_client.ApiClient(configuration))
+post_postcards = clicksend_client.PostPostcard() # PostPostcard | PostPostcard model
 
 try:
     # Send one or more postcards

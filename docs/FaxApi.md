@@ -1,4 +1,4 @@
-# swagger_client.FaxApi
+# clicksend_client.FaxApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,17 +22,17 @@ Get a list of Fax History.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FaxApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.FaxApi(clicksend_client.ApiClient(configuration))
 date_from = 56 # int | Customize result by setting from date (timestsamp) Example: 1457572619. (optional)
 date_to = 56 # int | Customize result by setting to date (timestamp) Example: 1457573000. (optional)
 q = 'q_example' # str | Custom query Example: status:Sent,status_code:201. (optional)
@@ -85,18 +85,18 @@ Calculate Total Price for Fax Messages sent
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FaxApi(swagger_client.ApiClient(configuration))
-fax_message = swagger_client.FaxMessageCollection() # FaxMessageCollection | FaxMessageCollection model
+api_instance = clicksend_client.FaxApi(clicksend_client.ApiClient(configuration))
+fax_message = clicksend_client.FaxMessageCollection() # FaxMessageCollection | FaxMessageCollection model
 
 try:
     # Calculate Total Price for Fax Messages sent
@@ -138,17 +138,17 @@ Get a single fax receipt based on message id.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FaxApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.FaxApi(clicksend_client.ApiClient(configuration))
 message_id = 'message_id_example' # str | ID of the message receipt to retrieve
 
 try:
@@ -191,17 +191,17 @@ Get List of Fax Receipts
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FaxApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.FaxApi(clicksend_client.ApiClient(configuration))
 
 try:
     # Get List of Fax Receipts
@@ -240,18 +240,18 @@ Send a fax using supplied supported file-types.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.FaxApi(swagger_client.ApiClient(configuration))
-fax_message = swagger_client.FaxMessageCollection() # FaxMessageCollection | FaxMessageCollection model
+api_instance = clicksend_client.FaxApi(clicksend_client.ApiClient(configuration))
+fax_message = clicksend_client.FaxMessageCollection() # FaxMessageCollection | FaxMessageCollection model
 
 try:
     # Send a fax using supplied supported file-types.

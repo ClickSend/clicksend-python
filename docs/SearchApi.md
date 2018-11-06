@@ -1,4 +1,4 @@
-# swagger_client.SearchApi
+# clicksend_client.SearchApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -18,17 +18,17 @@ Get list of searched contact list
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.SearchApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.SearchApi(clicksend_client.ApiClient(configuration))
 q = 'q_example' # str | Your keyword or query.
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)

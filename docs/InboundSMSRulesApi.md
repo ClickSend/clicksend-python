@@ -1,4 +1,4 @@
-# swagger_client.InboundSMSRulesApi
+# clicksend_client.InboundSMSRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,17 +22,17 @@ Delete inbound sms automation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.InboundSMSRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.InboundSMSRulesApi(clicksend_client.ApiClient(configuration))
 inbound_rule_id = 56 # int | Inbound rule id
 
 try:
@@ -75,17 +75,17 @@ Get specific inbound sms automation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.InboundSMSRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.InboundSMSRulesApi(clicksend_client.ApiClient(configuration))
 inbound_rule_id = 56 # int | Inbound rule id
 
 try:
@@ -128,18 +128,18 @@ Create new inbound sms automation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.InboundSMSRulesApi(swagger_client.ApiClient(configuration))
-inbound_sms_rule = swagger_client.InboundSMSRule() # InboundSMSRule | Inbound sms rule model
+api_instance = clicksend_client.InboundSMSRulesApi(clicksend_client.ApiClient(configuration))
+inbound_sms_rule = clicksend_client.InboundSMSRule() # InboundSMSRule | Inbound sms rule model
 
 try:
     # Create new inbound sms automation
@@ -181,19 +181,19 @@ Update inbound sms automation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.InboundSMSRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.InboundSMSRulesApi(clicksend_client.ApiClient(configuration))
 inbound_rule_id = 56 # int | Inbound rule id
-inbound_sms_rule = swagger_client.InboundSMSRule() # InboundSMSRule | Inbound sms rule model
+inbound_sms_rule = clicksend_client.InboundSMSRule() # InboundSMSRule | Inbound sms rule model
 
 try:
     # Update inbound sms automation
@@ -236,17 +236,17 @@ Get all inbound sms automations
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.InboundSMSRulesApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.InboundSMSRulesApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 

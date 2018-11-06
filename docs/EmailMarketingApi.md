@@ -1,4 +1,4 @@
-# swagger_client.EmailMarketingApi
+# clicksend_client.EmailMarketingApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -31,17 +31,17 @@ Get all email addresses
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -86,17 +86,17 @@ Create allowed Email Address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_address = 'email_address_example' # str | Email to be allowed.
 
 try:
@@ -139,17 +139,17 @@ Cancel email campaign
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_campaign_id = 56 # int | Allowed email campaign id
 
 try:
@@ -192,17 +192,17 @@ Get specific email campaign
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_campaign_id = 56 # int | Allowed email campaign id
 
 try:
@@ -245,17 +245,17 @@ Export specific email campaign history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_campaign_id = 56 # int | Allowed email campaign id
 date_from = 56 # int | Start date (optional)
 date_to = 56 # int | End date (optional)
@@ -302,17 +302,17 @@ Get specific email campaign history
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_campaign_id = 56 # int | Allowed email campaign id
 date_from = 56 # int | Start date (optional)
 date_to = 56 # int | End date (optional)
@@ -363,18 +363,18 @@ Send email campaign
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
-email_campaign = swagger_client.EmailCampaign() # EmailCampaign | Email model
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
+email_campaign = clicksend_client.EmailCampaign() # EmailCampaign | Email model
 
 try:
     # Send email campaign
@@ -416,18 +416,18 @@ Calculate email campaign price
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
-email_campaign = swagger_client.EmailCampaign() # EmailCampaign | Email model
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
+email_campaign = clicksend_client.EmailCampaign() # EmailCampaign | Email model
 
 try:
     # Calculate email campaign price
@@ -469,17 +469,17 @@ Edit email campaign
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_campaign_id = 56 # int | Allowed email campaign id
 
 try:
@@ -522,17 +522,17 @@ Get all email campaigns
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
@@ -577,17 +577,17 @@ Send verification token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_address_id = 56 # int | Allowed email address id
 
 try:
@@ -630,17 +630,17 @@ Delete specific email address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_address_id = 56 # int | Allowed email address id
 
 try:
@@ -683,17 +683,17 @@ Get specific email address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_address_id = 56 # int | Allowed email address id
 
 try:
@@ -736,17 +736,17 @@ Verify email address using verification token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import clicksend_client
+from clicksend_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BasicAuth
-configuration = swagger_client.Configuration()
+configuration = clicksend_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.EmailMarketingApi(swagger_client.ApiClient(configuration))
+api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
 email_address_id = 56 # int | Allowed email address id
 activation_token = 'activation_token_example' # str | Your activation token.
 
