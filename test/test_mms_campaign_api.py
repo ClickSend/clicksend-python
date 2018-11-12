@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.mms_campaign_api import MmsCampaignApi  # noqa: E501
+from clicksend_client.api.mms_campaign_api import MmsCampaignApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestMmsCampaignApi(unittest.TestCase):
     """MmsCampaignApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.mms_campaign_api.MmsCampaignApi()  # noqa: E501
+        self.api = clicksend_client.api.mms_campaign_api.MmsCampaignApi()  # noqa: E501
 
     def tearDown(self):
         pass

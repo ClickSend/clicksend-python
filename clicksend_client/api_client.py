@@ -24,7 +24,7 @@ import six
 from six.moves.urllib.parse import quote
 
 from clicksend_client.configuration import Configuration
-import clicksend_client.clicksend.model
+import clicksend_client.models
 from clicksend_client import rest
 
 
@@ -245,12 +245,12 @@ class ApiClient(object):
 
         if type(klass) == str:
             if klass.startswith('list['):
-                sub_kls = re.match(r'list\[(.*)\]', klass).group(1)
+                sub_kls = re.match('list\[(.*)\]', klass).group(1)
                 return [self.__deserialize(sub_data, sub_kls)
                         for sub_data in data]
 
             if klass.startswith('dict('):
-                sub_kls = re.match(r'dict\(([^,]*), (.*)\)', klass).group(2)
+                sub_kls = re.match('dict\(([^,]*), (.*)\)', klass).group(2)
                 return {k: self.__deserialize(v, sub_kls)
                         for k, v in six.iteritems(data)}
 
@@ -258,7 +258,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(clicksend_client.clicksend.model, klass)
+                klass = getattr(clicksend_client.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)
@@ -274,12 +274,12 @@ class ApiClient(object):
     def call_api(self, resource_path, method,
                  path_params=None, query_params=None, header_params=None,
                  body=None, post_params=None, files=None,
-                 response_type=None, auth_settings=None, async_req=None,
+                 response_type=None, auth_settings=None, async=None,
                  _return_http_data_only=None, collection_formats=None,
                  _preload_content=True, _request_timeout=None):
         """Makes the HTTP request (synchronous) and returns deserialized data.
 
-        To make an async request, set the async_req parameter.
+        To make an async request, set the async parameter.
 
         :param resource_path: Path to method endpoint.
         :param method: Method to call.
@@ -294,7 +294,7 @@ class ApiClient(object):
         :param response: Response data type.
         :param files dict: key -> filename, value -> filepath,
             for `multipart/form-data`.
-        :param async_req bool: execute request asynchronously
+        :param async bool: execute request asynchronously
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param collection_formats: dict of collection formats for path, query,
@@ -307,13 +307,13 @@ class ApiClient(object):
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
         :return:
-            If async_req parameter is True,
+            If async parameter is True,
             the request will be called asynchronously.
             The method will return the request thread.
-            If parameter async_req is False or missing,
+            If parameter async is False or missing,
             then the method will return the response directly.
         """
-        if not async_req:
+        if not async:
             return self.__call_api(resource_path, method,
                                    path_params, query_params, header_params,
                                    body, post_params, files,

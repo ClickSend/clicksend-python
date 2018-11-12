@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.clicksend.model.reseller_account_transfer_credit import ResellerAccountTransferCredit  # noqa: E501
+from clicksend_client.models.reseller_account_transfer_credit import ResellerAccountTransferCredit  # noqa: E501
 from clicksend_client.rest import ApiException
 
 

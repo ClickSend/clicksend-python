@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.inbound_sms_rules_api import InboundSMSRulesApi  # noqa: E501
+from clicksend_client.api.inbound_sms_rules_api import InboundSMSRulesApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestInboundSMSRulesApi(unittest.TestCase):
     """InboundSMSRulesApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.inbound_sms_rules_api.InboundSMSRulesApi()  # noqa: E501
+        self.api = clicksend_client.api.inbound_sms_rules_api.InboundSMSRulesApi()  # noqa: E501
 
     def tearDown(self):
         pass

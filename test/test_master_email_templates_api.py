@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.master_email_templates_api import MasterEmailTemplatesApi  # noqa: E501
+from clicksend_client.api.master_email_templates_api import MasterEmailTemplatesApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestMasterEmailTemplatesApi(unittest.TestCase):
     """MasterEmailTemplatesApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.master_email_templates_api.MasterEmailTemplatesApi()  # noqa: E501
+        self.api = clicksend_client.api.master_email_templates_api.MasterEmailTemplatesApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -1,0 +1,42 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from clicksend_client.api.account_api import AccountApi
+from clicksend_client.api.account_recharge_api import AccountRechargeApi
+from clicksend_client.api.contact_api import ContactApi
+from clicksend_client.api.contact_list_api import ContactListApi
+from clicksend_client.api.countries_api import CountriesApi
+from clicksend_client.api.delivery_issues_api import DeliveryIssuesApi
+from clicksend_client.api.detect_address_api import DetectAddressApi
+from clicksend_client.api.email_delivery_receipt_rules_api import EmailDeliveryReceiptRulesApi
+from clicksend_client.api.email_marketing_api import EmailMarketingApi
+from clicksend_client.api.email_to_sms_api import EmailToSmsApi
+from clicksend_client.api.fax_delivery_receipt_rules_api import FAXDeliveryReceiptRulesApi
+from clicksend_client.api.fax_api import FaxApi
+from clicksend_client.api.inbound_fax_rules_api import InboundFAXRulesApi
+from clicksend_client.api.inbound_sms_rules_api import InboundSMSRulesApi
+from clicksend_client.api.mms_api import MMSApi
+from clicksend_client.api.master_email_templates_api import MasterEmailTemplatesApi
+from clicksend_client.api.mms_campaign_api import MmsCampaignApi
+from clicksend_client.api.number_api import NumberApi
+from clicksend_client.api.post_direct_mail_api import PostDirectMailApi
+from clicksend_client.api.post_letter_api import PostLetterApi
+from clicksend_client.api.post_postcard_api import PostPostcardApi
+from clicksend_client.api.post_return_address_api import PostReturnAddressApi
+from clicksend_client.api.referral_account_api import ReferralAccountApi
+from clicksend_client.api.reseller_account_api import ResellerAccountApi
+from clicksend_client.api.sms_api import SMSApi
+from clicksend_client.api.sms_delivery_receipt_rules_api import SMSDeliveryReceiptRulesApi
+from clicksend_client.api.search_api import SearchApi
+from clicksend_client.api.sms_campaign_api import SmsCampaignApi
+from clicksend_client.api.statistics_api import StatisticsApi
+from clicksend_client.api.subaccount_api import SubaccountApi
+from clicksend_client.api.timezones_api import TimezonesApi
+from clicksend_client.api.transactional_email_api import TransactionalEmailApi
+from clicksend_client.api.transfer_credit_api import TransferCreditApi
+from clicksend_client.api.upload_api import UploadApi
+from clicksend_client.api.user_email_templates_api import UserEmailTemplatesApi
+from clicksend_client.api.voice_api import VoiceApi
+from clicksend_client.api.voice_delivery_receipt_rules_api import VoiceDeliveryReceiptRulesApi

@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.contact_api import ContactApi  # noqa: E501
+from clicksend_client.api.contact_api import ContactApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestContactApi(unittest.TestCase):
     """ContactApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.contact_api.ContactApi()  # noqa: E501
+        self.api = clicksend_client.api.contact_api.ContactApi()  # noqa: E501
 
     def tearDown(self):
         pass

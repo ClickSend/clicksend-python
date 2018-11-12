@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.clicksend.model.fax_message_collection import FaxMessageCollection  # noqa: E501
+from clicksend_client.models.fax_message_collection import FaxMessageCollection  # noqa: E501
 from clicksend_client.rest import ApiException
 
 

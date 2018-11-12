@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.voice_delivery_receipt_rules_api import VoiceDeliveryReceiptRulesApi  # noqa: E501
+from clicksend_client.api.voice_delivery_receipt_rules_api import VoiceDeliveryReceiptRulesApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestVoiceDeliveryReceiptRulesApi(unittest.TestCase):
     """VoiceDeliveryReceiptRulesApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.voice_delivery_receipt_rules_api.VoiceDeliveryReceiptRulesApi()  # noqa: E501
+        self.api = clicksend_client.api.voice_delivery_receipt_rules_api.VoiceDeliveryReceiptRulesApi()  # noqa: E501
 
     def tearDown(self):
         pass

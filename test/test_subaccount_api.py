@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.subaccount_api import SubaccountApi  # noqa: E501
+from clicksend_client.api.subaccount_api import SubaccountApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestSubaccountApi(unittest.TestCase):
     """SubaccountApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.subaccount_api.SubaccountApi()  # noqa: E501
+        self.api = clicksend_client.api.subaccount_api.SubaccountApi()  # noqa: E501
 
     def tearDown(self):
         pass

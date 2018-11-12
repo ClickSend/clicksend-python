@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.transfer_credit_api import TransferCreditApi  # noqa: E501
+from clicksend_client.api.transfer_credit_api import TransferCreditApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestTransferCreditApi(unittest.TestCase):
     """TransferCreditApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.transfer_credit_api.TransferCreditApi()  # noqa: E501
+        self.api = clicksend_client.api.transfer_credit_api.TransferCreditApi()  # noqa: E501
 
     def tearDown(self):
         pass

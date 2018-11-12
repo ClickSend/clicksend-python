@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.clicksend.model.post_postcard import PostPostcard  # noqa: E501
+from clicksend_client.models.post_postcard import PostPostcard  # noqa: E501
 from clicksend_client.rest import ApiException
 
 

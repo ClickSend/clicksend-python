@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.post_return_address_api import PostReturnAddressApi  # noqa: E501
+from clicksend_client.api.post_return_address_api import PostReturnAddressApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestPostReturnAddressApi(unittest.TestCase):
     """PostReturnAddressApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.post_return_address_api.PostReturnAddressApi()  # noqa: E501
+        self.api = clicksend_client.api.post_return_address_api.PostReturnAddressApi()  # noqa: E501
 
     def tearDown(self):
         pass

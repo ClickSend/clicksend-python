@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.clicksend.model.account_forgot_password_verify import AccountForgotPasswordVerify  # noqa: E501
+from clicksend_client.models.account_forgot_password_verify import AccountForgotPasswordVerify  # noqa: E501
 from clicksend_client.rest import ApiException
 
 

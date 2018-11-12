@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.clicksend.model.inbound_sms_rule import InboundSMSRule  # noqa: E501
+from clicksend_client.models.inbound_sms_rule import InboundSMSRule  # noqa: E501
 from clicksend_client.rest import ApiException
 
 

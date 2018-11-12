@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.clicksend.model.mms_message_collection import MmsMessageCollection  # noqa: E501
+from clicksend_client.models.mms_message_collection import MmsMessageCollection  # noqa: E501
 from clicksend_client.rest import ApiException
 
 

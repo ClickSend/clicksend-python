@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.clicksend.model.address import Address  # noqa: E501
+from clicksend_client.models.address import Address  # noqa: E501
 from clicksend_client.rest import ApiException
 
 

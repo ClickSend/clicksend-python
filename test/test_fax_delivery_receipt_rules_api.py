@@ -16,7 +16,7 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend.api.fax_delivery_receipt_rules_api import FAXDeliveryReceiptRulesApi  # noqa: E501
+from clicksend_client.api.fax_delivery_receipt_rules_api import FAXDeliveryReceiptRulesApi  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
@@ -24,7 +24,7 @@ class TestFAXDeliveryReceiptRulesApi(unittest.TestCase):
     """FAXDeliveryReceiptRulesApi unit test stubs"""
 
     def setUp(self):
-        self.api = clicksend.api.fax_delivery_receipt_rules_api.FAXDeliveryReceiptRulesApi()  # noqa: E501
+        self.api = clicksend_client.api.fax_delivery_receipt_rules_api.FAXDeliveryReceiptRulesApi()  # noqa: E501
 
     def tearDown(self):
         pass
