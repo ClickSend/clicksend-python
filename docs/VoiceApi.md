@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **voice_history_export_get**
-> file voice_history_export_get(filename)
+> str voice_history_export_get(filename)
 
 Export voice history
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**file**](file.md)
+**str**
 
 ### Authorization
 

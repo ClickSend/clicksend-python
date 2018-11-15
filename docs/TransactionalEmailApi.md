@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **email_history_export_get**
-> file email_history_export_get(filename, date_from=date_from, date_to=date_to)
+> str email_history_export_get(filename, date_from=date_from, date_to=date_to)
 
 Export all Transactional Email history
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**file**](file.md)
+**str**
 
 ### Authorization
 

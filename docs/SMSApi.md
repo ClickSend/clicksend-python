@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_history_export_get**
-> file sms_history_export_get(filename)
+> str sms_history_export_get(filename)
 
 Export all sms history
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**file**](file.md)
+**str**
 
 ### Authorization
 

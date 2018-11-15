@@ -234,7 +234,7 @@ class SMSApi(object):
 
         :param async_req bool
         :param str filename: Filename to download history as (required)
-        :return: file
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -256,7 +256,7 @@ class SMSApi(object):
 
         :param async_req bool
         :param str filename: Filename to download history as (required)
-        :return: file
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -314,7 +314,7 @@ class SMSApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='file',  # noqa: E501
+            response_type='str',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
