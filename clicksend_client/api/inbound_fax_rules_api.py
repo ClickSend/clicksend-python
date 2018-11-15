@@ -38,18 +38,18 @@ class InboundFAXRulesApi(object):
 
         Delete inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_delete(inbound_rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_delete(inbound_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_inbound_automation_delete_with_http_info(inbound_rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.fax_inbound_automation_delete_with_http_info(inbound_rule_id, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class InboundFAXRulesApi(object):
 
         Delete inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_delete_with_http_info(inbound_rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_delete_with_http_info(inbound_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
         :return: str
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class InboundFAXRulesApi(object):
         """
 
         all_params = ['inbound_rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class InboundFAXRulesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,18 +137,18 @@ class InboundFAXRulesApi(object):
 
         Get specific inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_get(inbound_rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_get(inbound_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_inbound_automation_get_with_http_info(inbound_rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.fax_inbound_automation_get_with_http_info(inbound_rule_id, **kwargs)  # noqa: E501
@@ -159,11 +159,11 @@ class InboundFAXRulesApi(object):
 
         Get specific inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_get_with_http_info(inbound_rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_get_with_http_info(inbound_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
         :return: str
                  If the method is called asynchronously,
@@ -171,7 +171,7 @@ class InboundFAXRulesApi(object):
         """
 
         all_params = ['inbound_rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class InboundFAXRulesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -236,18 +236,18 @@ class InboundFAXRulesApi(object):
 
         Create new inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_post(inbound_fax_rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_post(inbound_fax_rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_inbound_automation_post_with_http_info(inbound_fax_rule, **kwargs)  # noqa: E501
         else:
             (data) = self.fax_inbound_automation_post_with_http_info(inbound_fax_rule, **kwargs)  # noqa: E501
@@ -258,11 +258,11 @@ class InboundFAXRulesApi(object):
 
         Create new inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_post_with_http_info(inbound_fax_rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_post_with_http_info(inbound_fax_rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
                  If the method is called asynchronously,
@@ -270,7 +270,7 @@ class InboundFAXRulesApi(object):
         """
 
         all_params = ['inbound_fax_rule']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -324,7 +324,7 @@ class InboundFAXRulesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -335,11 +335,11 @@ class InboundFAXRulesApi(object):
 
         Update inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_put(inbound_rule_id, inbound_fax_rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_put(inbound_rule_id, inbound_fax_rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
         :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
@@ -347,7 +347,7 @@ class InboundFAXRulesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_inbound_automation_put_with_http_info(inbound_rule_id, inbound_fax_rule, **kwargs)  # noqa: E501
         else:
             (data) = self.fax_inbound_automation_put_with_http_info(inbound_rule_id, inbound_fax_rule, **kwargs)  # noqa: E501
@@ -358,11 +358,11 @@ class InboundFAXRulesApi(object):
 
         Update inbound fax automation  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automation_put_with_http_info(inbound_rule_id, inbound_fax_rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automation_put_with_http_info(inbound_rule_id, inbound_fax_rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
         :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
@@ -371,7 +371,7 @@ class InboundFAXRulesApi(object):
         """
 
         all_params = ['inbound_rule_id', 'inbound_fax_rule']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -431,7 +431,7 @@ class InboundFAXRulesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -442,11 +442,11 @@ class InboundFAXRulesApi(object):
 
         Get all inbound fax automations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automations_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automations_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -454,7 +454,7 @@ class InboundFAXRulesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_inbound_automations_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.fax_inbound_automations_get_with_http_info(**kwargs)  # noqa: E501
@@ -465,11 +465,11 @@ class InboundFAXRulesApi(object):
 
         Get all inbound fax automations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_inbound_automations_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_inbound_automations_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -478,7 +478,7 @@ class InboundFAXRulesApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -534,7 +534,7 @@ class InboundFAXRulesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -38,11 +38,11 @@ class MasterEmailTemplatesApi(object):
 
         Get all master email template categories  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_template_categories_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_template_categories_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -50,7 +50,7 @@ class MasterEmailTemplatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.master_email_template_categories_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.master_email_template_categories_get_with_http_info(**kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class MasterEmailTemplatesApi(object):
 
         Get all master email template categories  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_template_categories_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_template_categories_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -74,7 +74,7 @@ class MasterEmailTemplatesApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class MasterEmailTemplatesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class MasterEmailTemplatesApi(object):
 
         Get specific master email template category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_template_category_get(category_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_template_category_get(category_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int category_id: Email category id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.master_email_template_category_get_with_http_info(category_id, **kwargs)  # noqa: E501
         else:
             (data) = self.master_email_template_category_get_with_http_info(category_id, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class MasterEmailTemplatesApi(object):
 
         Get specific master email template category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_template_category_get_with_http_info(category_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_template_category_get_with_http_info(category_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int category_id: Email category id (required)
         :return: str
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class MasterEmailTemplatesApi(object):
         """
 
         all_params = ['category_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class MasterEmailTemplatesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -240,18 +240,18 @@ class MasterEmailTemplatesApi(object):
 
         Get specific master email template  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_template_get(template_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_template_get(template_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int template_id: Email template id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.master_email_template_get_with_http_info(template_id, **kwargs)  # noqa: E501
         else:
             (data) = self.master_email_template_get_with_http_info(template_id, **kwargs)  # noqa: E501
@@ -262,11 +262,11 @@ class MasterEmailTemplatesApi(object):
 
         Get specific master email template  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_template_get_with_http_info(template_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_template_get_with_http_info(template_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int template_id: Email template id (required)
         :return: str
                  If the method is called asynchronously,
@@ -274,7 +274,7 @@ class MasterEmailTemplatesApi(object):
         """
 
         all_params = ['template_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -328,7 +328,7 @@ class MasterEmailTemplatesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -339,11 +339,11 @@ class MasterEmailTemplatesApi(object):
 
         Get all master email templates  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_templates_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_templates_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -351,7 +351,7 @@ class MasterEmailTemplatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.master_email_templates_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.master_email_templates_get_with_http_info(**kwargs)  # noqa: E501
@@ -362,11 +362,11 @@ class MasterEmailTemplatesApi(object):
 
         Get all master email templates  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_templates_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_templates_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -375,7 +375,7 @@ class MasterEmailTemplatesApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -431,7 +431,7 @@ class MasterEmailTemplatesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -442,11 +442,11 @@ class MasterEmailTemplatesApi(object):
 
         Get all master email templates in a category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_templates_in_category_get(category_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_templates_in_category_get(category_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int category_id: Email category id (required)
         :param int page: Page number
         :param int limit: Number of records per page
@@ -455,7 +455,7 @@ class MasterEmailTemplatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.master_email_templates_in_category_get_with_http_info(category_id, **kwargs)  # noqa: E501
         else:
             (data) = self.master_email_templates_in_category_get_with_http_info(category_id, **kwargs)  # noqa: E501
@@ -466,11 +466,11 @@ class MasterEmailTemplatesApi(object):
 
         Get all master email templates in a category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.master_email_templates_in_category_get_with_http_info(category_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.master_email_templates_in_category_get_with_http_info(category_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int category_id: Email category id (required)
         :param int page: Page number
         :param int limit: Number of records per page
@@ -480,7 +480,7 @@ class MasterEmailTemplatesApi(object):
         """
 
         all_params = ['category_id', 'page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -542,7 +542,7 @@ class MasterEmailTemplatesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

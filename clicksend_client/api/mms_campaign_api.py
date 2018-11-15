@@ -38,18 +38,18 @@ class MmsCampaignApi(object):
 
         Get specific mms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaign_by_mms_campaign_id_get(mms_campaign_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaign_by_mms_campaign_id_get(mms_campaign_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int mms_campaign_id: ID of MMS campaign to retrieve (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.mms_campaign_by_mms_campaign_id_get_with_http_info(mms_campaign_id, **kwargs)  # noqa: E501
         else:
             (data) = self.mms_campaign_by_mms_campaign_id_get_with_http_info(mms_campaign_id, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class MmsCampaignApi(object):
 
         Get specific mms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaign_by_mms_campaign_id_get_with_http_info(mms_campaign_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaign_by_mms_campaign_id_get_with_http_info(mms_campaign_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int mms_campaign_id: ID of MMS campaign to retrieve (required)
         :return: str
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class MmsCampaignApi(object):
         """
 
         all_params = ['mms_campaign_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class MmsCampaignApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,11 +137,11 @@ class MmsCampaignApi(object):
 
         Update mms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_by_mms_campaign_id_put(mms_campaign_id, campaign, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_by_mms_campaign_id_put(mms_campaign_id, campaign, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int mms_campaign_id: ID of MMS campaign to update (required)
         :param MmsCampaign campaign: MmsCampaign model (required)
         :return: str
@@ -149,7 +149,7 @@ class MmsCampaignApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.mms_campaigns_by_mms_campaign_id_put_with_http_info(mms_campaign_id, campaign, **kwargs)  # noqa: E501
         else:
             (data) = self.mms_campaigns_by_mms_campaign_id_put_with_http_info(mms_campaign_id, campaign, **kwargs)  # noqa: E501
@@ -160,11 +160,11 @@ class MmsCampaignApi(object):
 
         Update mms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_by_mms_campaign_id_put_with_http_info(mms_campaign_id, campaign, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_by_mms_campaign_id_put_with_http_info(mms_campaign_id, campaign, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int mms_campaign_id: ID of MMS campaign to update (required)
         :param MmsCampaign campaign: MmsCampaign model (required)
         :return: str
@@ -173,7 +173,7 @@ class MmsCampaignApi(object):
         """
 
         all_params = ['mms_campaign_id', 'campaign']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -233,7 +233,7 @@ class MmsCampaignApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -244,18 +244,18 @@ class MmsCampaignApi(object):
 
         Cancel sms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_cancel_by_mms_campaign_id_put(mms_campaign_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_cancel_by_mms_campaign_id_put(mms_campaign_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int mms_campaign_id: ID of MMS Campaign to cancel (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.mms_campaigns_cancel_by_mms_campaign_id_put_with_http_info(mms_campaign_id, **kwargs)  # noqa: E501
         else:
             (data) = self.mms_campaigns_cancel_by_mms_campaign_id_put_with_http_info(mms_campaign_id, **kwargs)  # noqa: E501
@@ -266,11 +266,11 @@ class MmsCampaignApi(object):
 
         Cancel sms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_cancel_by_mms_campaign_id_put_with_http_info(mms_campaign_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_cancel_by_mms_campaign_id_put_with_http_info(mms_campaign_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int mms_campaign_id: ID of MMS Campaign to cancel (required)
         :return: str
                  If the method is called asynchronously,
@@ -278,7 +278,7 @@ class MmsCampaignApi(object):
         """
 
         all_params = ['mms_campaign_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -332,7 +332,7 @@ class MmsCampaignApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -343,11 +343,11 @@ class MmsCampaignApi(object):
 
         Get list of mms campaigns  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -355,7 +355,7 @@ class MmsCampaignApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.mms_campaigns_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.mms_campaigns_get_with_http_info(**kwargs)  # noqa: E501
@@ -366,11 +366,11 @@ class MmsCampaignApi(object):
 
         Get list of mms campaigns  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -379,7 +379,7 @@ class MmsCampaignApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -435,7 +435,7 @@ class MmsCampaignApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -446,18 +446,18 @@ class MmsCampaignApi(object):
 
         Calculate price for sms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_price_post(campaign, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_price_post(campaign, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param MmsCampaign campaign: MmsCampaign model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.mms_campaigns_price_post_with_http_info(campaign, **kwargs)  # noqa: E501
         else:
             (data) = self.mms_campaigns_price_post_with_http_info(campaign, **kwargs)  # noqa: E501
@@ -468,11 +468,11 @@ class MmsCampaignApi(object):
 
         Calculate price for sms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_price_post_with_http_info(campaign, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_price_post_with_http_info(campaign, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param MmsCampaign campaign: MmsCampaign model (required)
         :return: str
                  If the method is called asynchronously,
@@ -480,7 +480,7 @@ class MmsCampaignApi(object):
         """
 
         all_params = ['campaign']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -534,7 +534,7 @@ class MmsCampaignApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -545,18 +545,18 @@ class MmsCampaignApi(object):
 
         Create mms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_send_post(campaign, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_send_post(campaign, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param MmsCampaign campaign: MmsCampaign model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.mms_campaigns_send_post_with_http_info(campaign, **kwargs)  # noqa: E501
         else:
             (data) = self.mms_campaigns_send_post_with_http_info(campaign, **kwargs)  # noqa: E501
@@ -567,11 +567,11 @@ class MmsCampaignApi(object):
 
         Create mms campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.mms_campaigns_send_post_with_http_info(campaign, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.mms_campaigns_send_post_with_http_info(campaign, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param MmsCampaign campaign: MmsCampaign model (required)
         :return: str
                  If the method is called asynchronously,
@@ -579,7 +579,7 @@ class MmsCampaignApi(object):
         """
 
         all_params = ['campaign']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -633,7 +633,7 @@ class MmsCampaignApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

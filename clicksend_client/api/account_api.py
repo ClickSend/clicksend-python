@@ -38,17 +38,17 @@ class AccountApi(object):
 
         Get account details  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.account_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.account_get_with_http_info(**kwargs)  # noqa: E501
@@ -59,18 +59,18 @@ class AccountApi(object):
 
         Get account details  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -118,7 +118,7 @@ class AccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -129,18 +129,18 @@ class AccountApi(object):
 
         Create An Account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_post(account, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_post(account, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Account account: Account model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.account_post_with_http_info(account, **kwargs)  # noqa: E501
         else:
             (data) = self.account_post_with_http_info(account, **kwargs)  # noqa: E501
@@ -151,11 +151,11 @@ class AccountApi(object):
 
         Create An Account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_post_with_http_info(account, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_post_with_http_info(account, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Account account: Account model (required)
         :return: str
                  If the method is called asynchronously,
@@ -163,7 +163,7 @@ class AccountApi(object):
         """
 
         all_params = ['account']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -217,7 +217,7 @@ class AccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -228,18 +228,18 @@ class AccountApi(object):
 
         Send account activation token  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_verify_send_put(account_verify, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_verify_send_put(account_verify, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AccountVerify account_verify: Account details (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.account_verify_send_put_with_http_info(account_verify, **kwargs)  # noqa: E501
         else:
             (data) = self.account_verify_send_put_with_http_info(account_verify, **kwargs)  # noqa: E501
@@ -250,11 +250,11 @@ class AccountApi(object):
 
         Send account activation token  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_verify_send_put_with_http_info(account_verify, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_verify_send_put_with_http_info(account_verify, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AccountVerify account_verify: Account details (required)
         :return: str
                  If the method is called asynchronously,
@@ -262,7 +262,7 @@ class AccountApi(object):
         """
 
         all_params = ['account_verify']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -316,7 +316,7 @@ class AccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -327,18 +327,18 @@ class AccountApi(object):
 
         Verify new account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_verify_verify_by_activation_token_put(activation_token, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_verify_verify_by_activation_token_put(activation_token, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int activation_token:  (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.account_verify_verify_by_activation_token_put_with_http_info(activation_token, **kwargs)  # noqa: E501
         else:
             (data) = self.account_verify_verify_by_activation_token_put_with_http_info(activation_token, **kwargs)  # noqa: E501
@@ -349,11 +349,11 @@ class AccountApi(object):
 
         Verify new account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.account_verify_verify_by_activation_token_put_with_http_info(activation_token, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.account_verify_verify_by_activation_token_put_with_http_info(activation_token, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int activation_token:  (required)
         :return: str
                  If the method is called asynchronously,
@@ -361,7 +361,7 @@ class AccountApi(object):
         """
 
         all_params = ['activation_token']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -415,7 +415,7 @@ class AccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -426,18 +426,18 @@ class AccountApi(object):
 
         Forgot password  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.forgot_password_put(username, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.forgot_password_put(username, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str username: Username belonging to account (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.forgot_password_put_with_http_info(username, **kwargs)  # noqa: E501
         else:
             (data) = self.forgot_password_put_with_http_info(username, **kwargs)  # noqa: E501
@@ -448,11 +448,11 @@ class AccountApi(object):
 
         Forgot password  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.forgot_password_put_with_http_info(username, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.forgot_password_put_with_http_info(username, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str username: Username belonging to account (required)
         :return: str
                  If the method is called asynchronously,
@@ -460,7 +460,7 @@ class AccountApi(object):
         """
 
         all_params = ['username']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -514,7 +514,7 @@ class AccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -525,18 +525,18 @@ class AccountApi(object):
 
         Verify forgot password  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.forgot_password_verify_put(verify_password, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.forgot_password_verify_put(verify_password, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AccountForgotPasswordVerify verify_password: verifyPassword data (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.forgot_password_verify_put_with_http_info(verify_password, **kwargs)  # noqa: E501
         else:
             (data) = self.forgot_password_verify_put_with_http_info(verify_password, **kwargs)  # noqa: E501
@@ -547,11 +547,11 @@ class AccountApi(object):
 
         Verify forgot password  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.forgot_password_verify_put_with_http_info(verify_password, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.forgot_password_verify_put_with_http_info(verify_password, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AccountForgotPasswordVerify verify_password: verifyPassword data (required)
         :return: str
                  If the method is called asynchronously,
@@ -559,7 +559,7 @@ class AccountApi(object):
         """
 
         all_params = ['verify_password']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -613,7 +613,7 @@ class AccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -624,18 +624,18 @@ class AccountApi(object):
 
         Forgot username  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.forgot_username_put(email, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.forgot_username_put(email, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str email: Email belonging to account (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.forgot_username_put_with_http_info(email, **kwargs)  # noqa: E501
         else:
             (data) = self.forgot_username_put_with_http_info(email, **kwargs)  # noqa: E501
@@ -646,11 +646,11 @@ class AccountApi(object):
 
         Forgot username  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.forgot_username_put_with_http_info(email, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.forgot_username_put_with_http_info(email, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str email: Email belonging to account (required)
         :return: str
                  If the method is called asynchronously,
@@ -658,7 +658,7 @@ class AccountApi(object):
         """
 
         all_params = ['email']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -712,7 +712,7 @@ class AccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

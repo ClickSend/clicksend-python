@@ -38,18 +38,18 @@ class SubaccountApi(object):
 
         Delete a subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_by_subaccount_id_delete(subaccount_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_by_subaccount_id_delete(subaccount_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to delete (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.subaccounts_by_subaccount_id_delete_with_http_info(subaccount_id, **kwargs)  # noqa: E501
         else:
             (data) = self.subaccounts_by_subaccount_id_delete_with_http_info(subaccount_id, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class SubaccountApi(object):
 
         Delete a subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_by_subaccount_id_delete_with_http_info(subaccount_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_by_subaccount_id_delete_with_http_info(subaccount_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to delete (required)
         :return: str
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class SubaccountApi(object):
         """
 
         all_params = ['subaccount_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class SubaccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,18 +137,18 @@ class SubaccountApi(object):
 
         Get specific subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_by_subaccount_id_get(subaccount_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_by_subaccount_id_get(subaccount_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to get (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.subaccounts_by_subaccount_id_get_with_http_info(subaccount_id, **kwargs)  # noqa: E501
         else:
             (data) = self.subaccounts_by_subaccount_id_get_with_http_info(subaccount_id, **kwargs)  # noqa: E501
@@ -159,11 +159,11 @@ class SubaccountApi(object):
 
         Get specific subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_by_subaccount_id_get_with_http_info(subaccount_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_by_subaccount_id_get_with_http_info(subaccount_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to get (required)
         :return: str
                  If the method is called asynchronously,
@@ -171,7 +171,7 @@ class SubaccountApi(object):
         """
 
         all_params = ['subaccount_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class SubaccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -236,11 +236,11 @@ class SubaccountApi(object):
 
         Update subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_by_subaccount_id_put(subaccount_id, subaccount, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_by_subaccount_id_put(subaccount_id, subaccount, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to update (required)
         :param Subaccount subaccount: Subaccount model (required)
         :return: str
@@ -248,7 +248,7 @@ class SubaccountApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.subaccounts_by_subaccount_id_put_with_http_info(subaccount_id, subaccount, **kwargs)  # noqa: E501
         else:
             (data) = self.subaccounts_by_subaccount_id_put_with_http_info(subaccount_id, subaccount, **kwargs)  # noqa: E501
@@ -259,11 +259,11 @@ class SubaccountApi(object):
 
         Update subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_by_subaccount_id_put_with_http_info(subaccount_id, subaccount, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_by_subaccount_id_put_with_http_info(subaccount_id, subaccount, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to update (required)
         :param Subaccount subaccount: Subaccount model (required)
         :return: str
@@ -272,7 +272,7 @@ class SubaccountApi(object):
         """
 
         all_params = ['subaccount_id', 'subaccount']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -332,7 +332,7 @@ class SubaccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -343,11 +343,11 @@ class SubaccountApi(object):
 
         Get all subaccounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -355,7 +355,7 @@ class SubaccountApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.subaccounts_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.subaccounts_get_with_http_info(**kwargs)  # noqa: E501
@@ -366,11 +366,11 @@ class SubaccountApi(object):
 
         Get all subaccounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -379,7 +379,7 @@ class SubaccountApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -435,7 +435,7 @@ class SubaccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -446,18 +446,18 @@ class SubaccountApi(object):
 
         Create new subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_post(subaccount, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_post(subaccount, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Subaccount subaccount: Subaccount model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.subaccounts_post_with_http_info(subaccount, **kwargs)  # noqa: E501
         else:
             (data) = self.subaccounts_post_with_http_info(subaccount, **kwargs)  # noqa: E501
@@ -468,11 +468,11 @@ class SubaccountApi(object):
 
         Create new subaccount  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_post_with_http_info(subaccount, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_post_with_http_info(subaccount, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Subaccount subaccount: Subaccount model (required)
         :return: str
                  If the method is called asynchronously,
@@ -480,7 +480,7 @@ class SubaccountApi(object):
         """
 
         all_params = ['subaccount']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -534,7 +534,7 @@ class SubaccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -545,18 +545,18 @@ class SubaccountApi(object):
 
         Regenerate an API Key  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_regen_api_key_by_subaccount_id_put(subaccount_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_regen_api_key_by_subaccount_id_put(subaccount_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to regenerate API key for (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.subaccounts_regen_api_key_by_subaccount_id_put_with_http_info(subaccount_id, **kwargs)  # noqa: E501
         else:
             (data) = self.subaccounts_regen_api_key_by_subaccount_id_put_with_http_info(subaccount_id, **kwargs)  # noqa: E501
@@ -567,11 +567,11 @@ class SubaccountApi(object):
 
         Regenerate an API Key  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.subaccounts_regen_api_key_by_subaccount_id_put_with_http_info(subaccount_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.subaccounts_regen_api_key_by_subaccount_id_put_with_http_info(subaccount_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int subaccount_id: ID of subaccount to regenerate API key for (required)
         :return: str
                  If the method is called asynchronously,
@@ -579,7 +579,7 @@ class SubaccountApi(object):
         """
 
         all_params = ['subaccount_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -633,7 +633,7 @@ class SubaccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

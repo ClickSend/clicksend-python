@@ -38,11 +38,11 @@ class EmailToSmsApi(object):
 
         Get list of email to sms allowed addresses  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -50,7 +50,7 @@ class EmailToSmsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sms_email_sms_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.sms_email_sms_get_with_http_info(**kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class EmailToSmsApi(object):
 
         Get list of email to sms allowed addresses  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -74,7 +74,7 @@ class EmailToSmsApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class EmailToSmsApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class EmailToSmsApi(object):
 
         Create email to sms allowed address  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_post(email_sms_address, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_post(email_sms_address, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param EmailSMSAddress email_sms_address: EmailSMSAddress model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sms_email_sms_post_with_http_info(email_sms_address, **kwargs)  # noqa: E501
         else:
             (data) = self.sms_email_sms_post_with_http_info(email_sms_address, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class EmailToSmsApi(object):
 
         Create email to sms allowed address  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_post_with_http_info(email_sms_address, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_post_with_http_info(email_sms_address, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param EmailSMSAddress email_sms_address: EmailSMSAddress model (required)
         :return: str
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class EmailToSmsApi(object):
         """
 
         all_params = ['email_sms_address']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class EmailToSmsApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -240,18 +240,18 @@ class EmailToSmsApi(object):
 
         Delete email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_delete(rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_delete(rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int rule_id: Your rule id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sms_email_sms_stripped_string_delete_with_http_info(rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.sms_email_sms_stripped_string_delete_with_http_info(rule_id, **kwargs)  # noqa: E501
@@ -262,11 +262,11 @@ class EmailToSmsApi(object):
 
         Delete email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_delete_with_http_info(rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_delete_with_http_info(rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int rule_id: Your rule id (required)
         :return: str
                  If the method is called asynchronously,
@@ -274,7 +274,7 @@ class EmailToSmsApi(object):
         """
 
         all_params = ['rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -328,7 +328,7 @@ class EmailToSmsApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -339,18 +339,18 @@ class EmailToSmsApi(object):
 
         Get email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_get(rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_get(rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int rule_id: Your rule id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sms_email_sms_stripped_string_get_with_http_info(rule_id, **kwargs)  # noqa: E501
         else:
             (data) = self.sms_email_sms_stripped_string_get_with_http_info(rule_id, **kwargs)  # noqa: E501
@@ -361,11 +361,11 @@ class EmailToSmsApi(object):
 
         Get email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_get_with_http_info(rule_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_get_with_http_info(rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int rule_id: Your rule id (required)
         :return: str
                  If the method is called asynchronously,
@@ -373,7 +373,7 @@ class EmailToSmsApi(object):
         """
 
         all_params = ['rule_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -427,7 +427,7 @@ class EmailToSmsApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -438,18 +438,18 @@ class EmailToSmsApi(object):
 
         Create email to sms stripped string rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_post(stripped_string, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_post(stripped_string, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str stripped_string: String to be stripped. (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sms_email_sms_stripped_string_post_with_http_info(stripped_string, **kwargs)  # noqa: E501
         else:
             (data) = self.sms_email_sms_stripped_string_post_with_http_info(stripped_string, **kwargs)  # noqa: E501
@@ -460,11 +460,11 @@ class EmailToSmsApi(object):
 
         Create email to sms stripped string rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_post_with_http_info(stripped_string, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_post_with_http_info(stripped_string, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str stripped_string: String to be stripped. (required)
         :return: str
                  If the method is called asynchronously,
@@ -472,7 +472,7 @@ class EmailToSmsApi(object):
         """
 
         all_params = ['stripped_string']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -526,7 +526,7 @@ class EmailToSmsApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -537,11 +537,11 @@ class EmailToSmsApi(object):
 
         Update email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_put(rule_id, stripped_string, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_put(rule_id, stripped_string, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int rule_id: Your rule id (required)
         :param str stripped_string: String to be stripped. (required)
         :return: str
@@ -549,7 +549,7 @@ class EmailToSmsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sms_email_sms_stripped_string_put_with_http_info(rule_id, stripped_string, **kwargs)  # noqa: E501
         else:
             (data) = self.sms_email_sms_stripped_string_put_with_http_info(rule_id, stripped_string, **kwargs)  # noqa: E501
@@ -560,11 +560,11 @@ class EmailToSmsApi(object):
 
         Update email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_string_put_with_http_info(rule_id, stripped_string, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_string_put_with_http_info(rule_id, stripped_string, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int rule_id: Your rule id (required)
         :param str stripped_string: String to be stripped. (required)
         :return: str
@@ -573,7 +573,7 @@ class EmailToSmsApi(object):
         """
 
         all_params = ['rule_id', 'stripped_string']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -633,7 +633,7 @@ class EmailToSmsApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -644,11 +644,11 @@ class EmailToSmsApi(object):
 
         Get list of email to sms stripped string rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_strings_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_strings_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -656,7 +656,7 @@ class EmailToSmsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sms_email_sms_stripped_strings_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.sms_email_sms_stripped_strings_get_with_http_info(**kwargs)  # noqa: E501
@@ -667,11 +667,11 @@ class EmailToSmsApi(object):
 
         Get list of email to sms stripped string rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sms_email_sms_stripped_strings_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sms_email_sms_stripped_strings_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -680,7 +680,7 @@ class EmailToSmsApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -736,7 +736,7 @@ class EmailToSmsApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -38,11 +38,11 @@ class PostDirectMailApi(object):
 
         Get direct mail campaigns  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_campaigns_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_campaigns_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -50,7 +50,7 @@ class PostDirectMailApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.post_direct_mail_campaigns_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.post_direct_mail_campaigns_get_with_http_info(**kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class PostDirectMailApi(object):
 
         Get direct mail campaigns  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_campaigns_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_campaigns_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -74,7 +74,7 @@ class PostDirectMailApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class PostDirectMailApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class PostDirectMailApi(object):
 
         Calculate direct mail campaign price  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_campaigns_price_post(post_direct_mail, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_campaigns_price_post(post_direct_mail, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PostDirectMail post_direct_mail: PostDirectMail model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.post_direct_mail_campaigns_price_post_with_http_info(post_direct_mail, **kwargs)  # noqa: E501
         else:
             (data) = self.post_direct_mail_campaigns_price_post_with_http_info(post_direct_mail, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class PostDirectMailApi(object):
 
         Calculate direct mail campaign price  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_campaigns_price_post_with_http_info(post_direct_mail, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_campaigns_price_post_with_http_info(post_direct_mail, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PostDirectMail post_direct_mail: PostDirectMail model (required)
         :return: str
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class PostDirectMailApi(object):
         """
 
         all_params = ['post_direct_mail']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class PostDirectMailApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -240,18 +240,18 @@ class PostDirectMailApi(object):
 
         Send direct mail campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_campaigns_send_post(post_direct_mail, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_campaigns_send_post(post_direct_mail, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PostDirectMail post_direct_mail: PostDirectMail model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.post_direct_mail_campaigns_send_post_with_http_info(post_direct_mail, **kwargs)  # noqa: E501
         else:
             (data) = self.post_direct_mail_campaigns_send_post_with_http_info(post_direct_mail, **kwargs)  # noqa: E501
@@ -262,11 +262,11 @@ class PostDirectMailApi(object):
 
         Send direct mail campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_campaigns_send_post_with_http_info(post_direct_mail, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_campaigns_send_post_with_http_info(post_direct_mail, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PostDirectMail post_direct_mail: PostDirectMail model (required)
         :return: str
                  If the method is called asynchronously,
@@ -274,7 +274,7 @@ class PostDirectMailApi(object):
         """
 
         all_params = ['post_direct_mail']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -328,7 +328,7 @@ class PostDirectMailApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -339,11 +339,11 @@ class PostDirectMailApi(object):
 
         Search for a location  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_locations_search_by_country_get(country, q, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_locations_search_by_country_get(country, q, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str country: Country Code to search (required)
         :param str q: Search term (e.g. post code, city name) (required)
         :param int page: Page number
@@ -353,7 +353,7 @@ class PostDirectMailApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.post_direct_mail_locations_search_by_country_get_with_http_info(country, q, **kwargs)  # noqa: E501
         else:
             (data) = self.post_direct_mail_locations_search_by_country_get_with_http_info(country, q, **kwargs)  # noqa: E501
@@ -364,11 +364,11 @@ class PostDirectMailApi(object):
 
         Search for a location  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.post_direct_mail_locations_search_by_country_get_with_http_info(country, q, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_direct_mail_locations_search_by_country_get_with_http_info(country, q, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str country: Country Code to search (required)
         :param str q: Search term (e.g. post code, city name) (required)
         :param int page: Page number
@@ -379,7 +379,7 @@ class PostDirectMailApi(object):
         """
 
         all_params = ['country', 'q', 'page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -447,7 +447,7 @@ class PostDirectMailApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

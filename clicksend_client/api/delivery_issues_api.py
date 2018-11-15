@@ -38,11 +38,11 @@ class DeliveryIssuesApi(object):
 
         Get all delivery issues  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delivery_issues_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delivery_issues_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -50,7 +50,7 @@ class DeliveryIssuesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delivery_issues_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.delivery_issues_get_with_http_info(**kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class DeliveryIssuesApi(object):
 
         Get all delivery issues  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delivery_issues_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delivery_issues_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -74,7 +74,7 @@ class DeliveryIssuesApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class DeliveryIssuesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,18 +141,18 @@ class DeliveryIssuesApi(object):
 
         Create delivery Issue  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delivery_issues_post(delivery_issue, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delivery_issues_post(delivery_issue, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DeliveryIssue delivery_issue: DeliveryIssue model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delivery_issues_post_with_http_info(delivery_issue, **kwargs)  # noqa: E501
         else:
             (data) = self.delivery_issues_post_with_http_info(delivery_issue, **kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class DeliveryIssuesApi(object):
 
         Create delivery Issue  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delivery_issues_post_with_http_info(delivery_issue, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delivery_issues_post_with_http_info(delivery_issue, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DeliveryIssue delivery_issue: DeliveryIssue model (required)
         :return: str
                  If the method is called asynchronously,
@@ -175,7 +175,7 @@ class DeliveryIssuesApi(object):
         """
 
         all_params = ['delivery_issue']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class DeliveryIssuesApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -38,18 +38,18 @@ class ResellerAccountApi(object):
 
         Get Reseller clients Account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_by_client_user_id_get(client_user_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_by_client_user_id_get(client_user_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int client_user_id: User ID of client (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.reseller_accounts_by_client_user_id_get_with_http_info(client_user_id, **kwargs)  # noqa: E501
         else:
             (data) = self.reseller_accounts_by_client_user_id_get_with_http_info(client_user_id, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class ResellerAccountApi(object):
 
         Get Reseller clients Account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_by_client_user_id_get_with_http_info(client_user_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_by_client_user_id_get_with_http_info(client_user_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int client_user_id: User ID of client (required)
         :return: str
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class ResellerAccountApi(object):
         """
 
         all_params = ['client_user_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class ResellerAccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,11 +137,11 @@ class ResellerAccountApi(object):
 
         Update Reseller clients Account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_by_client_user_id_put(client_user_id, reseller_account, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_by_client_user_id_put(client_user_id, reseller_account, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int client_user_id: User ID of client (required)
         :param ResellerAccount reseller_account: ResellerAccount model (required)
         :return: str
@@ -149,7 +149,7 @@ class ResellerAccountApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.reseller_accounts_by_client_user_id_put_with_http_info(client_user_id, reseller_account, **kwargs)  # noqa: E501
         else:
             (data) = self.reseller_accounts_by_client_user_id_put_with_http_info(client_user_id, reseller_account, **kwargs)  # noqa: E501
@@ -160,11 +160,11 @@ class ResellerAccountApi(object):
 
         Update Reseller clients Account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_by_client_user_id_put_with_http_info(client_user_id, reseller_account, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_by_client_user_id_put_with_http_info(client_user_id, reseller_account, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int client_user_id: User ID of client (required)
         :param ResellerAccount reseller_account: ResellerAccount model (required)
         :return: str
@@ -173,7 +173,7 @@ class ResellerAccountApi(object):
         """
 
         all_params = ['client_user_id', 'reseller_account']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -233,7 +233,7 @@ class ResellerAccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -244,11 +244,11 @@ class ResellerAccountApi(object):
 
         Get list of reseller accounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -256,7 +256,7 @@ class ResellerAccountApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.reseller_accounts_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.reseller_accounts_get_with_http_info(**kwargs)  # noqa: E501
@@ -267,11 +267,11 @@ class ResellerAccountApi(object):
 
         Get list of reseller accounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -280,7 +280,7 @@ class ResellerAccountApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -336,7 +336,7 @@ class ResellerAccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -347,18 +347,18 @@ class ResellerAccountApi(object):
 
         Create reseller account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_post(reseller_account, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_post(reseller_account, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ResellerAccount reseller_account: ResellerAccount model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.reseller_accounts_post_with_http_info(reseller_account, **kwargs)  # noqa: E501
         else:
             (data) = self.reseller_accounts_post_with_http_info(reseller_account, **kwargs)  # noqa: E501
@@ -369,11 +369,11 @@ class ResellerAccountApi(object):
 
         Create reseller account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reseller_accounts_post_with_http_info(reseller_account, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reseller_accounts_post_with_http_info(reseller_account, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ResellerAccount reseller_account: ResellerAccount model (required)
         :return: str
                  If the method is called asynchronously,
@@ -381,7 +381,7 @@ class ResellerAccountApi(object):
         """
 
         all_params = ['reseller_account']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -435,7 +435,7 @@ class ResellerAccountApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

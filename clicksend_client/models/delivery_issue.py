@@ -43,7 +43,7 @@ class DeliveryIssue(object):
         'type': 'type',
         'description': 'description',
         'client_comments': 'client_comments',
-        'email_address': 'email-address'
+        'email_address': 'email_address'
     }
 
     discriminator_value_class_map = {

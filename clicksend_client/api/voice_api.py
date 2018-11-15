@@ -38,17 +38,17 @@ class VoiceApi(object):
 
         Update all voice messages as cancelled  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_cancel_all_put(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_cancel_all_put(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_cancel_all_put_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.voice_cancel_all_put_with_http_info(**kwargs)  # noqa: E501
@@ -59,18 +59,18 @@ class VoiceApi(object):
 
         Update all voice messages as cancelled  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_cancel_all_put_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_cancel_all_put_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -118,7 +118,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -129,18 +129,18 @@ class VoiceApi(object):
 
         Update voice message status as cancelled  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_cancel_by_message_id_put(message_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_cancel_by_message_id_put(message_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str message_id: Your voice message id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_cancel_by_message_id_put_with_http_info(message_id, **kwargs)  # noqa: E501
         else:
             (data) = self.voice_cancel_by_message_id_put_with_http_info(message_id, **kwargs)  # noqa: E501
@@ -151,11 +151,11 @@ class VoiceApi(object):
 
         Update voice message status as cancelled  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_cancel_by_message_id_put_with_http_info(message_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_cancel_by_message_id_put_with_http_info(message_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str message_id: Your voice message id (required)
         :return: str
                  If the method is called asynchronously,
@@ -163,7 +163,7 @@ class VoiceApi(object):
         """
 
         all_params = ['message_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -217,7 +217,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -228,18 +228,18 @@ class VoiceApi(object):
 
         Export voice history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_history_export_get(filename, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_history_export_get(filename, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str filename: Filename to export to (required)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_history_export_get_with_http_info(filename, **kwargs)  # noqa: E501
         else:
             (data) = self.voice_history_export_get_with_http_info(filename, **kwargs)  # noqa: E501
@@ -250,11 +250,11 @@ class VoiceApi(object):
 
         Export voice history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_history_export_get_with_http_info(filename, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_history_export_get_with_http_info(filename, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str filename: Filename to export to (required)
         :return: file
                  If the method is called asynchronously,
@@ -262,7 +262,7 @@ class VoiceApi(object):
         """
 
         all_params = ['filename']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -297,7 +297,7 @@ class VoiceApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json', 'application/csv'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -316,7 +316,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -327,11 +327,11 @@ class VoiceApi(object):
 
         Get all voice history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_history_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_history_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int date_from: Timestamp (from) used to show records by date.
         :param int date_to: Timestamp (to) used to show records by date
         :param int page: Page number
@@ -341,7 +341,7 @@ class VoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_history_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.voice_history_get_with_http_info(**kwargs)  # noqa: E501
@@ -352,11 +352,11 @@ class VoiceApi(object):
 
         Get all voice history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_history_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_history_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int date_from: Timestamp (from) used to show records by date.
         :param int date_to: Timestamp (to) used to show records by date
         :param int page: Page number
@@ -367,7 +367,7 @@ class VoiceApi(object):
         """
 
         all_params = ['date_from', 'date_to', 'page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -427,7 +427,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -438,17 +438,17 @@ class VoiceApi(object):
 
         Get all voice languages  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_lang_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_lang_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_lang_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.voice_lang_get_with_http_info(**kwargs)  # noqa: E501
@@ -459,18 +459,18 @@ class VoiceApi(object):
 
         Get all voice languages  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_lang_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_lang_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -518,7 +518,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -529,18 +529,18 @@ class VoiceApi(object):
 
         Calculate voice price  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_price_post(voice_messages, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_price_post(voice_messages, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param VoiceMessageCollection voice_messages: VoiceMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_price_post_with_http_info(voice_messages, **kwargs)  # noqa: E501
         else:
             (data) = self.voice_price_post_with_http_info(voice_messages, **kwargs)  # noqa: E501
@@ -551,11 +551,11 @@ class VoiceApi(object):
 
         Calculate voice price  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_price_post_with_http_info(voice_messages, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_price_post_with_http_info(voice_messages, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param VoiceMessageCollection voice_messages: VoiceMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
@@ -563,7 +563,7 @@ class VoiceApi(object):
         """
 
         all_params = ['voice_messages']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -617,7 +617,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -628,11 +628,11 @@ class VoiceApi(object):
 
         Get all voice receipts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_receipts_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_receipts_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -640,7 +640,7 @@ class VoiceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_receipts_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.voice_receipts_get_with_http_info(**kwargs)  # noqa: E501
@@ -651,11 +651,11 @@ class VoiceApi(object):
 
         Get all voice receipts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_receipts_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_receipts_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -664,7 +664,7 @@ class VoiceApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -720,7 +720,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -731,18 +731,18 @@ class VoiceApi(object):
 
         Send a voice call  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_send_post(voice_messages, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_send_post(voice_messages, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param VoiceMessageCollection voice_messages: VoiceMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.voice_send_post_with_http_info(voice_messages, **kwargs)  # noqa: E501
         else:
             (data) = self.voice_send_post_with_http_info(voice_messages, **kwargs)  # noqa: E501
@@ -753,11 +753,11 @@ class VoiceApi(object):
 
         Send a voice call  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.voice_send_post_with_http_info(voice_messages, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.voice_send_post_with_http_info(voice_messages, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param VoiceMessageCollection voice_messages: VoiceMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
@@ -765,7 +765,7 @@ class VoiceApi(object):
         """
 
         all_params = ['voice_messages']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -819,7 +819,7 @@ class VoiceApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

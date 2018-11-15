@@ -38,11 +38,11 @@ class FaxApi(object):
 
         Get a list of Fax History.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_history_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_history_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int date_from: Customize result by setting from date (timestsamp) Example: 1457572619.
         :param int date_to: Customize result by setting to date (timestamp) Example: 1457573000.
         :param str q: Custom query Example: status:Sent,status_code:201.
@@ -54,7 +54,7 @@ class FaxApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_history_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.fax_history_get_with_http_info(**kwargs)  # noqa: E501
@@ -65,11 +65,11 @@ class FaxApi(object):
 
         Get a list of Fax History.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_history_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_history_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int date_from: Customize result by setting from date (timestsamp) Example: 1457572619.
         :param int date_to: Customize result by setting to date (timestamp) Example: 1457573000.
         :param str q: Custom query Example: status:Sent,status_code:201.
@@ -82,7 +82,7 @@ class FaxApi(object):
         """
 
         all_params = ['date_from', 'date_to', 'q', 'order', 'page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -146,7 +146,7 @@ class FaxApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -157,18 +157,18 @@ class FaxApi(object):
 
         Calculate Total Price for Fax Messages sent  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_price_post(fax_message, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_price_post(fax_message, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param FaxMessageCollection fax_message: FaxMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_price_post_with_http_info(fax_message, **kwargs)  # noqa: E501
         else:
             (data) = self.fax_price_post_with_http_info(fax_message, **kwargs)  # noqa: E501
@@ -179,11 +179,11 @@ class FaxApi(object):
 
         Calculate Total Price for Fax Messages sent  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_price_post_with_http_info(fax_message, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_price_post_with_http_info(fax_message, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param FaxMessageCollection fax_message: FaxMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
@@ -191,7 +191,7 @@ class FaxApi(object):
         """
 
         all_params = ['fax_message']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -245,7 +245,7 @@ class FaxApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -256,18 +256,18 @@ class FaxApi(object):
 
         Get a single fax receipt based on message id.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_receipts_by_message_id_get(message_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_receipts_by_message_id_get(message_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str message_id: ID of the message receipt to retrieve (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_receipts_by_message_id_get_with_http_info(message_id, **kwargs)  # noqa: E501
         else:
             (data) = self.fax_receipts_by_message_id_get_with_http_info(message_id, **kwargs)  # noqa: E501
@@ -278,11 +278,11 @@ class FaxApi(object):
 
         Get a single fax receipt based on message id.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_receipts_by_message_id_get_with_http_info(message_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_receipts_by_message_id_get_with_http_info(message_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str message_id: ID of the message receipt to retrieve (required)
         :return: str
                  If the method is called asynchronously,
@@ -290,7 +290,7 @@ class FaxApi(object):
         """
 
         all_params = ['message_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -344,7 +344,7 @@ class FaxApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -355,17 +355,17 @@ class FaxApi(object):
 
         Get List of Fax Receipts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_receipts_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_receipts_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_receipts_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.fax_receipts_get_with_http_info(**kwargs)  # noqa: E501
@@ -376,18 +376,18 @@ class FaxApi(object):
 
         Get List of Fax Receipts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_receipts_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_receipts_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -435,7 +435,7 @@ class FaxApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -446,18 +446,18 @@ class FaxApi(object):
 
         Send a fax using supplied supported file-types.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_send_post(fax_message, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_send_post(fax_message, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param FaxMessageCollection fax_message: FaxMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.fax_send_post_with_http_info(fax_message, **kwargs)  # noqa: E501
         else:
             (data) = self.fax_send_post_with_http_info(fax_message, **kwargs)  # noqa: E501
@@ -468,11 +468,11 @@ class FaxApi(object):
 
         Send a fax using supplied supported file-types.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.fax_send_post_with_http_info(fax_message, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fax_send_post_with_http_info(fax_message, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param FaxMessageCollection fax_message: FaxMessageCollection model (required)
         :return: str
                  If the method is called asynchronously,
@@ -480,7 +480,7 @@ class FaxApi(object):
         """
 
         all_params = ['fax_message']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -534,7 +534,7 @@ class FaxApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

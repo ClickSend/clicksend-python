@@ -38,18 +38,18 @@ class NumberApi(object):
 
         Buy dedicated number  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.numbers_buy_by_dedicated_number_post(dedicated_number, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.numbers_buy_by_dedicated_number_post(dedicated_number, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str dedicated_number: Phone number to purchase (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.numbers_buy_by_dedicated_number_post_with_http_info(dedicated_number, **kwargs)  # noqa: E501
         else:
             (data) = self.numbers_buy_by_dedicated_number_post_with_http_info(dedicated_number, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class NumberApi(object):
 
         Buy dedicated number  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.numbers_buy_by_dedicated_number_post_with_http_info(dedicated_number, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.numbers_buy_by_dedicated_number_post_with_http_info(dedicated_number, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str dedicated_number: Phone number to purchase (required)
         :return: str
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class NumberApi(object):
         """
 
         all_params = ['dedicated_number']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class NumberApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,11 +137,11 @@ class NumberApi(object):
 
         Get all availible dedicated numbers  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.numbers_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.numbers_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -149,7 +149,7 @@ class NumberApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.numbers_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.numbers_get_with_http_info(**kwargs)  # noqa: E501
@@ -160,11 +160,11 @@ class NumberApi(object):
 
         Get all availible dedicated numbers  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.numbers_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.numbers_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -173,7 +173,7 @@ class NumberApi(object):
         """
 
         all_params = ['page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class NumberApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -240,11 +240,11 @@ class NumberApi(object):
 
         Get all dedicated numbers by country  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.numbers_search_by_country_get(country, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.numbers_search_by_country_get(country, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str country: Country code to search (required)
         :param str search: Your search pattern or query.
         :param int search_type: Your strategy for searching, 0 = starts with, 1 = anywhere, 2 = ends with.
@@ -255,7 +255,7 @@ class NumberApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.numbers_search_by_country_get_with_http_info(country, **kwargs)  # noqa: E501
         else:
             (data) = self.numbers_search_by_country_get_with_http_info(country, **kwargs)  # noqa: E501
@@ -266,11 +266,11 @@ class NumberApi(object):
 
         Get all dedicated numbers by country  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.numbers_search_by_country_get_with_http_info(country, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.numbers_search_by_country_get_with_http_info(country, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str country: Country code to search (required)
         :param str search: Your search pattern or query.
         :param int search_type: Your strategy for searching, 0 = starts with, 1 = anywhere, 2 = ends with.
@@ -282,7 +282,7 @@ class NumberApi(object):
         """
 
         all_params = ['country', 'search', 'search_type', 'page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -348,7 +348,7 @@ class NumberApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

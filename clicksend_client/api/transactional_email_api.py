@@ -38,11 +38,11 @@ class TransactionalEmailApi(object):
 
         Export all Transactional Email history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_history_export_get(filename, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_history_export_get(filename, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str filename: Filename to download history as (required)
         :param int date_from: Start date
         :param int date_to: End date
@@ -51,7 +51,7 @@ class TransactionalEmailApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.email_history_export_get_with_http_info(filename, **kwargs)  # noqa: E501
         else:
             (data) = self.email_history_export_get_with_http_info(filename, **kwargs)  # noqa: E501
@@ -62,11 +62,11 @@ class TransactionalEmailApi(object):
 
         Export all Transactional Email history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_history_export_get_with_http_info(filename, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_history_export_get_with_http_info(filename, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str filename: Filename to download history as (required)
         :param int date_from: Start date
         :param int date_to: End date
@@ -76,7 +76,7 @@ class TransactionalEmailApi(object):
         """
 
         all_params = ['filename', 'date_from', 'date_to']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -115,7 +115,7 @@ class TransactionalEmailApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json', 'application/csv'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -134,7 +134,7 @@ class TransactionalEmailApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -145,11 +145,11 @@ class TransactionalEmailApi(object):
 
         Get all transactional email history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_history_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_history_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int date_from: Start date
         :param int date_to: End date
         :param int page: Page number
@@ -159,7 +159,7 @@ class TransactionalEmailApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.email_history_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.email_history_get_with_http_info(**kwargs)  # noqa: E501
@@ -170,11 +170,11 @@ class TransactionalEmailApi(object):
 
         Get all transactional email history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_history_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_history_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int date_from: Start date
         :param int date_to: End date
         :param int page: Page number
@@ -185,7 +185,7 @@ class TransactionalEmailApi(object):
         """
 
         all_params = ['date_from', 'date_to', 'page', 'limit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -245,7 +245,7 @@ class TransactionalEmailApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -256,18 +256,18 @@ class TransactionalEmailApi(object):
 
         Get transactional email price  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_price_post(email, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_price_post(email, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Email email: Email model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.email_price_post_with_http_info(email, **kwargs)  # noqa: E501
         else:
             (data) = self.email_price_post_with_http_info(email, **kwargs)  # noqa: E501
@@ -278,11 +278,11 @@ class TransactionalEmailApi(object):
 
         Get transactional email price  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_price_post_with_http_info(email, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_price_post_with_http_info(email, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Email email: Email model (required)
         :return: str
                  If the method is called asynchronously,
@@ -290,7 +290,7 @@ class TransactionalEmailApi(object):
         """
 
         all_params = ['email']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -344,7 +344,7 @@ class TransactionalEmailApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -355,18 +355,18 @@ class TransactionalEmailApi(object):
 
         Send transactional email  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_send_post(email, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_send_post(email, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Email email: Email model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.email_send_post_with_http_info(email, **kwargs)  # noqa: E501
         else:
             (data) = self.email_send_post_with_http_info(email, **kwargs)  # noqa: E501
@@ -377,11 +377,11 @@ class TransactionalEmailApi(object):
 
         Send transactional email  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.email_send_post_with_http_info(email, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.email_send_post_with_http_info(email, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param Email email: Email model (required)
         :return: str
                  If the method is called asynchronously,
@@ -389,7 +389,7 @@ class TransactionalEmailApi(object):
         """
 
         all_params = ['email']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -443,7 +443,7 @@ class TransactionalEmailApi(object):
             files=local_var_files,
             response_type='str',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
