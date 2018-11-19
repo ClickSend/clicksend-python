@@ -857,45 +857,47 @@ class EmailMarketingApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def email_campaign_put(self, email_campaign_id, **kwargs):  # noqa: E501
+    def email_campaign_put(self, email_campaign_id, email_campaign, **kwargs):  # noqa: E501
         """Edit email campaign  # noqa: E501
 
         Edit email campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.email_campaign_put(email_campaign_id, async_req=True)
+        >>> thread = api.email_campaign_put(email_campaign_id, email_campaign, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int email_campaign_id: Allowed email campaign id (required)
+        :param EmailCampaign email_campaign: Email model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.email_campaign_put_with_http_info(email_campaign_id, **kwargs)  # noqa: E501
+            return self.email_campaign_put_with_http_info(email_campaign_id, email_campaign, **kwargs)  # noqa: E501
         else:
-            (data) = self.email_campaign_put_with_http_info(email_campaign_id, **kwargs)  # noqa: E501
+            (data) = self.email_campaign_put_with_http_info(email_campaign_id, email_campaign, **kwargs)  # noqa: E501
             return data
 
-    def email_campaign_put_with_http_info(self, email_campaign_id, **kwargs):  # noqa: E501
+    def email_campaign_put_with_http_info(self, email_campaign_id, email_campaign, **kwargs):  # noqa: E501
         """Edit email campaign  # noqa: E501
 
         Edit email campaign  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.email_campaign_put_with_http_info(email_campaign_id, async_req=True)
+        >>> thread = api.email_campaign_put_with_http_info(email_campaign_id, email_campaign, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int email_campaign_id: Allowed email campaign id (required)
+        :param EmailCampaign email_campaign: Email model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['email_campaign_id']  # noqa: E501
+        all_params = ['email_campaign_id', 'email_campaign']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -914,6 +916,10 @@ class EmailMarketingApi(object):
         if ('email_campaign_id' not in params or
                 params['email_campaign_id'] is None):
             raise ValueError("Missing the required parameter `email_campaign_id` when calling `email_campaign_put`")  # noqa: E501
+        # verify the required parameter 'email_campaign' is set
+        if ('email_campaign' not in params or
+                params['email_campaign'] is None):
+            raise ValueError("Missing the required parameter `email_campaign` when calling `email_campaign_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -929,6 +935,8 @@ class EmailMarketingApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'email_campaign' in params:
+            body_params = params['email_campaign']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -1143,7 +1151,7 @@ class EmailMarketingApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/email/address-verify/{email_address_id}/send', 'GET',
+            '/email/address-verify/{email_address_id}/send', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -1448,7 +1456,7 @@ class EmailMarketingApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/email/address-verify/{email_address_id}/verify/{activation_token}', 'GET',
+            '/email/address-verify/{email_address_id}/verify/{activation_token}', 'PUT',
             path_params,
             query_params,
             header_params,

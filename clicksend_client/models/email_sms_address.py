@@ -32,27 +32,32 @@ class EmailSMSAddress(object):
     """
     clicksend_types = {
         'email_address': 'str',
-        '_from': 'str'
+        '_from': 'str',
+        'subaccount_id': 'str'
     }
 
     attribute_map = {
         'email_address': 'email_address',
-        '_from': 'from'
+        '_from': 'from',
+        'subaccount_id': 'subaccount_id'
     }
 
     discriminator_value_class_map = {
         
     }
 
-    def __init__(self, email_address=None, _from=None):  # noqa: E501
+    def __init__(self, email_address=None, _from=None, subaccount_id=None):  # noqa: E501
         """EmailSMSAddress - a model defined in Swagger"""  # noqa: E501
 
         self._email_address = None
         self.__from = None
+        self._subaccount_id = None
         self.discriminator = 'classType'
 
         self.email_address = email_address
         self._from = _from
+        if subaccount_id is not None:
+            self.subaccount_id = subaccount_id
 
     @property
     def email_address(self):
@@ -103,6 +108,29 @@ class EmailSMSAddress(object):
             raise ValueError("Invalid value for `_from`, must not be `None`")  # noqa: E501
 
         self.__from = _from
+
+    @property
+    def subaccount_id(self):
+        """Gets the subaccount_id of this EmailSMSAddress.  # noqa: E501
+
+        Your subaccount id  # noqa: E501
+
+        :return: The subaccount_id of this EmailSMSAddress.  # noqa: E501
+        :rtype: str
+        """
+        return self._subaccount_id
+
+    @subaccount_id.setter
+    def subaccount_id(self, subaccount_id):
+        """Sets the subaccount_id of this EmailSMSAddress.
+
+        Your subaccount id  # noqa: E501
+
+        :param subaccount_id: The subaccount_id of this EmailSMSAddress.  # noqa: E501
+        :type: str
+        """
+
+        self._subaccount_id = subaccount_id
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

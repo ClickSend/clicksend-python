@@ -39,6 +39,7 @@ class Email(object):
         'cc': 'list[EmailRecipient]',
         'bcc': 'list[EmailRecipient]',
         '_from': 'list[EmailFrom]',
+        'subject': 'str',
         'body': 'str',
         'attachments': 'list[Attachment]',
         'schedule': 'float'
@@ -49,6 +50,7 @@ class Email(object):
         'cc': 'cc',
         'bcc': 'bcc',
         '_from': 'from',
+        'subject': 'subject',
         'body': 'body',
         'attachments': 'attachments',
         'schedule': 'schedule'
@@ -58,13 +60,14 @@ class Email(object):
         
     }
 
-    def __init__(self, to=None, cc=None, bcc=None, _from=None, body=None, attachments=None, schedule=None):  # noqa: E501
+    def __init__(self, to=None, cc=None, bcc=None, _from=None, subject=None, body=None, attachments=None, schedule=None):  # noqa: E501
         """Email - a model defined in Swagger"""  # noqa: E501
 
         self._to = None
         self._cc = None
         self._bcc = None
         self.__from = None
+        self._subject = None
         self._body = None
         self._attachments = None
         self._schedule = None
@@ -76,6 +79,8 @@ class Email(object):
         if bcc is not None:
             self.bcc = bcc
         self._from = _from
+        if subject is not None:
+            self.subject = subject
         self.body = body
         if attachments is not None:
             self.attachments = attachments
@@ -177,6 +182,29 @@ class Email(object):
             raise ValueError("Invalid value for `_from`, must not be `None`")  # noqa: E501
 
         self.__from = _from
+
+    @property
+    def subject(self):
+        """Gets the subject of this Email.  # noqa: E501
+
+        Subject of the email.  # noqa: E501
+
+        :return: The subject of this Email.  # noqa: E501
+        :rtype: str
+        """
+        return self._subject
+
+    @subject.setter
+    def subject(self, subject):
+        """Sets the subject of this Email.
+
+        Subject of the email.  # noqa: E501
+
+        :param subject: The subject of this Email.  # noqa: E501
+        :type: str
+        """
+
+        self._subject = subject
 
     @property
     def body(self):
