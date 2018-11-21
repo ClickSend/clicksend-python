@@ -43,7 +43,7 @@ class UploadApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str content: Base64-encoded file contents (required)
+        :param str content: Your base64 encoded file. (required)
         :param str convert:  (required)
         :return: str
                  If the method is called asynchronously,
@@ -66,7 +66,7 @@ class UploadApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str content: Base64-encoded file contents (required)
+        :param str content: Your base64 encoded file. (required)
         :param str convert:  (required)
         :return: str
                  If the method is called asynchronously,
@@ -109,17 +109,17 @@ class UploadApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'content' in params:
+            form_params.append(('content', params['content']))  # noqa: E501
 
         body_params = None
-        if 'content' in params:
-            body_params = params['content']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+            ['application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['BasicAuth']  # noqa: E501

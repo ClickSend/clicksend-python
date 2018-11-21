@@ -204,17 +204,17 @@ class EmailMarketingApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'email_address' in params:
+            form_params.append(('email_address', params['email_address']))  # noqa: E501
 
         body_params = None
-        if 'email_address' in params:
-            body_params = params['email_address']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+            ['application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['BasicAuth']  # noqa: E501

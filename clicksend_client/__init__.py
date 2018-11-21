@@ -77,6 +77,7 @@ from clicksend_client.models.email_template_new import EmailTemplateNew
 from clicksend_client.models.email_template_update import EmailTemplateUpdate
 from clicksend_client.models.fax_message import FaxMessage
 from clicksend_client.models.fax_message_collection import FaxMessageCollection
+from clicksend_client.models.fields import Fields
 from clicksend_client.models.inbound_fax_rule import InboundFAXRule
 from clicksend_client.models.inbound_sms_rule import InboundSMSRule
 from clicksend_client.models.mms_campaign import MmsCampaign

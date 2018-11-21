@@ -431,7 +431,7 @@ class AccountApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str username: Username belonging to account (required)
+        :param str username: Username belonging to account. (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -453,7 +453,7 @@ class AccountApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str username: Username belonging to account (required)
+        :param str username: Username belonging to account. (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -489,17 +489,17 @@ class AccountApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'username' in params:
+            form_params.append(('username', params['username']))  # noqa: E501
 
         body_params = None
-        if 'username' in params:
-            body_params = params['username']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+            ['application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['BasicAuth']  # noqa: E501
@@ -619,45 +619,47 @@ class AccountApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def forgot_username_put(self, email, **kwargs):  # noqa: E501
+    def forgot_username_put(self, **kwargs):  # noqa: E501
         """Forgot username  # noqa: E501
 
         Forgot username  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.forgot_username_put(email, async_req=True)
+        >>> thread = api.forgot_username_put(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str email: Email belonging to account (required)
+        :param str email: Email belonging to account.
+        :param str phone_number: Phone number belonging to account.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.forgot_username_put_with_http_info(email, **kwargs)  # noqa: E501
+            return self.forgot_username_put_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.forgot_username_put_with_http_info(email, **kwargs)  # noqa: E501
+            (data) = self.forgot_username_put_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def forgot_username_put_with_http_info(self, email, **kwargs):  # noqa: E501
+    def forgot_username_put_with_http_info(self, **kwargs):  # noqa: E501
         """Forgot username  # noqa: E501
 
         Forgot username  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.forgot_username_put_with_http_info(email, async_req=True)
+        >>> thread = api.forgot_username_put_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str email: Email belonging to account (required)
+        :param str email: Email belonging to account.
+        :param str phone_number: Phone number belonging to account.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['email']  # noqa: E501
+        all_params = ['email', 'phone_number']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -672,10 +674,6 @@ class AccountApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'email' is set
-        if ('email' not in params or
-                params['email'] is None):
-            raise ValueError("Missing the required parameter `email` when calling `forgot_username_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -687,17 +685,19 @@ class AccountApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'email' in params:
+            form_params.append(('email', params['email']))  # noqa: E501
+        if 'phone_number' in params:
+            form_params.append(('phone_number', params['phone_number']))  # noqa: E501
 
         body_params = None
-        if 'email' in params:
-            body_params = params['email']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+            ['application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501

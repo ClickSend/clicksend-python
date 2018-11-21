@@ -29,7 +29,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.UploadApi(clicksend_client.ApiClient(configuration))
-content = 'content_example' # str | Base64-encoded file contents
+content = 'content_example' # str | Your base64 encoded file.
 convert = 'convert_example' # str | 
 
 try:
@@ -44,7 +44,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **str**| Base64-encoded file contents | 
+ **content** | **str**| Your base64 encoded file. | 
  **convert** | **str**|  | 
 
 ### Return type
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

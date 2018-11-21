@@ -647,45 +647,47 @@ class ContactListApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def lists_remove_duplicates_by_list_id_put(self, list_id, **kwargs):  # noqa: E501
+    def lists_remove_duplicates_by_list_id_put(self, list_id, fields, **kwargs):  # noqa: E501
         """Remove duplicate contacts  # noqa: E501
 
         Remove duplicate contacts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.lists_remove_duplicates_by_list_id_put(list_id, async_req=True)
+        >>> thread = api.lists_remove_duplicates_by_list_id_put(list_id, fields, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int list_id: Your list id (required)
+        :param Fields fields: Fields model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.lists_remove_duplicates_by_list_id_put_with_http_info(list_id, **kwargs)  # noqa: E501
+            return self.lists_remove_duplicates_by_list_id_put_with_http_info(list_id, fields, **kwargs)  # noqa: E501
         else:
-            (data) = self.lists_remove_duplicates_by_list_id_put_with_http_info(list_id, **kwargs)  # noqa: E501
+            (data) = self.lists_remove_duplicates_by_list_id_put_with_http_info(list_id, fields, **kwargs)  # noqa: E501
             return data
 
-    def lists_remove_duplicates_by_list_id_put_with_http_info(self, list_id, **kwargs):  # noqa: E501
+    def lists_remove_duplicates_by_list_id_put_with_http_info(self, list_id, fields, **kwargs):  # noqa: E501
         """Remove duplicate contacts  # noqa: E501
 
         Remove duplicate contacts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.lists_remove_duplicates_by_list_id_put_with_http_info(list_id, async_req=True)
+        >>> thread = api.lists_remove_duplicates_by_list_id_put_with_http_info(list_id, fields, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int list_id: Your list id (required)
+        :param Fields fields: Fields model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['list_id']  # noqa: E501
+        all_params = ['list_id', 'fields']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -704,6 +706,10 @@ class ContactListApi(object):
         if ('list_id' not in params or
                 params['list_id'] is None):
             raise ValueError("Missing the required parameter `list_id` when calling `lists_remove_duplicates_by_list_id_put`")  # noqa: E501
+        # verify the required parameter 'fields' is set
+        if ('fields' not in params or
+                params['fields'] is None):
+            raise ValueError("Missing the required parameter `fields` when calling `lists_remove_duplicates_by_list_id_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -719,6 +725,8 @@ class ContactListApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'fields' in params:
+            body_params = params['fields']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

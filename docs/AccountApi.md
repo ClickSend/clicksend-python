@@ -243,7 +243,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
-username = 'username_example' # str | Username belonging to account
+username = 'username_example' # str | Username belonging to account.
 
 try:
     # Forgot password
@@ -257,7 +257,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username belonging to account | 
+ **username** | **str**| Username belonging to account. | 
 
 ### Return type
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forgot_username_put**
-> str forgot_username_put(email)
+> str forgot_username_put(email=email, phone_number=phone_number)
 
 Forgot username
 
@@ -344,11 +344,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = clicksend_client.AccountApi()
-email = 'email_example' # str | Email belonging to account
+email = 'email_example' # str | Email belonging to account. (optional)
+phone_number = 'phone_number_example' # str | Phone number belonging to account. (optional)
 
 try:
     # Forgot username
-    api_response = api_instance.forgot_username_put(email)
+    api_response = api_instance.forgot_username_put(email=email, phone_number=phone_number)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountApi->forgot_username_put: %s\n" % e)
@@ -358,7 +359,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **str**| Email belonging to account | 
+ **email** | **str**| Email belonging to account. | [optional] 
+ **phone_number** | **str**| Phone number belonging to account. | [optional] 
 
 ### Return type
 
@@ -370,7 +372,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

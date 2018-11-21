@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_remove_duplicates_by_list_id_put**
-> str lists_remove_duplicates_by_list_id_put(list_id)
+> str lists_remove_duplicates_by_list_id_put(list_id, fields)
 
 Remove duplicate contacts
 
@@ -360,10 +360,11 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_id = 56 # int | Your list id
+fields = clicksend_client.Fields() # Fields | Fields model
 
 try:
     # Remove duplicate contacts
-    api_response = api_instance.lists_remove_duplicates_by_list_id_put(list_id)
+    api_response = api_instance.lists_remove_duplicates_by_list_id_put(list_id, fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ContactListApi->lists_remove_duplicates_by_list_id_put: %s\n" % e)
@@ -374,6 +375,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list_id** | **int**| Your list id | 
+ **fields** | [**Fields**](Fields.md)| Fields model | 
 
 ### Return type
 

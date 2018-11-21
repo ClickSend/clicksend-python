@@ -31,12 +31,12 @@ class EmailFrom(object):
                             and the value is json key in definition.
     """
     clicksend_types = {
-        'email': 'str',
+        'email_address_id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
-        'email': 'email',
+        'email_address_id': 'email_address_id',
         'name': 'name'
     }
 
@@ -44,41 +44,41 @@ class EmailFrom(object):
         
     }
 
-    def __init__(self, email=None, name=None):  # noqa: E501
+    def __init__(self, email_address_id=None, name=None):  # noqa: E501
         """EmailFrom - a model defined in Swagger"""  # noqa: E501
 
-        self._email = None
+        self._email_address_id = None
         self._name = None
         self.discriminator = 'classType'
 
-        self.email = email
+        self.email_address_id = email_address_id
         if name is not None:
             self.name = name
 
     @property
-    def email(self):
-        """Gets the email of this EmailFrom.  # noqa: E501
+    def email_address_id(self):
+        """Gets the email_address_id of this EmailFrom.  # noqa: E501
 
-        Email of the recipient.  # noqa: E501
+        Email address id of the recipient.  # noqa: E501
 
-        :return: The email of this EmailFrom.  # noqa: E501
+        :return: The email_address_id of this EmailFrom.  # noqa: E501
         :rtype: str
         """
-        return self._email
+        return self._email_address_id
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this EmailFrom.
+    @email_address_id.setter
+    def email_address_id(self, email_address_id):
+        """Sets the email_address_id of this EmailFrom.
 
-        Email of the recipient.  # noqa: E501
+        Email address id of the recipient.  # noqa: E501
 
-        :param email: The email of this EmailFrom.  # noqa: E501
+        :param email_address_id: The email_address_id of this EmailFrom.  # noqa: E501
         :type: str
         """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
+        if email_address_id is None:
+            raise ValueError("Invalid value for `email_address_id`, must not be `None`")  # noqa: E501
 
-        self._email = email
+        self._email_address_id = email_address_id
 
     @property
     def name(self):

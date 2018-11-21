@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_email_sms_stripped_string_post**
-> str sms_email_sms_stripped_string_post(stripped_string)
+> str sms_email_sms_stripped_string_post(strip_string)
 
 Create email to sms stripped string rule
 
@@ -249,11 +249,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
-stripped_string = 'stripped_string_example' # str | String to be stripped.
+strip_string = 'strip_string_example' # str | String to be stripped.
 
 try:
     # Create email to sms stripped string rule
-    api_response = api_instance.sms_email_sms_stripped_string_post(stripped_string)
+    api_response = api_instance.sms_email_sms_stripped_string_post(strip_string)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_post: %s\n" % e)
@@ -263,7 +263,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripped_string** | **str**| String to be stripped. | 
+ **strip_string** | **str**| String to be stripped. | 
 
 ### Return type
 
@@ -275,13 +275,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_email_sms_stripped_string_put**
-> str sms_email_sms_stripped_string_put(rule_id, stripped_string)
+> str sms_email_sms_stripped_string_put(strip_string, rule_id)
 
 Update email to sms stripped string rule
 
@@ -302,12 +302,12 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
+strip_string = 'strip_string_example' # str | String to be stripped.
 rule_id = 56 # int | Your rule id
-stripped_string = 'stripped_string_example' # str | String to be stripped.
 
 try:
     # Update email to sms stripped string rule
-    api_response = api_instance.sms_email_sms_stripped_string_put(rule_id, stripped_string)
+    api_response = api_instance.sms_email_sms_stripped_string_put(strip_string, rule_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_put: %s\n" % e)
@@ -317,8 +317,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **strip_string** | **str**| String to be stripped. | 
  **rule_id** | **int**| Your rule id | 
- **stripped_string** | **str**| String to be stripped. | 
 
 ### Return type
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
