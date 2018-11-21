@@ -546,7 +546,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str url: Your url. (required)
+        :param Url url: Url model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -568,7 +568,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str url: Your url. (required)
+        :param Url url: Url model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -604,17 +604,17 @@ class SMSApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'url' in params:
-            form_params.append(('url', params['url']))  # noqa: E501
 
         body_params = None
+        if 'url' in params:
+            body_params = params['url']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/x-www-form-urlencoded'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['BasicAuth']  # noqa: E501
@@ -1041,7 +1041,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str url: Your url. (required)
+        :param Url url: Url model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1063,7 +1063,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str url: Your url. (required)
+        :param Url url: Url model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1099,17 +1099,17 @@ class SMSApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'url' in params:
-            form_params.append(('url', params['url']))  # noqa: E501
 
         body_params = None
+        if 'url' in params:
+            body_params = params['url']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/x-www-form-urlencoded'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['BasicAuth']  # noqa: E501

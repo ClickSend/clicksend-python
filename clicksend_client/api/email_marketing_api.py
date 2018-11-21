@@ -136,39 +136,39 @@ class EmailMarketingApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def allowed_email_address_post(self, email_address, **kwargs):  # noqa: E501
+    def allowed_email_address_post(self, **kwargs):  # noqa: E501
         """Create allowed Email Address  # noqa: E501
 
         Create allowed Email Address  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.allowed_email_address_post(email_address, async_req=True)
+        >>> thread = api.allowed_email_address_post(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str email_address: Email to be allowed. (required)
+        :param EmailAddress email_address:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.allowed_email_address_post_with_http_info(email_address, **kwargs)  # noqa: E501
+            return self.allowed_email_address_post_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.allowed_email_address_post_with_http_info(email_address, **kwargs)  # noqa: E501
+            (data) = self.allowed_email_address_post_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def allowed_email_address_post_with_http_info(self, email_address, **kwargs):  # noqa: E501
+    def allowed_email_address_post_with_http_info(self, **kwargs):  # noqa: E501
         """Create allowed Email Address  # noqa: E501
 
         Create allowed Email Address  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.allowed_email_address_post_with_http_info(email_address, async_req=True)
+        >>> thread = api.allowed_email_address_post_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str email_address: Email to be allowed. (required)
+        :param EmailAddress email_address:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -189,10 +189,6 @@ class EmailMarketingApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'email_address' is set
-        if ('email_address' not in params or
-                params['email_address'] is None):
-            raise ValueError("Missing the required parameter `email_address` when calling `allowed_email_address_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -204,17 +200,17 @@ class EmailMarketingApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'email_address' in params:
-            form_params.append(('email_address', params['email_address']))  # noqa: E501
 
         body_params = None
+        if 'email_address' in params:
+            body_params = params['email_address']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/x-www-form-urlencoded'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['BasicAuth']  # noqa: E501

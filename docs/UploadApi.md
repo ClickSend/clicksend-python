@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **uploads_post**
-> str uploads_post(content, convert)
+> str uploads_post(convert, upload_file=upload_file)
 
 Upload File
 
@@ -29,12 +29,12 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.UploadApi(clicksend_client.ApiClient(configuration))
-content = 'content_example' # str | Your base64 encoded file.
 convert = 'convert_example' # str | 
+upload_file = clicksend_client.UploadFile() # UploadFile |  (optional)
 
 try:
     # Upload File
-    api_response = api_instance.uploads_post(content, convert)
+    api_response = api_instance.uploads_post(convert, upload_file=upload_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UploadApi->uploads_post: %s\n" % e)
@@ -44,8 +44,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **str**| Your base64 encoded file. | 
  **convert** | **str**|  | 
+ **upload_file** | [**UploadFile**](UploadFile.md)|  | [optional] 
 
 ### Return type
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

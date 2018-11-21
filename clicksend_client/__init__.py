@@ -69,6 +69,7 @@ from clicksend_client.models.credit_card import CreditCard
 from clicksend_client.models.delivery_issue import DeliveryIssue
 from clicksend_client.models.delivery_receipt_rule import DeliveryReceiptRule
 from clicksend_client.models.email import Email
+from clicksend_client.models.email_address import EmailAddress
 from clicksend_client.models.email_campaign import EmailCampaign
 from clicksend_client.models.email_from import EmailFrom
 from clicksend_client.models.email_recipient import EmailRecipient
@@ -78,6 +79,8 @@ from clicksend_client.models.email_template_update import EmailTemplateUpdate
 from clicksend_client.models.fax_message import FaxMessage
 from clicksend_client.models.fax_message_collection import FaxMessageCollection
 from clicksend_client.models.fields import Fields
+from clicksend_client.models.forgot_password import ForgotPassword
+from clicksend_client.models.forgot_username import ForgotUsername
 from clicksend_client.models.inbound_fax_rule import InboundFAXRule
 from clicksend_client.models.inbound_sms_rule import InboundSMSRule
 from clicksend_client.models.mms_campaign import MmsCampaign
@@ -94,6 +97,9 @@ from clicksend_client.models.sms_campaign import SmsCampaign
 from clicksend_client.models.sms_message import SmsMessage
 from clicksend_client.models.sms_message_collection import SmsMessageCollection
 from clicksend_client.models.sms_template import SmsTemplate
+from clicksend_client.models.stripped_string import StrippedString
 from clicksend_client.models.subaccount import Subaccount
+from clicksend_client.models.upload_file import UploadFile
+from clicksend_client.models.url import Url
 from clicksend_client.models.voice_message import VoiceMessage
 from clicksend_client.models.voice_message_collection import VoiceMessageCollection

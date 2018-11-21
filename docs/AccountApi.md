@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forgot_password_put**
-> str forgot_password_put(username)
+> str forgot_password_put(forgot_password=forgot_password)
 
 Forgot password
 
@@ -243,11 +243,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
-username = 'username_example' # str | Username belonging to account.
+forgot_password = clicksend_client.ForgotPassword() # ForgotPassword |  (optional)
 
 try:
     # Forgot password
-    api_response = api_instance.forgot_password_put(username)
+    api_response = api_instance.forgot_password_put(forgot_password=forgot_password)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountApi->forgot_password_put: %s\n" % e)
@@ -257,7 +257,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username belonging to account. | 
+ **forgot_password** | [**ForgotPassword**](ForgotPassword.md)|  | [optional] 
 
 ### Return type
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forgot_username_put**
-> str forgot_username_put(email=email, phone_number=phone_number)
+> str forgot_username_put(forgot_username=forgot_username)
 
 Forgot username
 
@@ -344,12 +344,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = clicksend_client.AccountApi()
-email = 'email_example' # str | Email belonging to account. (optional)
-phone_number = 'phone_number_example' # str | Phone number belonging to account. (optional)
+forgot_username = clicksend_client.ForgotUsername() # ForgotUsername |  (optional)
 
 try:
     # Forgot username
-    api_response = api_instance.forgot_username_put(email=email, phone_number=phone_number)
+    api_response = api_instance.forgot_username_put(forgot_username=forgot_username)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AccountApi->forgot_username_put: %s\n" % e)
@@ -359,8 +358,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **str**| Email belonging to account. | [optional] 
- **phone_number** | **str**| Phone number belonging to account. | [optional] 
+ **forgot_username** | [**ForgotUsername**](ForgotUsername.md)|  | [optional] 
 
 ### Return type
 
@@ -372,7 +370,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

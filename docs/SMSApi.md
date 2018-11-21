@@ -314,7 +314,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
-url = 'url_example' # str | Your url.
+url = clicksend_client.Url() # Url | Url model
 
 try:
     # Create inbound sms
@@ -328,7 +328,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **str**| Your url. | 
+ **url** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -581,7 +581,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
-url = 'url_example' # str | Your url.
+url = clicksend_client.Url() # Url | Url model
 
 try:
     # Add a delivery receipt
@@ -595,7 +595,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **str**| Your url. | 
+ **url** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

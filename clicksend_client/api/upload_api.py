@@ -33,47 +33,47 @@ class UploadApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def uploads_post(self, content, convert, **kwargs):  # noqa: E501
+    def uploads_post(self, convert, **kwargs):  # noqa: E501
         """Upload File  # noqa: E501
 
         Upload File  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.uploads_post(content, convert, async_req=True)
+        >>> thread = api.uploads_post(convert, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str content: Your base64 encoded file. (required)
         :param str convert:  (required)
+        :param UploadFile upload_file:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.uploads_post_with_http_info(content, convert, **kwargs)  # noqa: E501
+            return self.uploads_post_with_http_info(convert, **kwargs)  # noqa: E501
         else:
-            (data) = self.uploads_post_with_http_info(content, convert, **kwargs)  # noqa: E501
+            (data) = self.uploads_post_with_http_info(convert, **kwargs)  # noqa: E501
             return data
 
-    def uploads_post_with_http_info(self, content, convert, **kwargs):  # noqa: E501
+    def uploads_post_with_http_info(self, convert, **kwargs):  # noqa: E501
         """Upload File  # noqa: E501
 
         Upload File  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.uploads_post_with_http_info(content, convert, async_req=True)
+        >>> thread = api.uploads_post_with_http_info(convert, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str content: Your base64 encoded file. (required)
         :param str convert:  (required)
+        :param UploadFile upload_file:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['content', 'convert']  # noqa: E501
+        all_params = ['convert', 'upload_file']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -88,10 +88,6 @@ class UploadApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'content' is set
-        if ('content' not in params or
-                params['content'] is None):
-            raise ValueError("Missing the required parameter `content` when calling `uploads_post`")  # noqa: E501
         # verify the required parameter 'convert' is set
         if ('convert' not in params or
                 params['convert'] is None):
@@ -109,17 +105,17 @@ class UploadApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'content' in params:
-            form_params.append(('content', params['content']))  # noqa: E501
 
         body_params = None
+        if 'upload_file' in params:
+            body_params = params['upload_file']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/x-www-form-urlencoded'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['BasicAuth']  # noqa: E501

@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **allowed_email_address_post**
-> str allowed_email_address_post(email_address)
+> str allowed_email_address_post(email_address=email_address)
 
 Create allowed Email Address
 
@@ -97,11 +97,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.EmailMarketingApi(clicksend_client.ApiClient(configuration))
-email_address = 'email_address_example' # str | Email to be allowed.
+email_address = clicksend_client.EmailAddress() # EmailAddress |  (optional)
 
 try:
     # Create allowed Email Address
-    api_response = api_instance.allowed_email_address_post(email_address)
+    api_response = api_instance.allowed_email_address_post(email_address=email_address)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmailMarketingApi->allowed_email_address_post: %s\n" % e)
@@ -111,7 +111,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_address** | **str**| Email to be allowed. | 
+ **email_address** | [**EmailAddress**](EmailAddress.md)|  | [optional] 
 
 ### Return type
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
