@@ -117,7 +117,7 @@ class PostLetterApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/post/letters/export', 'GET',
+            '/post/letters/history/export', 'GET',
             path_params,
             query_params,
             header_params,

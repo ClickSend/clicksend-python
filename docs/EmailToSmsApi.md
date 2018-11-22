@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_email_sms_stripped_string_put**
-> str sms_email_sms_stripped_string_put(url, rule_id)
+> str sms_email_sms_stripped_string_put(stripped_string, rule_id)
 
 Update email to sms stripped string rule
 
@@ -302,12 +302,12 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.EmailToSmsApi(clicksend_client.ApiClient(configuration))
-url = clicksend_client.Url() # Url | Url model
+stripped_string = clicksend_client.StrippedString() # StrippedString | StrippedString model
 rule_id = 56 # int | Your rule id
 
 try:
     # Update email to sms stripped string rule
-    api_response = api_instance.sms_email_sms_stripped_string_put(url, rule_id)
+    api_response = api_instance.sms_email_sms_stripped_string_put(stripped_string, rule_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_put: %s\n" % e)
@@ -317,7 +317,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **stripped_string** | [**StrippedString**](StrippedString.md)| StrippedString model | 
  **rule_id** | **int**| Your rule id | 
 
 ### Return type

@@ -532,17 +532,17 @@ class EmailToSmsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def sms_email_sms_stripped_string_put(self, url, rule_id, **kwargs):  # noqa: E501
+    def sms_email_sms_stripped_string_put(self, stripped_string, rule_id, **kwargs):  # noqa: E501
         """Update email to sms stripped string rule  # noqa: E501
 
         Update email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.sms_email_sms_stripped_string_put(url, rule_id, async_req=True)
+        >>> thread = api.sms_email_sms_stripped_string_put(stripped_string, rule_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param Url url: Url model (required)
+        :param StrippedString stripped_string: StrippedString model (required)
         :param int rule_id: Your rule id (required)
         :return: str
                  If the method is called asynchronously,
@@ -550,29 +550,29 @@ class EmailToSmsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.sms_email_sms_stripped_string_put_with_http_info(url, rule_id, **kwargs)  # noqa: E501
+            return self.sms_email_sms_stripped_string_put_with_http_info(stripped_string, rule_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.sms_email_sms_stripped_string_put_with_http_info(url, rule_id, **kwargs)  # noqa: E501
+            (data) = self.sms_email_sms_stripped_string_put_with_http_info(stripped_string, rule_id, **kwargs)  # noqa: E501
             return data
 
-    def sms_email_sms_stripped_string_put_with_http_info(self, url, rule_id, **kwargs):  # noqa: E501
+    def sms_email_sms_stripped_string_put_with_http_info(self, stripped_string, rule_id, **kwargs):  # noqa: E501
         """Update email to sms stripped string rule  # noqa: E501
 
         Update email to sms stripped string rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.sms_email_sms_stripped_string_put_with_http_info(url, rule_id, async_req=True)
+        >>> thread = api.sms_email_sms_stripped_string_put_with_http_info(stripped_string, rule_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param Url url: Url model (required)
+        :param StrippedString stripped_string: StrippedString model (required)
         :param int rule_id: Your rule id (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['url', 'rule_id']  # noqa: E501
+        all_params = ['stripped_string', 'rule_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -587,10 +587,10 @@ class EmailToSmsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'url' is set
-        if ('url' not in params or
-                params['url'] is None):
-            raise ValueError("Missing the required parameter `url` when calling `sms_email_sms_stripped_string_put`")  # noqa: E501
+        # verify the required parameter 'stripped_string' is set
+        if ('stripped_string' not in params or
+                params['stripped_string'] is None):
+            raise ValueError("Missing the required parameter `stripped_string` when calling `sms_email_sms_stripped_string_put`")  # noqa: E501
         # verify the required parameter 'rule_id' is set
         if ('rule_id' not in params or
                 params['rule_id'] is None):
@@ -610,8 +610,8 @@ class EmailToSmsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'url' in params:
-            body_params = params['url']
+        if 'stripped_string' in params:
+            body_params = params['stripped_string']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

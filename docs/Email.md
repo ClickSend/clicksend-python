@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **to** | [**list[EmailRecipient]**](EmailRecipient.md) | Array of To Recipient items. | 
 **cc** | [**list[EmailRecipient]**](EmailRecipient.md) | Array of Cc Recipient items. | [optional] 
 **bcc** | [**list[EmailRecipient]**](EmailRecipient.md) | Array of Bcc Recipient items. | [optional] 
-**_from** | [**list[EmailFrom]**](EmailFrom.md) | From Email object. | 
+**_from** | [**EmailFrom**](EmailFrom.md) |  | 
 **subject** | **str** | Subject of the email. | [optional] 
 **body** | **str** | Body of the email. | 
 **attachments** | [**list[Attachment]**](Attachment.md) | Array of Attachment items. | [optional] 

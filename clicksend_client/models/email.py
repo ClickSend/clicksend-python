@@ -38,7 +38,7 @@ class Email(object):
         'to': 'list[EmailRecipient]',
         'cc': 'list[EmailRecipient]',
         'bcc': 'list[EmailRecipient]',
-        '_from': 'list[EmailFrom]',
+        '_from': 'EmailFrom',
         'subject': 'str',
         'body': 'str',
         'attachments': 'list[Attachment]',
@@ -162,10 +162,9 @@ class Email(object):
     def _from(self):
         """Gets the _from of this Email.  # noqa: E501
 
-        From Email object.  # noqa: E501
 
         :return: The _from of this Email.  # noqa: E501
-        :rtype: list[EmailFrom]
+        :rtype: EmailFrom
         """
         return self.__from
 
@@ -173,10 +172,9 @@ class Email(object):
     def _from(self, _from):
         """Sets the _from of this Email.
 
-        From Email object.  # noqa: E501
 
         :param _from: The _from of this Email.  # noqa: E501
-        :type: list[EmailFrom]
+        :type: EmailFrom
         """
         if _from is None:
             raise ValueError("Invalid value for `_from`, must not be `None`")  # noqa: E501
