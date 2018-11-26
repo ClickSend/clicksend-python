@@ -117,7 +117,7 @@ class MmsCampaignApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/mms-campaign/{mms_campaign_id}', 'GET',
+            '/mms-campaigns/{mms_campaign_id}', 'GET',
             path_params,
             query_params,
             header_params,

@@ -117,7 +117,7 @@ class SmsCampaignApi(object):
         auth_settings = ['BasicAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/sms-campaign/{sms_campaign_id}', 'GET',
+            '/sms-campaigns/{sms_campaign_id}', 'GET',
             path_params,
             query_params,
             header_params,
