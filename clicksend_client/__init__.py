@@ -79,6 +79,7 @@ from clicksend_client.models.email_template_update import EmailTemplateUpdate
 from clicksend_client.models.fax_message import FaxMessage
 from clicksend_client.models.fax_message_collection import FaxMessageCollection
 from clicksend_client.models.fields import Fields
+from clicksend_client.models.fields_fields import FieldsFields
 from clicksend_client.models.forgot_password import ForgotPassword
 from clicksend_client.models.forgot_username import ForgotUsername
 from clicksend_client.models.inbound_fax_rule import InboundFAXRule
