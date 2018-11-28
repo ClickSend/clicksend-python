@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **uploads_post**
-> str uploads_post(convert, upload_file=upload_file)
+> str uploads_post(upload_file, convert)
 
 Upload File
 
@@ -29,12 +29,12 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.UploadApi(clicksend_client.ApiClient(configuration))
+upload_file = clicksend_client.UploadFile() # UploadFile | Your file to be uploaded
 convert = 'convert_example' # str | 
-upload_file = clicksend_client.UploadFile() # UploadFile |  (optional)
 
 try:
     # Upload File
-    api_response = api_instance.uploads_post(convert, upload_file=upload_file)
+    api_response = api_instance.uploads_post(upload_file, convert)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UploadApi->uploads_post: %s\n" % e)
@@ -44,8 +44,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **upload_file** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
  **convert** | **str**|  | 
- **upload_file** | [**UploadFile**](UploadFile.md)|  | [optional] 
 
 ### Return type
 

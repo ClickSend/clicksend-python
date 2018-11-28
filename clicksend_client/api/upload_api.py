@@ -33,47 +33,47 @@ class UploadApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def uploads_post(self, convert, **kwargs):  # noqa: E501
+    def uploads_post(self, upload_file, convert, **kwargs):  # noqa: E501
         """Upload File  # noqa: E501
 
         Upload File  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.uploads_post(convert, async_req=True)
+        >>> thread = api.uploads_post(upload_file, convert, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param UploadFile upload_file: Your file to be uploaded (required)
         :param str convert:  (required)
-        :param UploadFile upload_file:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.uploads_post_with_http_info(convert, **kwargs)  # noqa: E501
+            return self.uploads_post_with_http_info(upload_file, convert, **kwargs)  # noqa: E501
         else:
-            (data) = self.uploads_post_with_http_info(convert, **kwargs)  # noqa: E501
+            (data) = self.uploads_post_with_http_info(upload_file, convert, **kwargs)  # noqa: E501
             return data
 
-    def uploads_post_with_http_info(self, convert, **kwargs):  # noqa: E501
+    def uploads_post_with_http_info(self, upload_file, convert, **kwargs):  # noqa: E501
         """Upload File  # noqa: E501
 
         Upload File  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.uploads_post_with_http_info(convert, async_req=True)
+        >>> thread = api.uploads_post_with_http_info(upload_file, convert, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param UploadFile upload_file: Your file to be uploaded (required)
         :param str convert:  (required)
-        :param UploadFile upload_file:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['convert', 'upload_file']  # noqa: E501
+        all_params = ['upload_file', 'convert']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -88,6 +88,10 @@ class UploadApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'upload_file' is set
+        if ('upload_file' not in params or
+                params['upload_file'] is None):
+            raise ValueError("Missing the required parameter `upload_file` when calling `uploads_post`")  # noqa: E501
         # verify the required parameter 'convert' is set
         if ('convert' not in params or
                 params['convert'] is None):

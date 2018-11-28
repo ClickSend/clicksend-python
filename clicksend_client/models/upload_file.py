@@ -38,11 +38,15 @@ class UploadFile(object):
         'content': 'content'
     }
 
+    discriminator_value_class_map = {
+        
+    }
+
     def __init__(self, content=None):  # noqa: E501
         """UploadFile - a model defined in Swagger"""  # noqa: E501
 
         self._content = None
-        self.discriminator = None
+        self.discriminator = 'classType'
 
         self.content = content
 
@@ -50,7 +54,7 @@ class UploadFile(object):
     def content(self):
         """Gets the content of this UploadFile.  # noqa: E501
 
-        Your base64 encoded file.  # noqa: E501
+        Your base64 encoded file string.  # noqa: E501
 
         :return: The content of this UploadFile.  # noqa: E501
         :rtype: str
@@ -61,7 +65,7 @@ class UploadFile(object):
     def content(self, content):
         """Sets the content of this UploadFile.
 
-        Your base64 encoded file.  # noqa: E501
+        Your base64 encoded file string.  # noqa: E501
 
         :param content: The content of this UploadFile.  # noqa: E501
         :type: str
@@ -70,6 +74,11 @@ class UploadFile(object):
             raise ValueError("Invalid value for `content`, must not be `None`")  # noqa: E501
 
         self._content = content
+
+    def get_real_child_model(self, data):
+        """Returns the real base class specified by the discriminator"""
+        discriminator_value = data[self.discriminator].lower()
+        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""
