@@ -74,7 +74,8 @@ class PostRecipient(object):
 
         self.address_name = address_name
         self.address_line_1 = address_line_1
-        self.address_line_2 = address_line_2
+        if address_line_2 is not None:
+            self.address_line_2 = address_line_2
         self.address_city = address_city
         self.address_state = address_state
         self.address_postal_code = address_postal_code
@@ -153,8 +154,6 @@ class PostRecipient(object):
         :param address_line_2: The address_line_2 of this PostRecipient.  # noqa: E501
         :type: str
         """
-        if address_line_2 is None:
-            raise ValueError("Invalid value for `address_line_2`, must not be `None`")  # noqa: E501
 
         self._address_line_2 = address_line_2
 
