@@ -38,6 +38,7 @@ class PostLetter(object):
         'template_used': 'int',
         'duplex': 'int',
         'colour': 'int',
+        'priority_post': 'int',
         'source': 'str'
     }
 
@@ -47,6 +48,7 @@ class PostLetter(object):
         'template_used': 'template_used',
         'duplex': 'duplex',
         'colour': 'colour',
+        'priority_post': 'priority_post',
         'source': 'source'
     }
 
@@ -54,7 +56,7 @@ class PostLetter(object):
         
     }
 
-    def __init__(self, file_url=None, recipients=None, template_used=0, duplex=0, colour=0, source='sdk'):  # noqa: E501
+    def __init__(self, file_url=None, recipients=None, template_used=0, duplex=0, colour=0, priority_post=0, source='sdk'):  # noqa: E501
         """PostLetter - a model defined in Swagger"""  # noqa: E501
 
         self._file_url = None
@@ -62,6 +64,7 @@ class PostLetter(object):
         self._template_used = None
         self._duplex = None
         self._colour = None
+        self._priority_post = None
         self._source = None
         self.discriminator = 'classType'
 
@@ -73,6 +76,8 @@ class PostLetter(object):
             self.duplex = duplex
         if colour is not None:
             self.colour = colour
+        if priority_post is not None:
+            self.priority_post = priority_post
         if source is not None:
             self.source = source
 
@@ -194,6 +199,29 @@ class PostLetter(object):
         """
 
         self._colour = colour
+
+    @property
+    def priority_post(self):
+        """Gets the priority_post of this PostLetter.  # noqa: E501
+
+        Whether letter is priority  # noqa: E501
+
+        :return: The priority_post of this PostLetter.  # noqa: E501
+        :rtype: int
+        """
+        return self._priority_post
+
+    @priority_post.setter
+    def priority_post(self, priority_post):
+        """Sets the priority_post of this PostLetter.
+
+        Whether letter is priority  # noqa: E501
+
+        :param priority_post: The priority_post of this PostLetter.  # noqa: E501
+        :type: int
+        """
+
+        self._priority_post = priority_post
 
     @property
     def source(self):

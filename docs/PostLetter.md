@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **template_used** | **int** | Whether using our template | [optional] [default to 0]
 **duplex** | **int** | Whether letter is duplex | [optional] [default to 0]
 **colour** | **int** | Whether letter is in colour | [optional] [default to 0]
+**priority_post** | **int** | Whether letter is priority | [optional] [default to 0]
 **source** | **str** | Source being sent from | [optional] [default to 'sdk']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
