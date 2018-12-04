@@ -485,8 +485,6 @@ class ContactApi(object):
         :param async_req bool
         :param Contact contact: Contact model (required)
         :param int list_id: List id (required)
-        :param int page: Page number
-        :param int limit: Number of records per page
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -510,14 +508,12 @@ class ContactApi(object):
         :param async_req bool
         :param Contact contact: Contact model (required)
         :param int list_id: List id (required)
-        :param int page: Page number
-        :param int limit: Number of records per page
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['contact', 'list_id', 'page', 'limit']  # noqa: E501
+        all_params = ['contact', 'list_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -541,10 +537,6 @@ class ContactApi(object):
                 params['list_id'] is None):
             raise ValueError("Missing the required parameter `list_id` when calling `lists_contacts_by_list_id_post`")  # noqa: E501
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
-            raise ValueError("Invalid value for parameter `page` when calling `lists_contacts_by_list_id_post`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
-            raise ValueError("Invalid value for parameter `limit` when calling `lists_contacts_by_list_id_post`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -552,10 +544,6 @@ class ContactApi(object):
             path_params['list_id'] = params['list_id']  # noqa: E501
 
         query_params = []
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
 
         header_params = {}
 

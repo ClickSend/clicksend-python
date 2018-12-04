@@ -45,8 +45,6 @@ from clicksend_client.models.list import List
 from clicksend_client.models.mms_campaign import MmsCampaign
 from clicksend_client.models.mms_message import MmsMessage
 from clicksend_client.models.mms_message_collection import MmsMessageCollection
-from clicksend_client.models.post_direct_mail import PostDirectMail
-from clicksend_client.models.post_direct_mail_area import PostDirectMailArea
 from clicksend_client.models.post_letter import PostLetter
 from clicksend_client.models.post_postcard import PostPostcard
 from clicksend_client.models.post_recipient import PostRecipient

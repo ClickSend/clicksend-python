@@ -21,7 +21,6 @@ from clicksend_client.api.mms_api import MMSApi
 from clicksend_client.api.master_email_templates_api import MasterEmailTemplatesApi
 from clicksend_client.api.mms_campaign_api import MmsCampaignApi
 from clicksend_client.api.number_api import NumberApi
-from clicksend_client.api.post_direct_mail_api import PostDirectMailApi
 from clicksend_client.api.post_letter_api import PostLetterApi
 from clicksend_client.api.post_postcard_api import PostPostcardApi
 from clicksend_client.api.post_return_address_api import PostReturnAddressApi

@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **voice_receipts_get**
-> str voice_receipts_get(page=page, limit=limit)
+> str voice_receipts_get(q, page=page, limit=limit)
 
 Get all voice receipts
 
@@ -352,12 +352,13 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
+q = 'q_example' # str | Your keyword or query.
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
 try:
     # Get all voice receipts
-    api_response = api_instance.voice_receipts_get(page=page, limit=limit)
+    api_response = api_instance.voice_receipts_get(q, page=page, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling VoiceApi->voice_receipts_get: %s\n" % e)
@@ -367,6 +368,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **str**| Your keyword or query. | 
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
 

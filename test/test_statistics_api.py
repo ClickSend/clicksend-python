@@ -29,13 +29,6 @@ class TestStatisticsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_statistics_mms_get(self):
-        """Test case for statistics_mms_get
-
-        Get mms statistics  # noqa: E501
-        """
-        pass
-
     def test_statistics_sms_get(self):
         """Test case for statistics_sms_get
 

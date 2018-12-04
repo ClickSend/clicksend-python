@@ -623,16 +623,17 @@ class VoiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def voice_receipts_get(self, **kwargs):  # noqa: E501
+    def voice_receipts_get(self, q, **kwargs):  # noqa: E501
         """Get all voice receipts  # noqa: E501
 
         Get all voice receipts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.voice_receipts_get(async_req=True)
+        >>> thread = api.voice_receipts_get(q, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str q: Your keyword or query. (required)
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -641,21 +642,22 @@ class VoiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.voice_receipts_get_with_http_info(**kwargs)  # noqa: E501
+            return self.voice_receipts_get_with_http_info(q, **kwargs)  # noqa: E501
         else:
-            (data) = self.voice_receipts_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.voice_receipts_get_with_http_info(q, **kwargs)  # noqa: E501
             return data
 
-    def voice_receipts_get_with_http_info(self, **kwargs):  # noqa: E501
+    def voice_receipts_get_with_http_info(self, q, **kwargs):  # noqa: E501
         """Get all voice receipts  # noqa: E501
 
         Get all voice receipts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.voice_receipts_get_with_http_info(async_req=True)
+        >>> thread = api.voice_receipts_get_with_http_info(q, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str q: Your keyword or query. (required)
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -663,7 +665,7 @@ class VoiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['page', 'limit']  # noqa: E501
+        all_params = ['q', 'page', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -678,6 +680,10 @@ class VoiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'q' is set
+        if ('q' not in params or
+                params['q'] is None):
+            raise ValueError("Missing the required parameter `q` when calling `voice_receipts_get`")  # noqa: E501
 
         if 'page' in params and params['page'] < 1:  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `voice_receipts_get`, must be a value greater than or equal to `1`")  # noqa: E501
@@ -688,6 +694,8 @@ class VoiceApi(object):
         path_params = {}
 
         query_params = []
+        if 'q' in params:
+            query_params.append(('q', params['q']))  # noqa: E501
         if 'page' in params:
             query_params.append(('page', params['page']))  # noqa: E501
         if 'limit' in params:

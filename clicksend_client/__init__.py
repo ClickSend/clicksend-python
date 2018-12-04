@@ -34,7 +34,6 @@ from clicksend_client.api.mms_api import MMSApi
 from clicksend_client.api.master_email_templates_api import MasterEmailTemplatesApi
 from clicksend_client.api.mms_campaign_api import MmsCampaignApi
 from clicksend_client.api.number_api import NumberApi
-from clicksend_client.api.post_direct_mail_api import PostDirectMailApi
 from clicksend_client.api.post_letter_api import PostLetterApi
 from clicksend_client.api.post_postcard_api import PostPostcardApi
 from clicksend_client.api.post_return_address_api import PostReturnAddressApi
@@ -88,8 +87,6 @@ from clicksend_client.models.list import List
 from clicksend_client.models.mms_campaign import MmsCampaign
 from clicksend_client.models.mms_message import MmsMessage
 from clicksend_client.models.mms_message_collection import MmsMessageCollection
-from clicksend_client.models.post_direct_mail import PostDirectMail
-from clicksend_client.models.post_direct_mail_area import PostDirectMailArea
 from clicksend_client.models.post_letter import PostLetter
 from clicksend_client.models.post_postcard import PostPostcard
 from clicksend_client.models.post_recipient import PostRecipient

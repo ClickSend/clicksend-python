@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_contacts_by_list_id_post**
-> str lists_contacts_by_list_id_post(contact, list_id, page=page, limit=limit)
+> str lists_contacts_by_list_id_post(contact, list_id)
 
 Create new contact
 
@@ -261,12 +261,10 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = clicksend_client.ContactApi(clicksend_client.ApiClient(configuration))
 contact = clicksend_client.Contact() # Contact | Contact model
 list_id = 56 # int | List id
-page = 1 # int | Page number (optional) (default to 1)
-limit = 10 # int | Number of records per page (optional) (default to 10)
 
 try:
     # Create new contact
-    api_response = api_instance.lists_contacts_by_list_id_post(contact, list_id, page=page, limit=limit)
+    api_response = api_instance.lists_contacts_by_list_id_post(contact, list_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ContactApi->lists_contacts_by_list_id_post: %s\n" % e)
@@ -278,8 +276,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **list_id** | **int**| List id | 
- **page** | **int**| Page number | [optional] [default to 1]
- **limit** | **int**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 
