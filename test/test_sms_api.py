@@ -71,6 +71,13 @@ class TestSMSApi(unittest.TestCase):
         """
         pass
 
+    def test_sms_inbound_read_by_message_id_put(self):
+        """Test case for sms_inbound_read_by_message_id_put
+
+        Mark inbound SMS as read  # noqa: E501
+        """
+        pass
+
     def test_sms_inbound_read_put(self):
         """Test case for sms_inbound_read_put
 

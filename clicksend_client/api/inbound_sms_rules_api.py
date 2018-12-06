@@ -447,6 +447,7 @@ class InboundSMSRulesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str q: Your keyword or query.
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -470,6 +471,7 @@ class InboundSMSRulesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str q: Your keyword or query.
         :param int page: Page number
         :param int limit: Number of records per page
         :return: str
@@ -477,7 +479,7 @@ class InboundSMSRulesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['page', 'limit']  # noqa: E501
+        all_params = ['q', 'page', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -502,6 +504,8 @@ class InboundSMSRulesApi(object):
         path_params = {}
 
         query_params = []
+        if 'q' in params:
+            query_params.append(('q', params['q']))  # noqa: E501
         if 'page' in params:
             query_params.append(('page', params['page']))  # noqa: E501
         if 'limit' in params:

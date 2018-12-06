@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **fax_receipts_get**
-> str fax_receipts_get(q=q, page=page, limit=limit)
+> str fax_receipts_get(page=page, limit=limit)
 
 Get List of Fax Receipts
 
@@ -202,13 +202,12 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.FaxApi(clicksend_client.ApiClient(configuration))
-q = 'q_example' # str | Your keyword or query. (optional)
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
 try:
     # Get List of Fax Receipts
-    api_response = api_instance.fax_receipts_get(q=q, page=page, limit=limit)
+    api_response = api_instance.fax_receipts_get(page=page, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling FaxApi->fax_receipts_get: %s\n" % e)
@@ -218,7 +217,6 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **str**| Your keyword or query. | [optional] 
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
 
