@@ -332,6 +332,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str q: Custom query Example: from:{number},status_code:201.
         :param int date_from: Start date
         :param int date_to: End date
         :param int page: Page number
@@ -357,6 +358,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str q: Custom query Example: from:{number},status_code:201.
         :param int date_from: Start date
         :param int date_to: End date
         :param int page: Page number
@@ -366,7 +368,7 @@ class SMSApi(object):
                  returns the request thread.
         """
 
-        all_params = ['date_from', 'date_to', 'page', 'limit']  # noqa: E501
+        all_params = ['q', 'date_from', 'date_to', 'page', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -391,6 +393,8 @@ class SMSApi(object):
         path_params = {}
 
         query_params = []
+        if 'q' in params:
+            query_params.append(('q', params['q']))  # noqa: E501
         if 'date_from' in params:
             query_params.append(('date_from', params['date_from']))  # noqa: E501
         if 'date_to' in params:

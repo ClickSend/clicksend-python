@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_history_get**
-> str sms_history_get(date_from=date_from, date_to=date_to, page=page, limit=limit)
+> str sms_history_get(q=q, date_from=date_from, date_to=date_to, page=page, limit=limit)
 
 Get all sms history
 
@@ -201,6 +201,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
+q = 'q_example' # str | Custom query Example: from:{number},status_code:201. (optional)
 date_from = 56 # int | Start date (optional)
 date_to = 56 # int | End date (optional)
 page = 1 # int | Page number (optional) (default to 1)
@@ -208,7 +209,7 @@ limit = 10 # int | Number of records per page (optional) (default to 10)
 
 try:
     # Get all sms history
-    api_response = api_instance.sms_history_get(date_from=date_from, date_to=date_to, page=page, limit=limit)
+    api_response = api_instance.sms_history_get(q=q, date_from=date_from, date_to=date_to, page=page, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SMSApi->sms_history_get: %s\n" % e)
@@ -218,6 +219,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **str**| Custom query Example: from:{number},status_code:201. | [optional] 
  **date_from** | **int**| Start date | [optional] 
  **date_to** | **int**| End date | [optional] 
  **page** | **int**| Page number | [optional] [default to 1]
