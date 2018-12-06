@@ -31,7 +31,7 @@ class DateBefore(object):
                             and the value is json key in definition.
     """
     clicksend_types = {
-        'date_before': 'str'
+        'date_before': 'float'
     }
 
     attribute_map = {
@@ -58,7 +58,7 @@ class DateBefore(object):
         An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.  # noqa: E501
 
         :return: The date_before of this DateBefore.  # noqa: E501
-        :rtype: str
+        :rtype: float
         """
         return self._date_before
 
@@ -69,7 +69,7 @@ class DateBefore(object):
         An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.  # noqa: E501
 
         :param date_before: The date_before of this DateBefore.  # noqa: E501
-        :type: str
+        :type: float
         """
 
         self._date_before = date_before
