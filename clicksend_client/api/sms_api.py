@@ -748,7 +748,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param float date_before: An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+        :param DateBefore date_before: DateBefore model
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -770,7 +770,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param float date_before: An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+        :param DateBefore date_before: DateBefore model
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1243,7 +1243,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param float date_before: Mark all as read before this timestamp
+        :param DateBefore date_before: DateBefore model
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1265,7 +1265,7 @@ class SMSApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param float date_before: Mark all as read before this timestamp
+        :param DateBefore date_before: DateBefore model
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.

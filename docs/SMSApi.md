@@ -423,7 +423,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
-date_before = 8.14 # float | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
+date_before = clicksend_client.DateBefore() # DateBefore | DateBefore model (optional)
 
 try:
     # Mark inbound SMS as read
@@ -437,7 +437,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **float**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -690,7 +690,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
-date_before = 8.14 # float | Mark all as read before this timestamp (optional)
+date_before = clicksend_client.DateBefore() # DateBefore | DateBefore model (optional)
 
 try:
     # Mark delivery receipts as read
@@ -704,7 +704,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **float**| Mark all as read before this timestamp | [optional] 
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 

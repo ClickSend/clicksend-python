@@ -65,6 +65,7 @@ from clicksend_client.models.attachment import Attachment
 from clicksend_client.models.contact import Contact
 from clicksend_client.models.contact_list_import import ContactListImport
 from clicksend_client.models.credit_card import CreditCard
+from clicksend_client.models.date_before import DateBefore
 from clicksend_client.models.delivery_issue import DeliveryIssue
 from clicksend_client.models.delivery_receipt_rule import DeliveryReceiptRule
 from clicksend_client.models.email import Email
