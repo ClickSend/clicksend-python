@@ -36,6 +36,20 @@ class TestMMSApi(unittest.TestCase):
         """
         pass
 
+    def test_mms_receipts_get(self):
+        """Test case for mms_receipts_get
+
+        Get all delivery receipts  # noqa: E501
+        """
+        pass
+
+    def test_mms_receipts_read_put(self):
+        """Test case for mms_receipts_read_put
+
+        Mark delivery receipts as read  # noqa: E501
+        """
+        pass
+
     def test_mms_send_post(self):
         """Test case for mms_send_post
 

@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**voice_history_get**](VoiceApi.md#voice_history_get) | **GET** /voice/history | Get all voice history
 [**voice_lang_get**](VoiceApi.md#voice_lang_get) | **GET** /voice/lang | Get all voice languages
 [**voice_price_post**](VoiceApi.md#voice_price_post) | **POST** /voice/price | Calculate voice price
-[**voice_receipts_get**](VoiceApi.md#voice_receipts_get) | **GET** /voice/receipts | Get all voice receipts
+[**voice_receipts_get**](VoiceApi.md#voice_receipts_get) | **GET** /voice/receipts | Get all delivery receipts
+[**voice_receipts_post**](VoiceApi.md#voice_receipts_post) | **POST** /voice/receipts | Add a delivery receipt
+[**voice_receipts_read_put**](VoiceApi.md#voice_receipts_read_put) | **PUT** /voice/receipts-read | Mark delivery receipts as read
 [**voice_send_post**](VoiceApi.md#voice_send_post) | **POST** /voice/send | Send voice message(s)
 
 
@@ -333,9 +335,9 @@ Name | Type | Description  | Notes
 # **voice_receipts_get**
 > str voice_receipts_get(page=page, limit=limit)
 
-Get all voice receipts
+Get all delivery receipts
 
-Get all voice receipts
+Get all delivery receipts
 
 ### Example
 ```python
@@ -356,7 +358,7 @@ page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
 
 try:
-    # Get all voice receipts
+    # Get all delivery receipts
     api_response = api_instance.voice_receipts_get(page=page, limit=limit)
     pprint(api_response)
 except ApiException as e:
@@ -369,6 +371,112 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
+
+### Return type
+
+**str**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **voice_receipts_post**
+> str voice_receipts_post(url)
+
+Add a delivery receipt
+
+Add a delivery receipt
+
+### Example
+```python
+from __future__ import print_function
+import time
+import clicksend_client
+from clicksend_client.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = clicksend_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
+url = clicksend_client.Url() # Url | Url model
+
+try:
+    # Add a delivery receipt
+    api_response = api_instance.voice_receipts_post(url)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling VoiceApi->voice_receipts_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **url** | [**Url**](Url.md)| Url model | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **voice_receipts_read_put**
+> str voice_receipts_read_put(date_before=date_before)
+
+Mark delivery receipts as read
+
+Mark delivery receipts as read
+
+### Example
+```python
+from __future__ import print_function
+import time
+import clicksend_client
+from clicksend_client.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = clicksend_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = clicksend_client.VoiceApi(clicksend_client.ApiClient(configuration))
+date_before = clicksend_client.DateBefore() # DateBefore | DateBefore model (optional)
+
+try:
+    # Mark delivery receipts as read
+    api_response = api_instance.voice_receipts_read_put(date_before=date_before)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling VoiceApi->voice_receipts_read_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 

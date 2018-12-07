@@ -43,6 +43,13 @@ class TestAccountApi(unittest.TestCase):
         """
         pass
 
+    def test_account_useage_by_subaccount_get(self):
+        """Test case for account_useage_by_subaccount_get
+
+        Get account useage by subaccount  # noqa: E501
+        """
+        pass
+
     def test_account_verify_send_put(self):
         """Test case for account_verify_send_put
 

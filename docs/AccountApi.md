@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**account_get**](AccountApi.md#account_get) | **GET** /account | Get account information
 [**account_post**](AccountApi.md#account_post) | **POST** /account | Create a new account
+[**account_useage_by_subaccount_get**](AccountApi.md#account_useage_by_subaccount_get) | **GET** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
 [**account_verify_send_put**](AccountApi.md#account_verify_send_put) | **PUT** /account-verify/send | Send account activation token
 [**account_verify_verify_by_activation_token_put**](AccountApi.md#account_verify_verify_by_activation_token_put) | **PUT** /account-verify/verify/{activation_token} | Verify new account
 [**forgot_password_put**](AccountApi.md#forgot_password_put) | **PUT** /forgot-password | Forgot password
@@ -99,6 +100,61 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account** | [**Account**](Account.md)| Account model | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **account_useage_by_subaccount_get**
+> str account_useage_by_subaccount_get(year, month)
+
+Get account useage by subaccount
+
+Get account useage by subaccount
+
+### Example
+```python
+from __future__ import print_function
+import time
+import clicksend_client
+from clicksend_client.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = clicksend_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = clicksend_client.AccountApi(clicksend_client.ApiClient(configuration))
+year = 56 # int | Year to filter by (yyyy)
+month = 56 # int | Month to filter by (mm)
+
+try:
+    # Get account useage by subaccount
+    api_response = api_instance.account_useage_by_subaccount_get(year, month)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_useage_by_subaccount_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **int**| Year to filter by (yyyy) | 
+ **month** | **int**| Month to filter by (mm) | 
 
 ### Return type
 

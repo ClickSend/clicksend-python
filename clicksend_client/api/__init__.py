@@ -13,6 +13,7 @@ from clicksend_client.api.detect_address_api import DetectAddressApi
 from clicksend_client.api.email_delivery_receipt_rules_api import EmailDeliveryReceiptRulesApi
 from clicksend_client.api.email_marketing_api import EmailMarketingApi
 from clicksend_client.api.email_to_sms_api import EmailToSmsApi
+from clicksend_client.api.fax_api import FAXApi
 from clicksend_client.api.fax_delivery_receipt_rules_api import FAXDeliveryReceiptRulesApi
 from clicksend_client.api.fax_api import FaxApi
 from clicksend_client.api.inbound_fax_rules_api import InboundFAXRulesApi

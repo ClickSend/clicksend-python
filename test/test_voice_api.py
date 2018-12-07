@@ -74,7 +74,21 @@ class TestVoiceApi(unittest.TestCase):
     def test_voice_receipts_get(self):
         """Test case for voice_receipts_get
 
-        Get all voice receipts  # noqa: E501
+        Get all delivery receipts  # noqa: E501
+        """
+        pass
+
+    def test_voice_receipts_post(self):
+        """Test case for voice_receipts_post
+
+        Add a delivery receipt  # noqa: E501
+        """
+        pass
+
+    def test_voice_receipts_read_put(self):
+        """Test case for voice_receipts_read_put
+
+        Mark delivery receipts as read  # noqa: E501
         """
         pass
 
