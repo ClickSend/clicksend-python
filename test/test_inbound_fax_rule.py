@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.models.inbound_fax_rule import InboundFAXRule  # noqa: E501
+from clicksend_client.models.inbound_fax_rule import InboundFaxRule  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
-class TestInboundFAXRule(unittest.TestCase):
-    """InboundFAXRule unit test stubs"""
+class TestInboundFaxRule(unittest.TestCase):
+    """InboundFaxRule unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestInboundFAXRule(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInboundFAXRule(self):
-        """Test InboundFAXRule"""
+    def testInboundFaxRule(self):
+        """Test InboundFaxRule"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = clicksend_client.models.inbound_fax_rule.InboundFAXRule()  # noqa: E501
+        # model = clicksend_client.models.inbound_fax_rule.InboundFaxRule()  # noqa: E501
         pass
 
 

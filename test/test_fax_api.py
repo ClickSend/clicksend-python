@@ -29,6 +29,27 @@ class TestFAXApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_fax_history_get(self):
+        """Test case for fax_history_get
+
+        Get a list of Fax History.  # noqa: E501
+        """
+        pass
+
+    def test_fax_price_post(self):
+        """Test case for fax_price_post
+
+        Calculate Total Price for Fax Messages sent  # noqa: E501
+        """
+        pass
+
+    def test_fax_receipts_by_message_id_get(self):
+        """Test case for fax_receipts_by_message_id_get
+
+        Get a single fax receipt based on message id.  # noqa: E501
+        """
+        pass
+
     def test_fax_receipts_get(self):
         """Test case for fax_receipts_get
 
@@ -47,6 +68,13 @@ class TestFAXApi(unittest.TestCase):
         """Test case for fax_receipts_read_put
 
         Mark delivery receipts as read  # noqa: E501
+        """
+        pass
+
+    def test_fax_send_post(self):
+        """Test case for fax_send_post
+
+        Send a fax using supplied supported file-types.  # noqa: E501
         """
         pass
 

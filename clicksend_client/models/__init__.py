@@ -40,7 +40,7 @@ from clicksend_client.models.fields import Fields
 from clicksend_client.models.fields_fields import FieldsFields
 from clicksend_client.models.forgot_password import ForgotPassword
 from clicksend_client.models.forgot_username import ForgotUsername
-from clicksend_client.models.inbound_fax_rule import InboundFAXRule
+from clicksend_client.models.inbound_fax_rule import InboundFaxRule
 from clicksend_client.models.inbound_sms_rule import InboundSMSRule
 from clicksend_client.models.list import List
 from clicksend_client.models.mms_campaign import MmsCampaign

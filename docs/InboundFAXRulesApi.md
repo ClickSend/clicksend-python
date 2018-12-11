@@ -139,7 +139,7 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.InboundFAXRulesApi(clicksend_client.ApiClient(configuration))
-inbound_fax_rule = clicksend_client.InboundFAXRule() # InboundFAXRule | Inbound fax rule model
+inbound_fax_rule = clicksend_client.InboundFaxRule() # InboundFaxRule | Inbound fax rule model
 
 try:
     # Create new inbound fax automation
@@ -153,7 +153,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbound_fax_rule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inbound_fax_rule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 
@@ -193,7 +193,7 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = clicksend_client.InboundFAXRulesApi(clicksend_client.ApiClient(configuration))
 inbound_rule_id = 56 # int | Inbound rule id
-inbound_fax_rule = clicksend_client.InboundFAXRule() # InboundFAXRule | Inbound fax rule model
+inbound_fax_rule = clicksend_client.InboundFaxRule() # InboundFaxRule | Inbound fax rule model
 
 try:
     # Update inbound fax automation
@@ -208,7 +208,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inbound_rule_id** | **int**| Inbound rule id | 
- **inbound_fax_rule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inbound_fax_rule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 

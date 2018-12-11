@@ -1,4 +1,4 @@
-# InboundFAXRule
+# InboundFaxRule
 
 ## Properties
 Name | Type | Description | Notes

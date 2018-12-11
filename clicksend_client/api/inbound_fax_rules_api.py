@@ -241,7 +241,7 @@ class InboundFAXRulesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
+        :param InboundFaxRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -263,7 +263,7 @@ class InboundFAXRulesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
+        :param InboundFaxRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -341,7 +341,7 @@ class InboundFAXRulesApi(object):
 
         :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
-        :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
+        :param InboundFaxRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -364,7 +364,7 @@ class InboundFAXRulesApi(object):
 
         :param async_req bool
         :param int inbound_rule_id: Inbound rule id (required)
-        :param InboundFAXRule inbound_fax_rule: Inbound fax rule model (required)
+        :param InboundFaxRule inbound_fax_rule: Inbound fax rule model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
