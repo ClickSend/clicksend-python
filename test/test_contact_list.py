@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.models.list import List  # noqa: E501
+from clicksend_client.models.contact_list import ContactList  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
-class TestList(unittest.TestCase):
-    """List unit test stubs"""
+class TestContactList(unittest.TestCase):
+    """ContactList unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestList(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testList(self):
-        """Test List"""
+    def testContactList(self):
+        """Test ContactList"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = clicksend_client.models.list.List()  # noqa: E501
+        # model = clicksend_client.models.contact_list.ContactList()  # noqa: E501
         pass
 
 

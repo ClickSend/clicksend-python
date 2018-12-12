@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_by_list_id_put**
-> str lists_by_list_id_put(list_id, list)
+> str lists_by_list_id_put(list_id, contact_list)
 
 Update specific contact list
 
@@ -142,11 +142,11 @@ configuration.password = 'YOUR_PASSWORD'
 # create an instance of the API class
 api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
 list_id = 56 # int | Your list id
-list = clicksend_client.List() # List | List model
+contact_list = clicksend_client.ContactList() # ContactList | Contact list model
 
 try:
     # Update specific contact list
-    api_response = api_instance.lists_by_list_id_put(list_id, list)
+    api_response = api_instance.lists_by_list_id_put(list_id, contact_list)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ContactListApi->lists_by_list_id_put: %s\n" % e)
@@ -157,7 +157,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list_id** | **int**| Your list id | 
- **list** | [**List**](List.md)| List model | 
+ **contact_list** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_post**
-> str lists_post(list)
+> str lists_post(contact_list)
 
 Create new contact list
 
@@ -306,11 +306,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.ContactListApi(clicksend_client.ApiClient(configuration))
-list = clicksend_client.List() # List | List model
+contact_list = clicksend_client.ContactList() # ContactList | Contact list model
 
 try:
     # Create new contact list
-    api_response = api_instance.lists_post(list)
+    api_response = api_instance.lists_post(contact_list)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ContactListApi->lists_post: %s\n" % e)
@@ -320,7 +320,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | [**List**](List.md)| List model | 
+ **contact_list** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 

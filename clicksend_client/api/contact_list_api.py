@@ -231,47 +231,47 @@ class ContactListApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def lists_by_list_id_put(self, list_id, list, **kwargs):  # noqa: E501
+    def lists_by_list_id_put(self, list_id, contact_list, **kwargs):  # noqa: E501
         """Update specific contact list  # noqa: E501
 
         Update specific contact list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.lists_by_list_id_put(list_id, list, async_req=True)
+        >>> thread = api.lists_by_list_id_put(list_id, contact_list, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int list_id: Your list id (required)
-        :param List list: List model (required)
+        :param ContactList contact_list: Contact list model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.lists_by_list_id_put_with_http_info(list_id, list, **kwargs)  # noqa: E501
+            return self.lists_by_list_id_put_with_http_info(list_id, contact_list, **kwargs)  # noqa: E501
         else:
-            (data) = self.lists_by_list_id_put_with_http_info(list_id, list, **kwargs)  # noqa: E501
+            (data) = self.lists_by_list_id_put_with_http_info(list_id, contact_list, **kwargs)  # noqa: E501
             return data
 
-    def lists_by_list_id_put_with_http_info(self, list_id, list, **kwargs):  # noqa: E501
+    def lists_by_list_id_put_with_http_info(self, list_id, contact_list, **kwargs):  # noqa: E501
         """Update specific contact list  # noqa: E501
 
         Update specific contact list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.lists_by_list_id_put_with_http_info(list_id, list, async_req=True)
+        >>> thread = api.lists_by_list_id_put_with_http_info(list_id, contact_list, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int list_id: Your list id (required)
-        :param List list: List model (required)
+        :param ContactList contact_list: Contact list model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['list_id', 'list']  # noqa: E501
+        all_params = ['list_id', 'contact_list']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -290,10 +290,10 @@ class ContactListApi(object):
         if ('list_id' not in params or
                 params['list_id'] is None):
             raise ValueError("Missing the required parameter `list_id` when calling `lists_by_list_id_put`")  # noqa: E501
-        # verify the required parameter 'list' is set
-        if ('list' not in params or
-                params['list'] is None):
-            raise ValueError("Missing the required parameter `list` when calling `lists_by_list_id_put`")  # noqa: E501
+        # verify the required parameter 'contact_list' is set
+        if ('contact_list' not in params or
+                params['contact_list'] is None):
+            raise ValueError("Missing the required parameter `contact_list` when calling `lists_by_list_id_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -309,8 +309,8 @@ class ContactListApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'list' in params:
-            body_params = params['list']
+        if 'contact_list' in params:
+            body_params = params['contact_list']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -548,45 +548,45 @@ class ContactListApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def lists_post(self, list, **kwargs):  # noqa: E501
+    def lists_post(self, contact_list, **kwargs):  # noqa: E501
         """Create new contact list  # noqa: E501
 
         Create new contact list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.lists_post(list, async_req=True)
+        >>> thread = api.lists_post(contact_list, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param List list: List model (required)
+        :param ContactList contact_list: Contact list model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.lists_post_with_http_info(list, **kwargs)  # noqa: E501
+            return self.lists_post_with_http_info(contact_list, **kwargs)  # noqa: E501
         else:
-            (data) = self.lists_post_with_http_info(list, **kwargs)  # noqa: E501
+            (data) = self.lists_post_with_http_info(contact_list, **kwargs)  # noqa: E501
             return data
 
-    def lists_post_with_http_info(self, list, **kwargs):  # noqa: E501
+    def lists_post_with_http_info(self, contact_list, **kwargs):  # noqa: E501
         """Create new contact list  # noqa: E501
 
         Create new contact list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.lists_post_with_http_info(list, async_req=True)
+        >>> thread = api.lists_post_with_http_info(contact_list, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param List list: List model (required)
+        :param ContactList contact_list: Contact list model (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['list']  # noqa: E501
+        all_params = ['contact_list']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -601,10 +601,10 @@ class ContactListApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'list' is set
-        if ('list' not in params or
-                params['list'] is None):
-            raise ValueError("Missing the required parameter `list` when calling `lists_post`")  # noqa: E501
+        # verify the required parameter 'contact_list' is set
+        if ('contact_list' not in params or
+                params['contact_list'] is None):
+            raise ValueError("Missing the required parameter `contact_list` when calling `lists_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -618,8 +618,8 @@ class ContactListApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'list' in params:
-            body_params = params['list']
+        if 'contact_list' in params:
+            body_params = params['contact_list']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

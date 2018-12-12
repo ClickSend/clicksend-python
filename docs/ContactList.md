@@ -1,4 +1,4 @@
-# List
+# ContactList
 
 ## Properties
 Name | Type | Description | Notes

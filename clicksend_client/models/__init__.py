@@ -21,6 +21,7 @@ from clicksend_client.models.account_verify import AccountVerify
 from clicksend_client.models.address import Address
 from clicksend_client.models.attachment import Attachment
 from clicksend_client.models.contact import Contact
+from clicksend_client.models.contact_list import ContactList
 from clicksend_client.models.contact_list_import import ContactListImport
 from clicksend_client.models.credit_card import CreditCard
 from clicksend_client.models.date_before import DateBefore
@@ -42,7 +43,6 @@ from clicksend_client.models.forgot_password import ForgotPassword
 from clicksend_client.models.forgot_username import ForgotUsername
 from clicksend_client.models.inbound_fax_rule import InboundFaxRule
 from clicksend_client.models.inbound_sms_rule import InboundSMSRule
-from clicksend_client.models.list import List
 from clicksend_client.models.mms_campaign import MmsCampaign
 from clicksend_client.models.mms_message import MmsMessage
 from clicksend_client.models.mms_message_collection import MmsMessageCollection
