@@ -35,7 +35,8 @@ class SmsCampaign(object):
         'name': 'str',
         'body': 'str',
         '_from': 'str',
-        'schedule': 'int'
+        'schedule': 'int',
+        'url_to_shorten': 'str'
     }
 
     attribute_map = {
@@ -43,14 +44,15 @@ class SmsCampaign(object):
         'name': 'name',
         'body': 'body',
         '_from': 'from',
-        'schedule': 'schedule'
+        'schedule': 'schedule',
+        'url_to_shorten': 'url_to_shorten'
     }
 
     discriminator_value_class_map = {
         
     }
 
-    def __init__(self, list_id=None, name=None, body=None, _from=None, schedule=0):  # noqa: E501
+    def __init__(self, list_id=None, name=None, body=None, _from=None, schedule=0, url_to_shorten=None):  # noqa: E501
         """SmsCampaign - a model defined in Swagger"""  # noqa: E501
 
         self._list_id = None
@@ -58,6 +60,7 @@ class SmsCampaign(object):
         self._body = None
         self.__from = None
         self._schedule = None
+        self._url_to_shorten = None
         self.discriminator = 'classType'
 
         self.list_id = list_id
@@ -67,6 +70,8 @@ class SmsCampaign(object):
             self._from = _from
         if schedule is not None:
             self.schedule = schedule
+        if url_to_shorten is not None:
+            self.url_to_shorten = url_to_shorten
 
     @property
     def list_id(self):
@@ -188,6 +193,29 @@ class SmsCampaign(object):
         """
 
         self._schedule = schedule
+
+    @property
+    def url_to_shorten(self):
+        """Gets the url_to_shorten of this SmsCampaign.  # noqa: E501
+
+        url to be shortened add http://smsg.io/xxxxx` to the body as a placeholder.  # noqa: E501
+
+        :return: The url_to_shorten of this SmsCampaign.  # noqa: E501
+        :rtype: str
+        """
+        return self._url_to_shorten
+
+    @url_to_shorten.setter
+    def url_to_shorten(self, url_to_shorten):
+        """Sets the url_to_shorten of this SmsCampaign.
+
+        url to be shortened add http://smsg.io/xxxxx` to the body as a placeholder.  # noqa: E501
+
+        :param url_to_shorten: The url_to_shorten of this SmsCampaign.  # noqa: E501
+        :type: str
+        """
+
+        self._url_to_shorten = url_to_shorten
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""
