@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**to** | **str** | Your phone number in E.164 format. | 
+**to** | **str** | Your phone number in E.164 format. | [optional] 
 **body** | **str** | Biscuit uv3nlCOjRk croissant chocolate lollipop chocolate muffin. | 
 **voice** | **str** | Either &#39;female&#39; or &#39;male&#39;. | 
 **custom_string** | **str** | Your reference. Will be passed back with all replies and delivery reports. | 

@@ -75,7 +75,8 @@ class SmsMessage(object):
         if _from is not None:
             self._from = _from
         self.body = body
-        self.to = to
+        if to is not None:
+            self.to = to
         if source is not None:
             self.source = source
         if schedule is not None:
@@ -157,8 +158,6 @@ class SmsMessage(object):
         :param to: The to of this SmsMessage.  # noqa: E501
         :type: str
         """
-        if to is None:
-            raise ValueError("Invalid value for `to`, must not be `None`")  # noqa: E501
 
         self._to = to
 

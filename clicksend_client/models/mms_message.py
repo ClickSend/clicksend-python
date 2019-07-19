@@ -75,7 +75,8 @@ class MmsMessage(object):
         self._from_email = None
         self.discriminator = 'classType'
 
-        self.to = to
+        if to is not None:
+            self.to = to
         self.body = body
         self.subject = subject
         if _from is not None:
@@ -113,8 +114,6 @@ class MmsMessage(object):
         :param to: The to of this MmsMessage.  # noqa: E501
         :type: str
         """
-        if to is None:
-            raise ValueError("Invalid value for `to`, must not be `None`")  # noqa: E501
 
         self._to = to
 

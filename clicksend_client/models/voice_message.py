@@ -78,7 +78,8 @@ class VoiceMessage(object):
         self._machine_detection = None
         self.discriminator = 'classType'
 
-        self.to = to
+        if to is not None:
+            self.to = to
         self.body = body
         self.voice = voice
         self.custom_string = custom_string
@@ -116,8 +117,6 @@ class VoiceMessage(object):
         :param to: The to of this VoiceMessage.  # noqa: E501
         :type: str
         """
-        if to is None:
-            raise ValueError("Invalid value for `to`, must not be `None`")  # noqa: E501
 
         self._to = to
 
