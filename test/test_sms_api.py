@@ -92,13 +92,6 @@ class TestSMSApi(unittest.TestCase):
         """
         pass
 
-    def test_sms_receipt_read_by_message_id_put(self):
-        """Test case for sms_receipt_read_by_message_id_put
-
-        Mark specific delivery receipt as read  # noqa: E501
-        """
-        pass
-
     def test_sms_receipts_by_message_id_get(self):
         """Test case for sms_receipts_by_message_id_get
 

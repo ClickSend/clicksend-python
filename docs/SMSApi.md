@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**sms_inbound_read_by_message_id_put**](SMSApi.md#sms_inbound_read_by_message_id_put) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**sms_inbound_read_put**](SMSApi.md#sms_inbound_read_put) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**sms_price_post**](SMSApi.md#sms_price_post) | **POST** /sms/price | Calculate sms price
-[**sms_receipt_read_by_message_id_put**](SMSApi.md#sms_receipt_read_by_message_id_put) | **PUT** /sms/receipts-read/{message_id} | Mark specific delivery receipt as read
 [**sms_receipts_by_message_id_get**](SMSApi.md#sms_receipts_by_message_id_get) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
 [**sms_receipts_get**](SMSApi.md#sms_receipts_get) | **GET** /sms/receipts | Get all delivery receipts
 [**sms_receipts_post**](SMSApi.md#sms_receipts_post) | **POST** /sms/receipts | Add a delivery receipt
@@ -494,59 +493,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sms_messages** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sms_receipt_read_by_message_id_put**
-> str sms_receipt_read_by_message_id_put(message_id)
-
-Mark specific delivery receipt as read
-
-Mark specific delivery receipt as read
-
-### Example
-```python
-from __future__ import print_function
-import time
-import clicksend_client
-from clicksend_client.rest import ApiException
-from pprint import pprint
-
-# Configure HTTP basic authorization: BasicAuth
-configuration = clicksend_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-
-# create an instance of the API class
-api_instance = clicksend_client.SMSApi(clicksend_client.ApiClient(configuration))
-message_id = 'message_id_example' # str | The message ID you want to mark as read
-
-try:
-    # Mark specific delivery receipt as read
-    api_response = api_instance.sms_receipt_read_by_message_id_put(message_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling SMSApi->sms_receipt_read_by_message_id_put: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **message_id** | **str**| The message ID you want to mark as read | 
 
 ### Return type
 
