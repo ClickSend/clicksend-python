@@ -64,6 +64,13 @@ class TestContactApi(unittest.TestCase):
         """
         pass
 
+    def test_lists_copy_contact_put(self):
+        """Test case for lists_copy_contact_put
+
+        Copy contact to another list  # noqa: E501
+        """
+        pass
+
     def test_lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put(self):
         """Test case for lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put
 

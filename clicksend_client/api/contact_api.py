@@ -580,6 +580,121 @@ class ContactApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def lists_copy_contact_put(self, from_list_id, contact_id, to_list_id, **kwargs):  # noqa: E501
+        """Copy contact to another list  # noqa: E501
+
+        Copy contact to another list  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.lists_copy_contact_put(from_list_id, contact_id, to_list_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int from_list_id: List ID for list that contains contact. (required)
+        :param int contact_id: Contact ID (required)
+        :param int to_list_id: List ID for list you want to copy the contact to. (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.lists_copy_contact_put_with_http_info(from_list_id, contact_id, to_list_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.lists_copy_contact_put_with_http_info(from_list_id, contact_id, to_list_id, **kwargs)  # noqa: E501
+            return data
+
+    def lists_copy_contact_put_with_http_info(self, from_list_id, contact_id, to_list_id, **kwargs):  # noqa: E501
+        """Copy contact to another list  # noqa: E501
+
+        Copy contact to another list  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.lists_copy_contact_put_with_http_info(from_list_id, contact_id, to_list_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int from_list_id: List ID for list that contains contact. (required)
+        :param int contact_id: Contact ID (required)
+        :param int to_list_id: List ID for list you want to copy the contact to. (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['from_list_id', 'contact_id', 'to_list_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method lists_copy_contact_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'from_list_id' is set
+        if ('from_list_id' not in params or
+                params['from_list_id'] is None):
+            raise ValueError("Missing the required parameter `from_list_id` when calling `lists_copy_contact_put`")  # noqa: E501
+        # verify the required parameter 'contact_id' is set
+        if ('contact_id' not in params or
+                params['contact_id'] is None):
+            raise ValueError("Missing the required parameter `contact_id` when calling `lists_copy_contact_put`")  # noqa: E501
+        # verify the required parameter 'to_list_id' is set
+        if ('to_list_id' not in params or
+                params['to_list_id'] is None):
+            raise ValueError("Missing the required parameter `to_list_id` when calling `lists_copy_contact_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'from_list_id' in params:
+            path_params['from_list_id'] = params['from_list_id']  # noqa: E501
+        if 'contact_id' in params:
+            path_params['contact_id'] = params['contact_id']  # noqa: E501
+        if 'to_list_id' in params:
+            path_params['to_list_id'] = params['to_list_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['BasicAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put(self, list_id, opt_out_list_id, **kwargs):  # noqa: E501
         """Remove all opted out contacts  # noqa: E501
 

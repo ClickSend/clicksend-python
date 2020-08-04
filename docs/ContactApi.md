@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**lists_contacts_by_list_id_and_contact_id_put**](ContactApi.md#lists_contacts_by_list_id_and_contact_id_put) | **PUT** /lists/{list_id}/contacts/{contact_id} | Update specific contact
 [**lists_contacts_by_list_id_get**](ContactApi.md#lists_contacts_by_list_id_get) | **GET** /lists/{list_id}/contacts | Get all contacts in a list
 [**lists_contacts_by_list_id_post**](ContactApi.md#lists_contacts_by_list_id_post) | **POST** /lists/{list_id}/contacts | Create new contact
+[**lists_copy_contact_put**](ContactApi.md#lists_copy_contact_put) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
 [**lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put**](ContactApi.md#lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
 [**lists_transfer_contact_put**](ContactApi.md#lists_transfer_contact_put) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
@@ -276,6 +277,63 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **list_id** | **int**| List id | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **lists_copy_contact_put**
+> str lists_copy_contact_put(from_list_id, contact_id, to_list_id)
+
+Copy contact to another list
+
+Copy contact to another list
+
+### Example
+```python
+from __future__ import print_function
+import time
+import clicksend_client
+from clicksend_client.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = clicksend_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = clicksend_client.ContactApi(clicksend_client.ApiClient(configuration))
+from_list_id = 56 # int | List ID for list that contains contact.
+contact_id = 56 # int | Contact ID
+to_list_id = 56 # int | List ID for list you want to copy the contact to.
+
+try:
+    # Copy contact to another list
+    api_response = api_instance.lists_copy_contact_put(from_list_id, contact_id, to_list_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ContactApi->lists_copy_contact_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from_list_id** | **int**| List ID for list that contains contact. | 
+ **contact_id** | **int**| Contact ID | 
+ **to_list_id** | **int**| List ID for list you want to copy the contact to. | 
 
 ### Return type
 
