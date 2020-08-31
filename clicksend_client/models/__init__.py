@@ -23,6 +23,7 @@ from clicksend_client.models.attachment import Attachment
 from clicksend_client.models.contact import Contact
 from clicksend_client.models.contact_list import ContactList
 from clicksend_client.models.contact_list_import import ContactListImport
+from clicksend_client.models.content import Content
 from clicksend_client.models.credit_card import CreditCard
 from clicksend_client.models.date_before import DateBefore
 from clicksend_client.models.delivery_issue import DeliveryIssue
@@ -57,7 +58,6 @@ from clicksend_client.models.sms_message_collection import SmsMessageCollection
 from clicksend_client.models.sms_template import SmsTemplate
 from clicksend_client.models.stripped_string import StrippedString
 from clicksend_client.models.subaccount import Subaccount
-from clicksend_client.models.upload_file import UploadFile
 from clicksend_client.models.url import Url
 from clicksend_client.models.voice_message import VoiceMessage
 from clicksend_client.models.voice_message_collection import VoiceMessageCollection

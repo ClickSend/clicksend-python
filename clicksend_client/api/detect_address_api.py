@@ -33,45 +33,45 @@ class DetectAddressApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def detect_address_post(self, upload_file, **kwargs):  # noqa: E501
+    def detect_address_post(self, content, **kwargs):  # noqa: E501
         """Detects address in uploaded file.  # noqa: E501
 
         Detects address in uploaded file.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.detect_address_post(upload_file, async_req=True)
+        >>> thread = api.detect_address_post(content, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param UploadFile upload_file: Your file to be uploaded (required)
+        :param Content content: Your file to be uploaded (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.detect_address_post_with_http_info(upload_file, **kwargs)  # noqa: E501
+            return self.detect_address_post_with_http_info(content, **kwargs)  # noqa: E501
         else:
-            (data) = self.detect_address_post_with_http_info(upload_file, **kwargs)  # noqa: E501
+            (data) = self.detect_address_post_with_http_info(content, **kwargs)  # noqa: E501
             return data
 
-    def detect_address_post_with_http_info(self, upload_file, **kwargs):  # noqa: E501
+    def detect_address_post_with_http_info(self, content, **kwargs):  # noqa: E501
         """Detects address in uploaded file.  # noqa: E501
 
         Detects address in uploaded file.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.detect_address_post_with_http_info(upload_file, async_req=True)
+        >>> thread = api.detect_address_post_with_http_info(content, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param UploadFile upload_file: Your file to be uploaded (required)
+        :param Content content: Your file to be uploaded (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['upload_file']  # noqa: E501
+        all_params = ['content']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -86,10 +86,10 @@ class DetectAddressApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'upload_file' is set
-        if ('upload_file' not in params or
-                params['upload_file'] is None):
-            raise ValueError("Missing the required parameter `upload_file` when calling `detect_address_post`")  # noqa: E501
+        # verify the required parameter 'content' is set
+        if ('content' not in params or
+                params['content'] is None):
+            raise ValueError("Missing the required parameter `content` when calling `detect_address_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -103,8 +103,8 @@ class DetectAddressApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'upload_file' in params:
-            body_params = params['upload_file']
+        if 'content' in params:
+            body_params = params['content']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
