@@ -37,7 +37,8 @@ class InboundSMSRule(object):
         'message_search_term': 'str',
         'action': 'str',
         'action_address': 'str',
-        'enabled': 'float'
+        'enabled': 'float',
+        'webhook_type': 'str'
     }
 
     attribute_map = {
@@ -47,14 +48,15 @@ class InboundSMSRule(object):
         'message_search_term': 'message_search_term',
         'action': 'action',
         'action_address': 'action_address',
-        'enabled': 'enabled'
+        'enabled': 'enabled',
+        'webhook_type': 'webhook_type'
     }
 
     discriminator_value_class_map = {
         
     }
 
-    def __init__(self, dedicated_number=None, rule_name=None, message_search_type=None, message_search_term=None, action=None, action_address=None, enabled=None):  # noqa: E501
+    def __init__(self, dedicated_number=None, rule_name=None, message_search_type=None, message_search_term=None, action=None, action_address=None, enabled=None, webhook_type=None):  # noqa: E501
         """InboundSMSRule - a model defined in Swagger"""  # noqa: E501
 
         self._dedicated_number = None
@@ -64,6 +66,7 @@ class InboundSMSRule(object):
         self._action = None
         self._action_address = None
         self._enabled = None
+        self._webhook_type = None
         self.discriminator = 'classType'
 
         self.dedicated_number = dedicated_number
@@ -73,6 +76,8 @@ class InboundSMSRule(object):
         self.action = action
         self.action_address = action_address
         self.enabled = enabled
+        if webhook_type is not None:
+            self.webhook_type = webhook_type
 
     @property
     def dedicated_number(self):
@@ -248,6 +253,29 @@ class InboundSMSRule(object):
             raise ValueError("Invalid value for `enabled`, must not be `None`")  # noqa: E501
 
         self._enabled = enabled
+
+    @property
+    def webhook_type(self):
+        """Gets the webhook_type of this InboundSMSRule.  # noqa: E501
+
+        post, get, or json. post by default  # noqa: E501
+
+        :return: The webhook_type of this InboundSMSRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._webhook_type
+
+    @webhook_type.setter
+    def webhook_type(self, webhook_type):
+        """Sets the webhook_type of this InboundSMSRule.
+
+        post, get, or json. post by default  # noqa: E501
+
+        :param webhook_type: The webhook_type of this InboundSMSRule.  # noqa: E501
+        :type: str
+        """
+
+        self._webhook_type = webhook_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""
