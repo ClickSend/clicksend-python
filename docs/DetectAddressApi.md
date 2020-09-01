@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **detect_address_post**
-> str detect_address_post(content)
+> str detect_address_post(upload_file)
 
 Detects address in uploaded file.
 
@@ -29,11 +29,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = clicksend_client.DetectAddressApi(clicksend_client.ApiClient(configuration))
-content = clicksend_client.Content() # Content | Your file to be uploaded
+upload_file = clicksend_client.UploadFile() # UploadFile | Your file to be uploaded
 
 try:
     # Detects address in uploaded file.
-    api_response = api_instance.detect_address_post(content)
+    api_response = api_instance.detect_address_post(upload_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DetectAddressApi->detect_address_post: %s\n" % e)
@@ -43,7 +43,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | [**Content**](Content.md)| Your file to be uploaded | 
+ **upload_file** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
 
 ### Return type
 

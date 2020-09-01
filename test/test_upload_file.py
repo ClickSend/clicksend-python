@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import clicksend_client
-from clicksend_client.models.content import Content  # noqa: E501
+from clicksend_client.models.upload_file import UploadFile  # noqa: E501
 from clicksend_client.rest import ApiException
 
 
-class TestContent(unittest.TestCase):
-    """Content unit test stubs"""
+class TestUploadFile(unittest.TestCase):
+    """UploadFile unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestContent(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testContent(self):
-        """Test Content"""
+    def testUploadFile(self):
+        """Test UploadFile"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = clicksend_client.models.content.Content()  # noqa: E501
+        # model = clicksend_client.models.upload_file.UploadFile()  # noqa: E501
         pass
 
 
