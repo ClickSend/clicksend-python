@@ -178,8 +178,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'message_id' is set
-        if ('message_id' not in params or
-                params['message_id'] is None):
+        if self.api_client.client_side_validation and ('message_id' not in params or
+                                                       params['message_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `message_id` when calling `sms_cancel_by_message_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -277,8 +277,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'filename' is set
-        if ('filename' not in params or
-                params['filename'] is None):
+        if self.api_client.client_side_validation and ('filename' not in params or
+                                                       params['filename'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `filename` when calling `sms_history_export_get`")  # noqa: E501
 
         collection_formats = {}
@@ -384,9 +384,9 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `sms_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `sms_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -495,9 +495,9 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `sms_inbound_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `sms_inbound_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -598,8 +598,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'url' is set
-        if ('url' not in params or
-                params['url'] is None):
+        if self.api_client.client_side_validation and ('url' not in params or
+                                                       params['url'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `url` when calling `sms_inbound_post`")  # noqa: E501
 
         collection_formats = {}
@@ -697,8 +697,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'message_id' is set
-        if ('message_id' not in params or
-                params['message_id'] is None):
+        if self.api_client.client_side_validation and ('message_id' not in params or
+                                                       params['message_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `message_id` when calling `sms_inbound_read_by_message_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -891,8 +891,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'sms_messages' is set
-        if ('sms_messages' not in params or
-                params['sms_messages'] is None):
+        if self.api_client.client_side_validation and ('sms_messages' not in params or
+                                                       params['sms_messages'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `sms_messages` when calling `sms_price_post`")  # noqa: E501
 
         collection_formats = {}
@@ -990,8 +990,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'message_id' is set
-        if ('message_id' not in params or
-                params['message_id'] is None):
+        if self.api_client.client_side_validation and ('message_id' not in params or
+                                                       params['message_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `message_id` when calling `sms_receipts_by_message_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -1091,9 +1091,9 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `sms_receipts_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `sms_receipts_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -1192,8 +1192,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'url' is set
-        if ('url' not in params or
-                params['url'] is None):
+        if self.api_client.client_side_validation and ('url' not in params or
+                                                       params['url'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `url` when calling `sms_receipts_post`")  # noqa: E501
 
         collection_formats = {}
@@ -1386,8 +1386,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'sms_messages' is set
-        if ('sms_messages' not in params or
-                params['sms_messages'] is None):
+        if self.api_client.client_side_validation and ('sms_messages' not in params or
+                                                       params['sms_messages'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `sms_messages` when calling `sms_send_post`")  # noqa: E501
 
         collection_formats = {}
@@ -1485,8 +1485,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'template_id' is set
-        if ('template_id' not in params or
-                params['template_id'] is None):
+        if self.api_client.client_side_validation and ('template_id' not in params or
+                                                       params['template_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `template_id` when calling `sms_templates_by_template_id_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -1586,12 +1586,12 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'template_id' is set
-        if ('template_id' not in params or
-                params['template_id'] is None):
+        if self.api_client.client_side_validation and ('template_id' not in params or
+                                                       params['template_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `template_id` when calling `sms_templates_by_template_id_put`")  # noqa: E501
         # verify the required parameter 'sms_template' is set
-        if ('sms_template' not in params or
-                params['sms_template'] is None):
+        if self.api_client.client_side_validation and ('sms_template' not in params or
+                                                       params['sms_template'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `sms_template` when calling `sms_templates_by_template_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -1693,9 +1693,9 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `sms_templates_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `sms_templates_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -1794,8 +1794,8 @@ class SMSApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'sms_template' is set
-        if ('sms_template' not in params or
-                params['sms_template'] is None):
+        if self.api_client.client_side_validation and ('sms_template' not in params or
+                                                       params['sms_template'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `sms_template` when calling `sms_templates_post`")  # noqa: E501
 
         collection_formats = {}

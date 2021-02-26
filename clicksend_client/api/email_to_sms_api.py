@@ -89,9 +89,9 @@ class EmailToSmsApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `sms_email_sms_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `sms_email_sms_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -190,8 +190,8 @@ class EmailToSmsApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_sms_address' is set
-        if ('email_sms_address' not in params or
-                params['email_sms_address'] is None):
+        if self.api_client.client_side_validation and ('email_sms_address' not in params or
+                                                       params['email_sms_address'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_sms_address` when calling `sms_email_sms_post`")  # noqa: E501
 
         collection_formats = {}
@@ -289,8 +289,8 @@ class EmailToSmsApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'rule_id' is set
-        if ('rule_id' not in params or
-                params['rule_id'] is None):
+        if self.api_client.client_side_validation and ('rule_id' not in params or
+                                                       params['rule_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `rule_id` when calling `sms_email_sms_stripped_string_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -388,8 +388,8 @@ class EmailToSmsApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'rule_id' is set
-        if ('rule_id' not in params or
-                params['rule_id'] is None):
+        if self.api_client.client_side_validation and ('rule_id' not in params or
+                                                       params['rule_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `rule_id` when calling `sms_email_sms_stripped_string_get`")  # noqa: E501
 
         collection_formats = {}
@@ -487,8 +487,8 @@ class EmailToSmsApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'stripped_string' is set
-        if ('stripped_string' not in params or
-                params['stripped_string'] is None):
+        if self.api_client.client_side_validation and ('stripped_string' not in params or
+                                                       params['stripped_string'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `stripped_string` when calling `sms_email_sms_stripped_string_post`")  # noqa: E501
 
         collection_formats = {}
@@ -588,12 +588,12 @@ class EmailToSmsApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'stripped_string' is set
-        if ('stripped_string' not in params or
-                params['stripped_string'] is None):
+        if self.api_client.client_side_validation and ('stripped_string' not in params or
+                                                       params['stripped_string'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `stripped_string` when calling `sms_email_sms_stripped_string_put`")  # noqa: E501
         # verify the required parameter 'rule_id' is set
-        if ('rule_id' not in params or
-                params['rule_id'] is None):
+        if self.api_client.client_side_validation and ('rule_id' not in params or
+                                                       params['rule_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `rule_id` when calling `sms_email_sms_stripped_string_put`")  # noqa: E501
 
         collection_formats = {}
@@ -695,9 +695,9 @@ class EmailToSmsApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `sms_email_sms_stripped_strings_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `sms_email_sms_stripped_strings_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 

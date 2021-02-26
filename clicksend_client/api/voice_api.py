@@ -178,8 +178,8 @@ class VoiceApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'message_id' is set
-        if ('message_id' not in params or
-                params['message_id'] is None):
+        if self.api_client.client_side_validation and ('message_id' not in params or
+                                                       params['message_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `message_id` when calling `voice_cancel_by_message_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -277,8 +277,8 @@ class VoiceApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'filename' is set
-        if ('filename' not in params or
-                params['filename'] is None):
+        if self.api_client.client_side_validation and ('filename' not in params or
+                                                       params['filename'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `filename` when calling `voice_history_export_get`")  # noqa: E501
 
         collection_formats = {}
@@ -382,9 +382,9 @@ class VoiceApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `voice_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `voice_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -578,8 +578,8 @@ class VoiceApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'voice_messages' is set
-        if ('voice_messages' not in params or
-                params['voice_messages'] is None):
+        if self.api_client.client_side_validation and ('voice_messages' not in params or
+                                                       params['voice_messages'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `voice_messages` when calling `voice_price_post`")  # noqa: E501
 
         collection_formats = {}
@@ -679,9 +679,9 @@ class VoiceApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `voice_receipts_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `voice_receipts_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -780,8 +780,8 @@ class VoiceApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'url' is set
-        if ('url' not in params or
-                params['url'] is None):
+        if self.api_client.client_side_validation and ('url' not in params or
+                                                       params['url'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `url` when calling `voice_receipts_post`")  # noqa: E501
 
         collection_formats = {}
@@ -974,8 +974,8 @@ class VoiceApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'voice_messages' is set
-        if ('voice_messages' not in params or
-                params['voice_messages'] is None):
+        if self.api_client.client_side_validation and ('voice_messages' not in params or
+                                                       params['voice_messages'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `voice_messages` when calling `voice_send_post`")  # noqa: E501
 
         collection_formats = {}

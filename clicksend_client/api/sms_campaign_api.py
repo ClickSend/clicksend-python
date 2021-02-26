@@ -87,8 +87,8 @@ class SmsCampaignApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'sms_campaign_id' is set
-        if ('sms_campaign_id' not in params or
-                params['sms_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('sms_campaign_id' not in params or
+                                                       params['sms_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `sms_campaign_id` when calling `sms_campaign_by_sms_campaign_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -188,12 +188,12 @@ class SmsCampaignApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'sms_campaign_id' is set
-        if ('sms_campaign_id' not in params or
-                params['sms_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('sms_campaign_id' not in params or
+                                                       params['sms_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `sms_campaign_id` when calling `sms_campaigns_by_sms_campaign_id_put`")  # noqa: E501
         # verify the required parameter 'campaign' is set
-        if ('campaign' not in params or
-                params['campaign'] is None):
+        if self.api_client.client_side_validation and ('campaign' not in params or
+                                                       params['campaign'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `campaign` when calling `sms_campaigns_by_sms_campaign_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -293,8 +293,8 @@ class SmsCampaignApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'sms_campaign_id' is set
-        if ('sms_campaign_id' not in params or
-                params['sms_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('sms_campaign_id' not in params or
+                                                       params['sms_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `sms_campaign_id` when calling `sms_campaigns_cancel_by_sms_campaign_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -394,9 +394,9 @@ class SmsCampaignApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `sms_campaigns_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `sms_campaigns_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -495,8 +495,8 @@ class SmsCampaignApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'campaign' is set
-        if ('campaign' not in params or
-                params['campaign'] is None):
+        if self.api_client.client_side_validation and ('campaign' not in params or
+                                                       params['campaign'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `campaign` when calling `sms_campaigns_price_post`")  # noqa: E501
 
         collection_formats = {}
@@ -594,8 +594,8 @@ class SmsCampaignApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'campaign' is set
-        if ('campaign' not in params or
-                params['campaign'] is None):
+        if self.api_client.client_side_validation and ('campaign' not in params or
+                                                       params['campaign'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `campaign` when calling `sms_campaigns_send_post`")  # noqa: E501
 
         collection_formats = {}

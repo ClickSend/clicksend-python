@@ -87,8 +87,8 @@ class InboundFAXRulesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'inbound_rule_id' is set
-        if ('inbound_rule_id' not in params or
-                params['inbound_rule_id'] is None):
+        if self.api_client.client_side_validation and ('inbound_rule_id' not in params or
+                                                       params['inbound_rule_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `inbound_rule_id` when calling `fax_inbound_automation_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -186,8 +186,8 @@ class InboundFAXRulesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'inbound_rule_id' is set
-        if ('inbound_rule_id' not in params or
-                params['inbound_rule_id'] is None):
+        if self.api_client.client_side_validation and ('inbound_rule_id' not in params or
+                                                       params['inbound_rule_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `inbound_rule_id` when calling `fax_inbound_automation_get`")  # noqa: E501
 
         collection_formats = {}
@@ -285,8 +285,8 @@ class InboundFAXRulesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'inbound_fax_rule' is set
-        if ('inbound_fax_rule' not in params or
-                params['inbound_fax_rule'] is None):
+        if self.api_client.client_side_validation and ('inbound_fax_rule' not in params or
+                                                       params['inbound_fax_rule'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `inbound_fax_rule` when calling `fax_inbound_automation_post`")  # noqa: E501
 
         collection_formats = {}
@@ -386,12 +386,12 @@ class InboundFAXRulesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'inbound_rule_id' is set
-        if ('inbound_rule_id' not in params or
-                params['inbound_rule_id'] is None):
+        if self.api_client.client_side_validation and ('inbound_rule_id' not in params or
+                                                       params['inbound_rule_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `inbound_rule_id` when calling `fax_inbound_automation_put`")  # noqa: E501
         # verify the required parameter 'inbound_fax_rule' is set
-        if ('inbound_fax_rule' not in params or
-                params['inbound_fax_rule'] is None):
+        if self.api_client.client_side_validation and ('inbound_fax_rule' not in params or
+                                                       params['inbound_fax_rule'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `inbound_fax_rule` when calling `fax_inbound_automation_put`")  # noqa: E501
 
         collection_formats = {}
@@ -495,9 +495,9 @@ class InboundFAXRulesApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `fax_inbound_automations_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `fax_inbound_automations_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 

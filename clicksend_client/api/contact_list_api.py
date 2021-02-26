@@ -87,8 +87,8 @@ class ContactListApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'list_id' is set
-        if ('list_id' not in params or
-                params['list_id'] is None):
+        if self.api_client.client_side_validation and ('list_id' not in params or
+                                                       params['list_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `list_id` when calling `lists_by_list_id_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -186,8 +186,8 @@ class ContactListApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'list_id' is set
-        if ('list_id' not in params or
-                params['list_id'] is None):
+        if self.api_client.client_side_validation and ('list_id' not in params or
+                                                       params['list_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `list_id` when calling `lists_by_list_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -287,12 +287,12 @@ class ContactListApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'list_id' is set
-        if ('list_id' not in params or
-                params['list_id'] is None):
+        if self.api_client.client_side_validation and ('list_id' not in params or
+                                                       params['list_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `list_id` when calling `lists_by_list_id_put`")  # noqa: E501
         # verify the required parameter 'contact_list' is set
-        if ('contact_list' not in params or
-                params['contact_list'] is None):
+        if self.api_client.client_side_validation and ('contact_list' not in params or
+                                                       params['contact_list'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `contact_list` when calling `lists_by_list_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -394,9 +394,9 @@ class ContactListApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `lists_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `lists_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -497,12 +497,12 @@ class ContactListApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'list_id' is set
-        if ('list_id' not in params or
-                params['list_id'] is None):
+        if self.api_client.client_side_validation and ('list_id' not in params or
+                                                       params['list_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `list_id` when calling `lists_import_by_list_id_post`")  # noqa: E501
         # verify the required parameter 'file' is set
-        if ('file' not in params or
-                params['file'] is None):
+        if self.api_client.client_side_validation and ('file' not in params or
+                                                       params['file'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `file` when calling `lists_import_by_list_id_post`")  # noqa: E501
 
         collection_formats = {}
@@ -602,8 +602,8 @@ class ContactListApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'contact_list' is set
-        if ('contact_list' not in params or
-                params['contact_list'] is None):
+        if self.api_client.client_side_validation and ('contact_list' not in params or
+                                                       params['contact_list'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `contact_list` when calling `lists_post`")  # noqa: E501
 
         collection_formats = {}
@@ -703,12 +703,12 @@ class ContactListApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'list_id' is set
-        if ('list_id' not in params or
-                params['list_id'] is None):
+        if self.api_client.client_side_validation and ('list_id' not in params or
+                                                       params['list_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `list_id` when calling `lists_remove_duplicates_by_list_id_put`")  # noqa: E501
         # verify the required parameter 'fields' is set
-        if ('fields' not in params or
-                params['fields'] is None):
+        if self.api_client.client_side_validation and ('fields' not in params or
+                                                       params['fields'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `fields` when calling `lists_remove_duplicates_by_list_id_put`")  # noqa: E501
 
         collection_formats = {}

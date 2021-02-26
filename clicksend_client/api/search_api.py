@@ -91,13 +91,13 @@ class SearchApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'q' is set
-        if ('q' not in params or
-                params['q'] is None):
+        if self.api_client.client_side_validation and ('q' not in params or
+                                                       params['q'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `q` when calling `search_contacts_lists_get`")  # noqa: E501
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `search_contacts_lists_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `search_contacts_lists_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 

@@ -178,8 +178,8 @@ class AccountRechargeApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'credit_card' is set
-        if ('credit_card' not in params or
-                params['credit_card'] is None):
+        if self.api_client.client_side_validation and ('credit_card' not in params or
+                                                       params['credit_card'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `credit_card` when calling `recharge_credit_card_put`")  # noqa: E501
 
         collection_formats = {}
@@ -372,8 +372,8 @@ class AccountRechargeApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'package_id' is set
-        if ('package_id' not in params or
-                params['package_id'] is None):
+        if self.api_client.client_side_validation and ('package_id' not in params or
+                                                       params['package_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `package_id` when calling `recharge_purchase_by_package_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -471,8 +471,8 @@ class AccountRechargeApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'transaction_id' is set
-        if ('transaction_id' not in params or
-                params['transaction_id'] is None):
+        if self.api_client.client_side_validation and ('transaction_id' not in params or
+                                                       params['transaction_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `transaction_id` when calling `recharge_transactions_by_transaction_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -572,9 +572,9 @@ class AccountRechargeApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `recharge_transactions_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `recharge_transactions_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 

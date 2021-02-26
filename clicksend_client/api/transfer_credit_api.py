@@ -87,8 +87,8 @@ class TransferCreditApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'reseller_account_transfer_credit' is set
-        if ('reseller_account_transfer_credit' not in params or
-                params['reseller_account_transfer_credit'] is None):
+        if self.api_client.client_side_validation and ('reseller_account_transfer_credit' not in params or
+                                                       params['reseller_account_transfer_credit'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `reseller_account_transfer_credit` when calling `reseller_transfer_credit_put`")  # noqa: E501
 
         collection_formats = {}

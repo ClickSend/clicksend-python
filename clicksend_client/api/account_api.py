@@ -178,8 +178,8 @@ class AccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'account' is set
-        if ('account' not in params or
-                params['account'] is None):
+        if self.api_client.client_side_validation and ('account' not in params or
+                                                       params['account'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `account` when calling `account_post`")  # noqa: E501
 
         collection_formats = {}
@@ -279,12 +279,12 @@ class AccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'year' is set
-        if ('year' not in params or
-                params['year'] is None):
+        if self.api_client.client_side_validation and ('year' not in params or
+                                                       params['year'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `year` when calling `account_useage_by_subaccount_get`")  # noqa: E501
         # verify the required parameter 'month' is set
-        if ('month' not in params or
-                params['month'] is None):
+        if self.api_client.client_side_validation and ('month' not in params or
+                                                       params['month'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `month` when calling `account_useage_by_subaccount_get`")  # noqa: E501
 
         collection_formats = {}
@@ -384,8 +384,8 @@ class AccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'account_verify' is set
-        if ('account_verify' not in params or
-                params['account_verify'] is None):
+        if self.api_client.client_side_validation and ('account_verify' not in params or
+                                                       params['account_verify'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `account_verify` when calling `account_verify_send_put`")  # noqa: E501
 
         collection_formats = {}
@@ -483,8 +483,8 @@ class AccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'activation_token' is set
-        if ('activation_token' not in params or
-                params['activation_token'] is None):
+        if self.api_client.client_side_validation and ('activation_token' not in params or
+                                                       params['activation_token'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `activation_token` when calling `account_verify_verify_by_activation_token_put`")  # noqa: E501
 
         collection_formats = {}
@@ -677,8 +677,8 @@ class AccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'verify_password' is set
-        if ('verify_password' not in params or
-                params['verify_password'] is None):
+        if self.api_client.client_side_validation and ('verify_password' not in params or
+                                                       params['verify_password'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `verify_password` when calling `forgot_password_verify_put`")  # noqa: E501
 
         collection_formats = {}

@@ -87,8 +87,8 @@ class UserEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'template_id' is set
-        if ('template_id' not in params or
-                params['template_id'] is None):
+        if self.api_client.client_side_validation and ('template_id' not in params or
+                                                       params['template_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `template_id` when calling `email_template_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -186,8 +186,8 @@ class UserEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'template_id' is set
-        if ('template_id' not in params or
-                params['template_id'] is None):
+        if self.api_client.client_side_validation and ('template_id' not in params or
+                                                       params['template_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `template_id` when calling `email_template_get`")  # noqa: E501
 
         collection_formats = {}
@@ -285,8 +285,8 @@ class UserEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_template' is set
-        if ('email_template' not in params or
-                params['email_template'] is None):
+        if self.api_client.client_side_validation and ('email_template' not in params or
+                                                       params['email_template'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_template` when calling `email_template_post`")  # noqa: E501
 
         collection_formats = {}
@@ -386,12 +386,12 @@ class UserEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'template_id' is set
-        if ('template_id' not in params or
-                params['template_id'] is None):
+        if self.api_client.client_side_validation and ('template_id' not in params or
+                                                       params['template_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `template_id` when calling `email_template_put`")  # noqa: E501
         # verify the required parameter 'email_template' is set
-        if ('email_template' not in params or
-                params['email_template'] is None):
+        if self.api_client.client_side_validation and ('email_template' not in params or
+                                                       params['email_template'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_template` when calling `email_template_put`")  # noqa: E501
 
         collection_formats = {}
@@ -493,9 +493,9 @@ class UserEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `email_templates_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `email_templates_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 

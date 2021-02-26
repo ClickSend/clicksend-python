@@ -91,8 +91,8 @@ class TransactionalEmailApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'filename' is set
-        if ('filename' not in params or
-                params['filename'] is None):
+        if self.api_client.client_side_validation and ('filename' not in params or
+                                                       params['filename'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `filename` when calling `email_history_export_get`")  # noqa: E501
 
         collection_formats = {}
@@ -200,9 +200,9 @@ class TransactionalEmailApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `email_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `email_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -305,8 +305,8 @@ class TransactionalEmailApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email' is set
-        if ('email' not in params or
-                params['email'] is None):
+        if self.api_client.client_side_validation and ('email' not in params or
+                                                       params['email'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email` when calling `email_price_post`")  # noqa: E501
 
         collection_formats = {}
@@ -404,8 +404,8 @@ class TransactionalEmailApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email' is set
-        if ('email' not in params or
-                params['email'] is None):
+        if self.api_client.client_side_validation and ('email' not in params or
+                                                       params['email'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email` when calling `email_send_post`")  # noqa: E501
 
         collection_formats = {}

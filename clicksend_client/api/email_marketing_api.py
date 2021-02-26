@@ -89,9 +89,9 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `allowed_email_address_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `allowed_email_address_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -285,8 +285,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_campaign_id' is set
-        if ('email_campaign_id' not in params or
-                params['email_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('email_campaign_id' not in params or
+                                                       params['email_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign_id` when calling `cancel_email_campaign_put`")  # noqa: E501
 
         collection_formats = {}
@@ -384,8 +384,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_campaign_id' is set
-        if ('email_campaign_id' not in params or
-                params['email_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('email_campaign_id' not in params or
+                                                       params['email_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign_id` when calling `email_campaign_get`")  # noqa: E501
 
         collection_formats = {}
@@ -487,8 +487,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_campaign_id' is set
-        if ('email_campaign_id' not in params or
-                params['email_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('email_campaign_id' not in params or
+                                                       params['email_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign_id` when calling `email_campaign_history_export_get`")  # noqa: E501
 
         collection_formats = {}
@@ -598,13 +598,13 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_campaign_id' is set
-        if ('email_campaign_id' not in params or
-                params['email_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('email_campaign_id' not in params or
+                                                       params['email_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign_id` when calling `email_campaign_history_get`")  # noqa: E501
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `email_campaign_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `email_campaign_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -709,8 +709,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_campaign' is set
-        if ('email_campaign' not in params or
-                params['email_campaign'] is None):
+        if self.api_client.client_side_validation and ('email_campaign' not in params or
+                                                       params['email_campaign'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign` when calling `email_campaign_post`")  # noqa: E501
 
         collection_formats = {}
@@ -808,8 +808,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_campaign' is set
-        if ('email_campaign' not in params or
-                params['email_campaign'] is None):
+        if self.api_client.client_side_validation and ('email_campaign' not in params or
+                                                       params['email_campaign'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign` when calling `email_campaign_price_post`")  # noqa: E501
 
         collection_formats = {}
@@ -909,12 +909,12 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_campaign_id' is set
-        if ('email_campaign_id' not in params or
-                params['email_campaign_id'] is None):
+        if self.api_client.client_side_validation and ('email_campaign_id' not in params or
+                                                       params['email_campaign_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign_id` when calling `email_campaign_put`")  # noqa: E501
         # verify the required parameter 'email_campaign' is set
-        if ('email_campaign' not in params or
-                params['email_campaign'] is None):
+        if self.api_client.client_side_validation and ('email_campaign' not in params or
+                                                       params['email_campaign'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_campaign` when calling `email_campaign_put`")  # noqa: E501
 
         collection_formats = {}
@@ -1016,9 +1016,9 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `email_campaigns_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `email_campaigns_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -1117,8 +1117,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_address_id' is set
-        if ('email_address_id' not in params or
-                params['email_address_id'] is None):
+        if self.api_client.client_side_validation and ('email_address_id' not in params or
+                                                       params['email_address_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_address_id` when calling `send_verification_token_get`")  # noqa: E501
 
         collection_formats = {}
@@ -1216,8 +1216,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_address_id' is set
-        if ('email_address_id' not in params or
-                params['email_address_id'] is None):
+        if self.api_client.client_side_validation and ('email_address_id' not in params or
+                                                       params['email_address_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_address_id` when calling `specific_allowed_email_address_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -1315,8 +1315,8 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_address_id' is set
-        if ('email_address_id' not in params or
-                params['email_address_id'] is None):
+        if self.api_client.client_side_validation and ('email_address_id' not in params or
+                                                       params['email_address_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_address_id` when calling `specific_allowed_email_address_get`")  # noqa: E501
 
         collection_formats = {}
@@ -1416,12 +1416,12 @@ class EmailMarketingApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'email_address_id' is set
-        if ('email_address_id' not in params or
-                params['email_address_id'] is None):
+        if self.api_client.client_side_validation and ('email_address_id' not in params or
+                                                       params['email_address_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `email_address_id` when calling `verify_allowed_email_address_get`")  # noqa: E501
         # verify the required parameter 'activation_token' is set
-        if ('activation_token' not in params or
-                params['activation_token'] is None):
+        if self.api_client.client_side_validation and ('activation_token' not in params or
+                                                       params['activation_token'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `activation_token` when calling `verify_allowed_email_address_get`")  # noqa: E501
 
         collection_formats = {}

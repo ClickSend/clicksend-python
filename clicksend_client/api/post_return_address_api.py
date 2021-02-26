@@ -87,8 +87,8 @@ class PostReturnAddressApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'return_address_id' is set
-        if ('return_address_id' not in params or
-                params['return_address_id'] is None):
+        if self.api_client.client_side_validation and ('return_address_id' not in params or
+                                                       params['return_address_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `return_address_id` when calling `post_return_addresses_by_return_address_id_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -186,8 +186,8 @@ class PostReturnAddressApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'return_address_id' is set
-        if ('return_address_id' not in params or
-                params['return_address_id'] is None):
+        if self.api_client.client_side_validation and ('return_address_id' not in params or
+                                                       params['return_address_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `return_address_id` when calling `post_return_addresses_by_return_address_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -287,12 +287,12 @@ class PostReturnAddressApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'return_address_id' is set
-        if ('return_address_id' not in params or
-                params['return_address_id'] is None):
+        if self.api_client.client_side_validation and ('return_address_id' not in params or
+                                                       params['return_address_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `return_address_id` when calling `post_return_addresses_by_return_address_id_put`")  # noqa: E501
         # verify the required parameter 'return_address' is set
-        if ('return_address' not in params or
-                params['return_address'] is None):
+        if self.api_client.client_side_validation and ('return_address' not in params or
+                                                       params['return_address'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `return_address` when calling `post_return_addresses_by_return_address_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -394,9 +394,9 @@ class PostReturnAddressApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `post_return_addresses_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `post_return_addresses_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -495,8 +495,8 @@ class PostReturnAddressApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'return_address' is set
-        if ('return_address' not in params or
-                params['return_address'] is None):
+        if self.api_client.client_side_validation and ('return_address' not in params or
+                                                       params['return_address'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `return_address` when calling `post_return_addresses_post`")  # noqa: E501
 
         collection_formats = {}

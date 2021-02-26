@@ -87,8 +87,8 @@ class NumberApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'dedicated_number' is set
-        if ('dedicated_number' not in params or
-                params['dedicated_number'] is None):
+        if self.api_client.client_side_validation and ('dedicated_number' not in params or
+                                                       params['dedicated_number'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `dedicated_number` when calling `numbers_buy_by_dedicated_number_post`")  # noqa: E501
 
         collection_formats = {}
@@ -188,9 +188,9 @@ class NumberApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `numbers_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `numbers_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -297,13 +297,13 @@ class NumberApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'country' is set
-        if ('country' not in params or
-                params['country'] is None):
+        if self.api_client.client_side_validation and ('country' not in params or
+                                                       params['country'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `country` when calling `numbers_search_by_country_get`")  # noqa: E501
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `numbers_search_by_country_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `numbers_search_by_country_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 

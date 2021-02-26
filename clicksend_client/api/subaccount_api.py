@@ -87,8 +87,8 @@ class SubaccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'subaccount_id' is set
-        if ('subaccount_id' not in params or
-                params['subaccount_id'] is None):
+        if self.api_client.client_side_validation and ('subaccount_id' not in params or
+                                                       params['subaccount_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `subaccount_id` when calling `subaccounts_by_subaccount_id_delete`")  # noqa: E501
 
         collection_formats = {}
@@ -186,8 +186,8 @@ class SubaccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'subaccount_id' is set
-        if ('subaccount_id' not in params or
-                params['subaccount_id'] is None):
+        if self.api_client.client_side_validation and ('subaccount_id' not in params or
+                                                       params['subaccount_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `subaccount_id` when calling `subaccounts_by_subaccount_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -287,12 +287,12 @@ class SubaccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'subaccount_id' is set
-        if ('subaccount_id' not in params or
-                params['subaccount_id'] is None):
+        if self.api_client.client_side_validation and ('subaccount_id' not in params or
+                                                       params['subaccount_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `subaccount_id` when calling `subaccounts_by_subaccount_id_put`")  # noqa: E501
         # verify the required parameter 'subaccount' is set
-        if ('subaccount' not in params or
-                params['subaccount'] is None):
+        if self.api_client.client_side_validation and ('subaccount' not in params or
+                                                       params['subaccount'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `subaccount` when calling `subaccounts_by_subaccount_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -394,9 +394,9 @@ class SubaccountApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `subaccounts_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `subaccounts_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -495,8 +495,8 @@ class SubaccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'subaccount' is set
-        if ('subaccount' not in params or
-                params['subaccount'] is None):
+        if self.api_client.client_side_validation and ('subaccount' not in params or
+                                                       params['subaccount'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `subaccount` when calling `subaccounts_post`")  # noqa: E501
 
         collection_formats = {}
@@ -594,8 +594,8 @@ class SubaccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'subaccount_id' is set
-        if ('subaccount_id' not in params or
-                params['subaccount_id'] is None):
+        if self.api_client.client_side_validation and ('subaccount_id' not in params or
+                                                       params['subaccount_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `subaccount_id` when calling `subaccounts_regen_api_key_by_subaccount_id_put`")  # noqa: E501
 
         collection_formats = {}

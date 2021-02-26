@@ -97,9 +97,9 @@ class FAXApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `fax_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `fax_history_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -206,8 +206,8 @@ class FAXApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'fax_message' is set
-        if ('fax_message' not in params or
-                params['fax_message'] is None):
+        if self.api_client.client_side_validation and ('fax_message' not in params or
+                                                       params['fax_message'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `fax_message` when calling `fax_price_post`")  # noqa: E501
 
         collection_formats = {}
@@ -305,8 +305,8 @@ class FAXApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'message_id' is set
-        if ('message_id' not in params or
-                params['message_id'] is None):
+        if self.api_client.client_side_validation and ('message_id' not in params or
+                                                       params['message_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `message_id` when calling `fax_receipts_by_message_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -406,9 +406,9 @@ class FAXApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `fax_receipts_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `fax_receipts_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -507,8 +507,8 @@ class FAXApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'url' is set
-        if ('url' not in params or
-                params['url'] is None):
+        if self.api_client.client_side_validation and ('url' not in params or
+                                                       params['url'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `url` when calling `fax_receipts_post`")  # noqa: E501
 
         collection_formats = {}
@@ -701,8 +701,8 @@ class FAXApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'fax_message' is set
-        if ('fax_message' not in params or
-                params['fax_message'] is None):
+        if self.api_client.client_side_validation and ('fax_message' not in params or
+                                                       params['fax_message'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `fax_message` when calling `fax_send_post`")  # noqa: E501
 
         collection_formats = {}

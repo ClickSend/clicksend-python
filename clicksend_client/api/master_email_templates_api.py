@@ -89,9 +89,9 @@ class MasterEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `master_email_template_categories_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `master_email_template_categories_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -190,8 +190,8 @@ class MasterEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'category_id' is set
-        if ('category_id' not in params or
-                params['category_id'] is None):
+        if self.api_client.client_side_validation and ('category_id' not in params or
+                                                       params['category_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `category_id` when calling `master_email_template_category_get`")  # noqa: E501
 
         collection_formats = {}
@@ -289,8 +289,8 @@ class MasterEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'template_id' is set
-        if ('template_id' not in params or
-                params['template_id'] is None):
+        if self.api_client.client_side_validation and ('template_id' not in params or
+                                                       params['template_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `template_id` when calling `master_email_template_get`")  # noqa: E501
 
         collection_formats = {}
@@ -390,9 +390,9 @@ class MasterEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `master_email_templates_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `master_email_templates_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -495,13 +495,13 @@ class MasterEmailTemplatesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'category_id' is set
-        if ('category_id' not in params or
-                params['category_id'] is None):
+        if self.api_client.client_side_validation and ('category_id' not in params or
+                                                       params['category_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `category_id` when calling `master_email_templates_in_category_get`")  # noqa: E501
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `master_email_templates_in_category_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `master_email_templates_in_category_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 

@@ -87,8 +87,8 @@ class ResellerAccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_user_id' is set
-        if ('client_user_id' not in params or
-                params['client_user_id'] is None):
+        if self.api_client.client_side_validation and ('client_user_id' not in params or
+                                                       params['client_user_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `client_user_id` when calling `reseller_accounts_by_client_user_id_get`")  # noqa: E501
 
         collection_formats = {}
@@ -188,12 +188,12 @@ class ResellerAccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'client_user_id' is set
-        if ('client_user_id' not in params or
-                params['client_user_id'] is None):
+        if self.api_client.client_side_validation and ('client_user_id' not in params or
+                                                       params['client_user_id'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `client_user_id` when calling `reseller_accounts_by_client_user_id_put`")  # noqa: E501
         # verify the required parameter 'reseller_account' is set
-        if ('reseller_account' not in params or
-                params['reseller_account'] is None):
+        if self.api_client.client_side_validation and ('reseller_account' not in params or
+                                                       params['reseller_account'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `reseller_account` when calling `reseller_accounts_by_client_user_id_put`")  # noqa: E501
 
         collection_formats = {}
@@ -295,9 +295,9 @@ class ResellerAccountApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `reseller_accounts_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `reseller_accounts_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -396,8 +396,8 @@ class ResellerAccountApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'reseller_account' is set
-        if ('reseller_account' not in params or
-                params['reseller_account'] is None):
+        if self.api_client.client_side_validation and ('reseller_account' not in params or
+                                                       params['reseller_account'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `reseller_account` when calling `reseller_accounts_post`")  # noqa: E501
 
         collection_formats = {}

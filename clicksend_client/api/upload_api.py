@@ -89,12 +89,12 @@ class UploadApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'upload_file' is set
-        if ('upload_file' not in params or
-                params['upload_file'] is None):
+        if self.api_client.client_side_validation and ('upload_file' not in params or
+                                                       params['upload_file'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `upload_file` when calling `uploads_post`")  # noqa: E501
         # verify the required parameter 'convert' is set
-        if ('convert' not in params or
-                params['convert'] is None):
+        if self.api_client.client_side_validation and ('convert' not in params or
+                                                       params['convert'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `convert` when calling `uploads_post`")  # noqa: E501
 
         collection_formats = {}

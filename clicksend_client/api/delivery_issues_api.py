@@ -89,9 +89,9 @@ class DeliveryIssuesApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'page' in params and params['page'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('page' in params and params['page'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `page` when calling `delivery_issues_get`, must be a value greater than or equal to `1`")  # noqa: E501
-        if 'limit' in params and params['limit'] < 1:  # noqa: E501
+        if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `delivery_issues_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
@@ -190,8 +190,8 @@ class DeliveryIssuesApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'delivery_issue' is set
-        if ('delivery_issue' not in params or
-                params['delivery_issue'] is None):
+        if self.api_client.client_side_validation and ('delivery_issue' not in params or
+                                                       params['delivery_issue'] is None):  # noqa: E501
             raise ValueError("Missing the required parameter `delivery_issue` when calling `delivery_issues_post`")  # noqa: E501
 
         collection_formats = {}
