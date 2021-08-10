@@ -29,6 +29,20 @@ class TestMMSApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_mms_history_export_get(self):
+        """Test case for mms_history_export_get
+
+        Export all mms history  # noqa: E501
+        """
+        pass
+
+    def test_mms_history_get(self):
+        """Test case for mms_history_get
+
+        Get all mms history  # noqa: E501
+        """
+        pass
+
     def test_mms_price_post(self):
         """Test case for mms_price_post
 

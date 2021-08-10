@@ -4,11 +4,127 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**mms_history_export_get**](MMSApi.md#mms_history_export_get) | **GET** /mms/history/export | Export all mms history
+[**mms_history_get**](MMSApi.md#mms_history_get) | **GET** /mms/history | Get all mms history
 [**mms_price_post**](MMSApi.md#mms_price_post) | **POST** /mms/price | Get Price for MMS sent
 [**mms_receipts_get**](MMSApi.md#mms_receipts_get) | **GET** /mms/receipts | Get all delivery receipts
 [**mms_receipts_read_put**](MMSApi.md#mms_receipts_read_put) | **PUT** /mms/receipts-read | Mark delivery receipts as read
 [**mms_send_post**](MMSApi.md#mms_send_post) | **POST** /mms/send | Send MMS
 
+
+# **mms_history_export_get**
+> str mms_history_export_get(filename)
+
+Export all mms history
+
+Export all mms history
+
+### Example
+```python
+from __future__ import print_function
+import time
+import clicksend_client
+from clicksend_client.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = clicksend_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = clicksend_client.MMSApi(clicksend_client.ApiClient(configuration))
+filename = 'filename_example' # str | Filename to download history as
+
+try:
+    # Export all mms history
+    api_response = api_instance.mms_history_export_get(filename)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MMSApi->mms_history_export_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filename** | **str**| Filename to download history as | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **mms_history_get**
+> str mms_history_get(q=q, date_from=date_from, date_to=date_to, page=page, limit=limit)
+
+Get all mms history
+
+Get all mms history
+
+### Example
+```python
+from __future__ import print_function
+import time
+import clicksend_client
+from clicksend_client.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = clicksend_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = clicksend_client.MMSApi(clicksend_client.ApiClient(configuration))
+q = 'q_example' # str | Custom query Example: from:{number},status_code:201. (optional)
+date_from = 56 # int | Start date (optional)
+date_to = 56 # int | End date (optional)
+page = 1 # int | Page number (optional) (default to 1)
+limit = 10 # int | Number of records per page (optional) (default to 10)
+
+try:
+    # Get all mms history
+    api_response = api_instance.mms_history_get(q=q, date_from=date_from, date_to=date_to, page=page, limit=limit)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MMSApi->mms_history_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **q** | **str**| Custom query Example: from:{number},status_code:201. | [optional] 
+ **date_from** | **int**| Start date | [optional] 
+ **date_to** | **int**| End date | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **limit** | **int**| Number of records per page | [optional] [default to 10]
+
+### Return type
+
+**str**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **mms_price_post**
 > str mms_price_post(mms_messages)
