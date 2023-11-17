@@ -28,6 +28,7 @@ from clicksend_client.api.email_marketing_api import EmailMarketingApi
 from clicksend_client.api.email_to_sms_api import EmailToSmsApi
 from clicksend_client.api.fax_api import FAXApi
 from clicksend_client.api.fax_delivery_receipt_rules_api import FAXDeliveryReceiptRulesApi
+from clicksend_client.api.global_sending_api import GlobalSendingApi
 from clicksend_client.api.inbound_fax_rules_api import InboundFAXRulesApi
 from clicksend_client.api.inbound_sms_rules_api import InboundSMSRulesApi
 from clicksend_client.api.mms_api import MMSApi
@@ -65,6 +66,8 @@ from clicksend_client.models.attachment import Attachment
 from clicksend_client.models.contact import Contact
 from clicksend_client.models.contact_list import ContactList
 from clicksend_client.models.contact_list_import import ContactListImport
+from clicksend_client.models.country_list_id import CountryListId
+from clicksend_client.models.country_list_ids import CountryListIds
 from clicksend_client.models.credit_card import CreditCard
 from clicksend_client.models.date_before import DateBefore
 from clicksend_client.models.delivery_issue import DeliveryIssue

@@ -23,6 +23,8 @@ from clicksend_client.models.attachment import Attachment
 from clicksend_client.models.contact import Contact
 from clicksend_client.models.contact_list import ContactList
 from clicksend_client.models.contact_list_import import ContactListImport
+from clicksend_client.models.country_list_id import CountryListId
+from clicksend_client.models.country_list_ids import CountryListIds
 from clicksend_client.models.credit_card import CreditCard
 from clicksend_client.models.date_before import DateBefore
 from clicksend_client.models.delivery_issue import DeliveryIssue
