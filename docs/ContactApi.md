@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_contacts_by_list_id_get**
-> str lists_contacts_by_list_id_get(list_id, page=page, limit=limit)
+> str lists_contacts_by_list_id_get(list_id, page=page, limit=limit, updated_after=updated_after)
 
 Get all contacts in a list
 
@@ -206,10 +206,11 @@ api_instance = clicksend_client.ContactApi(clicksend_client.ApiClient(configurat
 list_id = 56 # int | Contact list ID
 page = 1 # int | Page number (optional) (default to 1)
 limit = 10 # int | Number of records per page (optional) (default to 10)
+updated_after = 10 # int | Get all contacts updated after a given timestamp. (optional) (default to 10)
 
 try:
     # Get all contacts in a list
-    api_response = api_instance.lists_contacts_by_list_id_get(list_id, page=page, limit=limit)
+    api_response = api_instance.lists_contacts_by_list_id_get(list_id, page=page, limit=limit, updated_after=updated_after)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ContactApi->lists_contacts_by_list_id_get: %s\n" % e)
@@ -222,6 +223,7 @@ Name | Type | Description  | Notes
  **list_id** | **int**| Contact list ID | 
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
+ **updated_after** | **int**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 
