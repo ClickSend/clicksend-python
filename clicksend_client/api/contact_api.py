@@ -375,6 +375,7 @@ class ContactApi(object):
         :param int list_id: Contact list ID (required)
         :param int page: Page number
         :param int limit: Number of records per page
+        :param int updated_after: Get all contacts updated after a given timestamp.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -399,12 +400,13 @@ class ContactApi(object):
         :param int list_id: Contact list ID (required)
         :param int page: Page number
         :param int limit: Number of records per page
+        :param int updated_after: Get all contacts updated after a given timestamp.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['list_id', 'page', 'limit']  # noqa: E501
+        all_params = ['list_id', 'page', 'limit', 'updated_after']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -428,6 +430,8 @@ class ContactApi(object):
             raise ValueError("Invalid value for parameter `page` when calling `lists_contacts_by_list_id_get`, must be a value greater than or equal to `1`")  # noqa: E501
         if self.api_client.client_side_validation and ('limit' in params and params['limit'] < 1):  # noqa: E501
             raise ValueError("Invalid value for parameter `limit` when calling `lists_contacts_by_list_id_get`, must be a value greater than or equal to `1`")  # noqa: E501
+        if self.api_client.client_side_validation and ('updated_after' in params and params['updated_after'] < 1):  # noqa: E501
+            raise ValueError("Invalid value for parameter `updated_after` when calling `lists_contacts_by_list_id_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -439,6 +443,8 @@ class ContactApi(object):
             query_params.append(('page', params['page']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('limit', params['limit']))  # noqa: E501
+        if 'updated_after' in params:
+            query_params.append(('updated_after', params['updated_after']))  # noqa: E501
 
         header_params = {}
 
