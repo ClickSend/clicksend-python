@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "clicksend-client"
-VERSION = "5.0.78"
+VERSION = "5.0.80"
 # To install the library, run the following
 #
 # python setup.py install
