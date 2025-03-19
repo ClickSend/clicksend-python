@@ -1335,7 +1335,7 @@ class SMSApi(object):
     def sms_send_post(self, sms_messages, **kwargs):  # noqa: E501
         """Send sms message(s)  # noqa: E501
 
-         # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.*   # noqa: E501
+         # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://developers.clicksend.com/docs/#application-status-codes) for the possible response message status strings.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.sms_send_post(sms_messages, async_req=True)
@@ -1357,7 +1357,7 @@ class SMSApi(object):
     def sms_send_post_with_http_info(self, sms_messages, **kwargs):  # noqa: E501
         """Send sms message(s)  # noqa: E501
 
-         # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.*   # noqa: E501
+         # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://developers.clicksend.com/docs/#application-status-codes) for the possible response message status strings.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.sms_send_post_with_http_info(sms_messages, async_req=True)
