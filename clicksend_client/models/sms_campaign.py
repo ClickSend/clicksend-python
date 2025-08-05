@@ -157,7 +157,7 @@ class SmsCampaign(object):
     def _from(self):
         """Gets the _from of this SmsCampaign.  # noqa: E501
 
-        Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.  # noqa: E501
+        Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.  # noqa: E501
 
         :return: The _from of this SmsCampaign.  # noqa: E501
         :rtype: str
@@ -168,7 +168,7 @@ class SmsCampaign(object):
     def _from(self, _from):
         """Sets the _from of this SmsCampaign.
 
-        Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.  # noqa: E501
+        Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.  # noqa: E501
 
         :param _from: The _from of this SmsCampaign.  # noqa: E501
         :type: str
