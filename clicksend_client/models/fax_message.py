@@ -188,7 +188,7 @@ class FaxMessage(object):
     def schedule(self):
         """Gets the schedule of this FaxMessage.  # noqa: E501
 
-        Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp  # noqa: E501
+        Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp  # noqa: E501
 
         :return: The schedule of this FaxMessage.  # noqa: E501
         :rtype: int
@@ -199,7 +199,7 @@ class FaxMessage(object):
     def schedule(self, schedule):
         """Sets the schedule of this FaxMessage.
 
-        Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp  # noqa: E501
+        Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp  # noqa: E501
 
         :param schedule: The schedule of this FaxMessage.  # noqa: E501
         :type: int

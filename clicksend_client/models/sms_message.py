@@ -99,7 +99,7 @@ class SmsMessage(object):
     def _from(self):
         """Gets the _from of this SmsMessage.  # noqa: E501
 
-        Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.  # noqa: E501
+        Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.  # noqa: E501
 
         :return: The _from of this SmsMessage.  # noqa: E501
         :rtype: str
@@ -110,7 +110,7 @@ class SmsMessage(object):
     def _from(self, _from):
         """Sets the _from of this SmsMessage.
 
-        Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.  # noqa: E501
+        Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.  # noqa: E501
 
         :param _from: The _from of this SmsMessage.  # noqa: E501
         :type: str
@@ -193,7 +193,7 @@ class SmsMessage(object):
     def schedule(self):
         """Gets the schedule of this SmsMessage.  # noqa: E501
 
-        Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp  # noqa: E501
+        Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp  # noqa: E501
 
         :return: The schedule of this SmsMessage.  # noqa: E501
         :rtype: int
@@ -204,7 +204,7 @@ class SmsMessage(object):
     def schedule(self, schedule):
         """Sets the schedule of this SmsMessage.
 
-        Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp  # noqa: E501
+        Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp # noqa: E501
 
         :param schedule: The schedule of this SmsMessage.  # noqa: E501
         :type: int
