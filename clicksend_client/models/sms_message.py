@@ -204,7 +204,7 @@ class SmsMessage(object):
     def schedule(self, schedule):
         """Sets the schedule of this SmsMessage.
 
-        Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp # noqa: E501
+        Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp  # noqa: E501
 
         :param schedule: The schedule of this SmsMessage.  # noqa: E501
         :type: int
